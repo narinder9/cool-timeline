@@ -1,6 +1,6 @@
-
-<H1>Wordpress Cool Timeline plugin creates responsive vertical storyline automatically in chronological order based on the year and date of your posts.
-</h1>
+<h1>Cool Timeline</h1>
+<p>Wordpress Cool Timeline plugin creates responsive vertical storyline automatically in chronological order based on the year and date of your posts.
+</p>
 <H3>Description</h3>
 <p>Cool Timeline is a responsive Wordpress Plugin that allows you to create beautiful vertical storyline. You simply create posts, set images and date then Cool Timeline will automatically populate these posts in chronological order, based on the year and date.
 </p>
@@ -37,3 +37,41 @@ Check Demo:- www.cooltimeline.com
 *	Begin populating the timeline with stories. (Note: Story will appear in chronological order according to the story date)
 *	Once you have populated the timeline stories, head over to the settings page (Cool Timeline) to customize your timeline.
 *	Create a new page, and enter the shortcode [cool-timeline] to display the your timeline (Note:Cool  Timeline displays best on full width pages)
+
+
+<H3>Changelog</h3>
+= 1.0.8 =
+* Added:Added options in settings panel to Enable/Disable stories date.
+* Added:Main title alignments options in option panel.
+* Fixed:Fixed read more overriding issue.
+* Enhancement:included ctl_styles and bootstrap styles only on timeline page.
+
+= 1.0.7 =
+* Fixed:Minor Fixes.
+
+= 1.0.6 =
+* Fixed:Date issues
+* Fixed:styles settings issue
+* Fixed:Minor css issues.
+* Enhancement:included styles only on timeline page.
+
+= 1.0.5 =
+* Removed:Removed bootflat.css file.
+* Fixed:css issue resolved
+= 1.0.4 =
+* Added:Stoires description type short/Full(with HTML) in option panel.
+* Fixed:Typography issues.
+* Fixed:Minor css issues.
+* Fixed:Minor images size issues.
+= 1.0.3 =
+* Fixed:stories date issue resolved.
+* Fixed:background color issue resolved.
+* Fixed:minor javascript bug removed.
+= 1.0.2 =
+* Minor bug fixes.
+= 1.0.1 =
+* Added Stories order option in settings panel for post order by(Ascending ,Descending)
+* improved short description content.
+* updated icons.
+= 1.0 =
+* Initial Release.
