@@ -1,0 +1,316 @@
+
+/* CSS Reset */
+
+h4.events-heading {
+  margin: 0;
+  padding: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  background: #2d2d2d url(../images/dust-bg.png);
+  text-shadow: 1px 1px 0px #555;
+  color: #fff;
+  text-transform: uppercase;
+}
+.cool_timeline .timeline-main-title{text-align:center;}
+.events .small ,.event-description {
+  padding:10px;
+}
+
+.cool_timeline {
+  background-color:none;
+  padding:5px;
+}
+
+.avatar_container{
+text-align:center;
+}
+.avatar_container img.center-block.img-responsive.img-circle{
+border:2px solid #8D9298;
+box-shadow: 10px 10px 10px #888888;
+-webkit-box-shadow:10px 10px 10px #888888;
+-moz-box-shadow:10px 10px 10px #888888;
+box-shadow:10px 10px 10px #888888;
+}
+h1.timeline-main-title.center-block{
+margin:10px 0;
+}
+.timeline dl dd.even .circ, .timeline dl dd.even  .events h4 {
+  background: #1b949e url(../images/dust-bg.png);
+}
+
+.timeline dl dd.odd .circ, .timeline dl dd.odd .events h4 {
+  background: #f58636 url(../images/dust-bg.png);
+}
+
+.timeline dl dd.even .events:before {
+  border-color: #1b949e;
+}
+
+.timeline dl dd.odd .events:before {
+  border-color: #f58636;
+}
+
+.timeline dl dd.even .time {
+  color: #1b949e;
+}
+
+.timeline dl dd.odd .time {
+  color: #f58636;
+}
+
+.timeline dl {
+  position: relative;
+  top: 0;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.timeline dl:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 100;
+  width: 5px;
+  margin-left: -2.5px;
+  content: '';
+  background-color: #414A54;
+  opacity: 0.6;
+}
+
+.timeline dl dt {
+  position: relative;
+  top: 30px;
+  z-index: 200;
+  width: 88px;
+  height: 90px;
+  padding: 30px 15px;
+  margin: 0 auto 20px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  background-color: #414A54;
+  border-radius: 55px;
+  -webkit-border-radius: 55px;
+  -moz-border-radius: 55px;
+	font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  text-shadow: 1px 1px 0 #222;
+  line-height: 26px;
+  box-shadow: 2px 2px 0 0 #222;
+}
+
+.timeline dl dd {
+  position: relative;
+  z-index: 200;
+}
+
+.timeline dl dd .circ {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  z-index: 200;
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  background-color: #4fc1e9;
+  border: 4px solid #f5f7fa;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.timeline dl dd .time {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px;
+  font-size: 32px;
+  color: #4fc1e9;
+  font-family: 'Open Sans', sans-serif;
+ // font-family: 'Titillium Web', sans-serif;
+}
+
+.timeline dl dd .events {
+  box-shadow: 0px 2px 1px 0 #DEDEDE;
+  position: relative;
+  width: 46%;
+  padding: 0;
+  margin-top: 31px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+.timeline dl dd .events:before {
+  position: absolute;
+  top: 12px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-style: solid;
+  border-width: 12px;
+}
+
+.timeline dl dd .events .events-object {
+  margin-right: 10px;
+}
+
+.timeline dl dd .events .events-body {
+  overflow: hidden;
+  zoom: 1;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.8px;
+  color: #777;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  display:inline;
+}
+.timeline dl dd .events .events-body a.read_more{
+color:#777;
+font-weight:bold;
+text-decoration:none;
+}
+.timeline dl dd .events .events-body a.read_more:hover{
+text-decoration:underline;
+}
+.full p{
+padding:10px;
+}  
+.timeline dl dd .events .events-body .events-heading {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+.events-object.left_small {
+    padding: 3px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.timeline dl dd.pos-right .time {
+  margin-left: -150px;
+  text-align: right;
+}
+
+.timeline dl dd.pos-right .events {
+  float: right;
+}
+
+.timeline dl dd.pos-right .events:before {
+  left: -23px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.timeline dl dd.pos-left .time {
+  margin-left: 0;
+  text-align: left;
+}
+
+.timeline dl dd.pos-left .time {
+  margin-left: 0;
+  text-align: left;
+}
+
+.timeline dl dd.pos-left .events {
+  float: left;
+}
+
+.timeline dl dd.pos-left .events:before {
+  right: -24px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+.ctl_info.event-description{
+display:inline-block;
+width:100%;
+}
+@media screen and (max-width:767px) {
+  .timeline dl:before {
+    left: 60px;
+  }
+
+  .timeline dl dt {
+    margin: 0 0 30px 15px;
+  }
+
+  .timeline dl dd .circ {
+    left: 60px;
+  }
+
+  .timeline dl dd .time {
+    left: 0;
+  }
+
+  .timeline dl dd.pos-left .time {
+    padding: 10px 0;
+    margin-left: 0;
+    font-size: 18px;
+    width: 42px;
+    text-align: center;
+  }
+
+  .timeline dl dd.pos-left .events {
+    float: right;
+    width: 84%;
+  }
+
+  .timeline dl dd.pos-left .events:before {
+    left: -24px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+
+  .timeline dl dd.pos-right .time {
+    padding: 10px 0;
+    font-size: 18px;
+    width: 42px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .timeline dl dd.pos-right .events {
+    float: right;
+    width: 84%;
+  }
+
+  .timeline dl dd.even  .events:before {
+    border-right-color: #1b949e;
+  }
+
+  .timeline dl dd.odd .events:before {
+    border-right-color: #f58636;
+	
+  }
+}
+
+@media only screen and (min-width:481px) and (max-width:570px) {
+.timeline dl dd.pos-right .events ,.timeline dl dd.pos-left .events{
+width:80%;
+/*background-color:red!important;*/
+}
+}
+
+@media screen and (max-width: 480px) {
+.timeline dl::before{
+left:0%;
+}
+.circ{
+display:none;
+}
+.timeline dl dd.odd .events::before{
+ border-left-color:none!important;
+}
+}
+@media screen and(min-width:320px) {
+.pull-left{
+float:none;
+}
+
+}
