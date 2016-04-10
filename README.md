@@ -1,5 +1,5 @@
 
-<H1>Cool Timeline plugin creates responsive vertical storyline automatically in chronological order based on the year and date of your posts.
+<H1>Wordpress Cool Timeline plugin creates responsive vertical storyline automatically in chronological order based on the year and date of your posts.
 </h1>
 <H3>Description</h3>
 <p>Cool Timeline is a responsive Wordpress Plugin that allows you to create beautiful vertical storyline. You simply create posts, set images and date then Cool Timeline will automatically populate these posts in chronological order, based on the year and date.
