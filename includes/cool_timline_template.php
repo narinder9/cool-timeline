@@ -45,6 +45,226 @@ if (!class_exists('CoolTimeline_Template')) {
         function cooltimeline_register_shortcode() {
             add_shortcode('cool-timeline', array(&$this, 'cooltimeline_view'));
 		 }
+	    function cooltimeline_view($atts, $content = null) {
+			
+			wp_enqueue_style('ctl_styles');
+			
+            $attribute = shortcode_atts(array(
+                'class' => 'caption',
+                'post_per_page' => 10,
+                    ), $atts);
+			$ctl_options_arr = get_option('cool_timeline_options');
+			
+		
+			$output='';
+			$ctl_html='';
+			 /*
+             * Gerneral options
+             */
+
+          //  $ctl_timeline_type = $ctl_options_arr['timeline_type'];
+            $ctl_title_text = $ctl_options_arr['title_text'];
+            $ctl_title_tag = $ctl_options_arr['title_tag'];
+          //  $ctl_title_pos = $ctl_options_arr['title_pos'];
+        	
+				if(isset($ctl_options_arr['user_avatar']['id'])){
+					$user_avatar =wp_get_attachment_image_src($ctl_options_arr['user_avatar']['id'],'ctl_avatar');
+					}
+			
+			/*
+			* content settings
+			*/
+	
+            $ctl_post_per_page = $ctl_options_arr['post_per_page'];
+			$story_desc_type = $ctl_options_arr['desc_type'];
+			$ctl_no_posts= isset($ctl_options_arr['no_posts'])?$ctl_options_arr['no_posts']:"No timeline post found";
+			$ctl_content_length = $ctl_options_arr['content_length'];
+			$ctl_posts_orders = $ctl_options_arr['posts_orders']?$ctl_options_arr['posts_orders']:"DESC";
+			$disable_months = $ctl_options_arr['disable_months']?$ctl_options_arr['disable_months']:"no";
+			$title_alignment = $ctl_options_arr['title_alignment']?$ctl_options_arr['title_alignment']:"center";
+		
+			//$ctl_posts_order='date';
+         
+            /*
+             * images sizes
+             */
+        
+			
+            $ctl_post_per_page=$ctl_post_per_page ? $ctl_post_per_page : 10;
+            $ctl_title_text = $ctl_title_text ? $ctl_title_text : 'Timeline';
+            $ctl_title_tag = $ctl_title_tag ? $ctl_title_tag : 'H2';
+            //$ctl_title_pos = $ctl_title_pos ? $ctl_title_pos : 'left';
+            $ctl_content_length ? $ctl_content_length : 100;
+			
+			
+			$display_year = '';
+            $format =__('d/M/Y','cool_timeline');
+			$output='';
+            $year_position = 2;
+           $args = array(
+		   'post_type' => 'cool_timeline', 
+		   'posts_per_page' => $ctl_post_per_page,
+		  'post_status' => array( 'publish', 'future' ),
+			'orderby' => 'date',
+			'order' =>$ctl_posts_orders
+		   );
+			$i = 0;
+			$row = 1;
+			
+			  $ctl_loop = new WP_Query($args);
+
+            if ($ctl_loop->have_posts()){
+				
+                while ($ctl_loop->have_posts()) : $ctl_loop->the_post();
+                    $img_cont_size = get_post_meta(get_the_ID(), 'image_container_type', true);
+
+						switch ($img_cont_size) {
+                        case'Full':
+                            $cont_size_cls = 'full';
+							break;
+				
+                        case'small':
+                            $cont_size_cls = 'small';
+							break;
+                        default;
+                            $cont_size_cls = 'full';
+							break;
+                    }	
+					
+						 if (isset($cont_size_cls) && !empty($cont_size_cls)) {
+                        $container_cls = $cont_size_cls;
+                    } else {
+							 $container_cls ='full';
+                    }
+
+					   /*
+                         * Display By date
+                         */
+                        $post_date = explode('/', get_the_date($format));
+
+                        $post_year = $post_date[$year_position];
+                        if ($post_year != $display_year) {
+                        
+						 /* $post_year
+						   $post_date[1] */
+                            $display_year = $post_year;
+							$ctl_html.=' <dt>'. $post_year.'</dt>';
+                        }
+
+					if($story_desc_type=='full'){
+						$story_cont = get_the_content();
+					}else{
+						$story_cont =get_the_excerpt();
+					}
+
+					if ( '' != $story_cont ) {
+						 $post_content= $story_cont;
+					}else{
+					 $post_content="";
+					}
+				
+					$posted_date=get_the_date(__('M d','cool_timeline'));
+					
+					   if($cont_size_cls=="full"){
+					$ctl_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'large');
+					}else{
+					$ctl_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'thumbnail');
+					}
+			
+                    $ctl_thumb_url = $ctl_thumb['0'];
+                    $ctl_thumb_width = $ctl_thumb['1'];
+                    $ctl_thumb_height = $ctl_thumb['2'];
+				
+                    if ($i % 2 == 0) {
+                        $even_odd = "even";
+                        $ctl_html .='<dd id="' . $row . '" class="pos-right clearfix ' . $even_odd . ' ' . $container_cls . '">';
+						$ctl_html .='<div class="circ"></div>';
+						
+						if($disable_months=="no"){
+							$ctl_html .='<div class="time">'.$posted_date.'</div>';
+							} 
+							
+						$ctl_html .='<div class="events"><h4 class="events-heading">' . get_the_title() . '</h4>';
+                   
+						 $ctl_html   .= '<div class="ctl_info event-description '.$cont_size_cls.'">';
+						if(isset($ctl_thumb_url)&& !empty($ctl_thumb_url)){
+					   if($cont_size_cls=="full"){
+								$ctl_html.='<div class="full-width"><img  width="100%" class="events-object" src="'.$ctl_thumb_url.'"></div>';
+							}else{
+							$ctl_html.='<div class="pull-left"><img  class="events-object left_small" src="'.$ctl_thumb_url.'"></div>';
+							}
+						}
+					
+						if(!empty($post_content)){
+						$ctl_html.='<div class="events-body"><p>' . $post_content. '</p></div>';
+						 }
+						 
+					    $ctl_html .='</div>';
+					
+                    } else {
+                        $even_odd = "odd";
+						$ctl_html .='<dd id="' . $row . '" class="pos-left clearfix ' . $even_odd . ' ' . $container_cls . '">';
+						$ctl_html .='<div class="circ"></div>';
+							if($disable_months=="no"){
+							$ctl_html .='<div class="time">'.$posted_date.'</div>';
+							}
+							
+						$ctl_html .='<div class="events"><h4  class="events-heading">' . get_the_title() . '</h4>';
+						
+						 $ctl_html   .= '<div class="ctl_info event-description '.$cont_size_cls.'">';
+						if(isset($ctl_thumb_url)&& !empty($ctl_thumb_url)){
+					   if($cont_size_cls=="full"){
+								$ctl_html.='<div class="full-width"><img  width="100%" class="events-object" src="'.$ctl_thumb_url.'"></div>';
+							}else{
+							$ctl_html.='<div class="pull-left"><img  class="events-object left_small" src="'.$ctl_thumb_url.'"></div>';
+							}
+						}
+						
+							if(!empty($post_content)){
+						$ctl_html.='<div class="events-body"><p>'.$post_content.'</p></div>';
+						 }
+					    $ctl_html .='</div>';
+						
+                        $ctl_html .='</dd>';
+                    }
+                    if ($row >= 3) {
+                        $row = 0;
+                    }
+                    $row++;
+                    $i++;
+                endwhile;
+                wp_reset_query();
+		
+			
+			}else{
+				$ctl_html.='<div class="no-content">';
+				$ctl_html.=$ctl_no_posts;
+				$ctl_html.='</div>';
+				}
+	 
+		
+	$output .='<div class="clearfix"></div>
+	  <!-- Cool timeline
+      ================================================== -->
+    <div class="cool_timeline">';
+		if(isset($user_avatar[0])&& !empty($user_avatar[0])){
+			$output .='<div class="avatar_container row"><span title="'.$ctl_title_text.'"><img  class=" center-block img-responsive img-circle" alt="'.$ctl_title_text.'" src="'.$user_avatar[0].'"></span></div> ';
+		  }
+		  $output .='<' . $ctl_title_tag . '  class="timeline-main-title center-block">' . $ctl_title_text . '</' . $ctl_title_tag . '>';
+         $output .='<div class="row">
+		  <div class="col-md-12">
+			  <div class="timeline cooltimeline_cont"><dl>';
+		$output.=$ctl_html;
+		$output.='</dl></div>
+			</div>
+		</div>
+    </div>  <!-- end
+      ================================================== -->';
+		
+			
+            return $output ;
+		}
+
 		
 		function ctl_custom_style(){
 			
@@ -138,250 +358,13 @@ if (!class_exists('CoolTimeline_Template')) {
 			
 			wp_add_inline_style( 'ctl_styles',$styles );
 		}
-
-        function cooltimeline_view($atts, $content = null) {
-			
-			wp_enqueue_style('ctl_styles');
-			wp_enqueue_style('bootstrap-css');
-			
-			
-            $attribute = shortcode_atts(array(
-                'class' => 'caption',
-                'post_per_page' => 10,
-                    ), $atts);
-			$ctl_options_arr = get_option('cool_timeline_options');
-			
 		
-			$output='';
-			$ctl_html='';
-			 /*
-             * Gerneral options
-             */
-
-          //  $ctl_timeline_type = $ctl_options_arr['timeline_type'];
-            $ctl_title_text = $ctl_options_arr['title_text'];
-            $ctl_title_tag = $ctl_options_arr['title_tag'];
-          //  $ctl_title_pos = $ctl_options_arr['title_pos'];
-        	
-				if(isset($ctl_options_arr['user_avatar']['id'])){
-					$user_avatar =wp_get_attachment_image_src($ctl_options_arr['user_avatar']['id'],'ctl_avatar');
-					}
-			
-			/*
-			* content settings
-			*/
-	
-            $ctl_post_per_page = $ctl_options_arr['post_per_page'];
-			$story_desc_type = $ctl_options_arr['desc_type'];
-			$ctl_no_posts= isset($ctl_options_arr['no_posts'])?$ctl_options_arr['no_posts']:"No timeline post found";
-			$ctl_content_length = $ctl_options_arr['content_length'];
-			$ctl_posts_orders = $ctl_options_arr['posts_orders']?$ctl_options_arr['posts_orders']:"DESC";
-			$disable_months = $ctl_options_arr['disable_months']?$ctl_options_arr['disable_months']:"no";
-			$title_alignment = $ctl_options_arr['title_alignment']?$ctl_options_arr['title_alignment']:"center";
-		
-			//$ctl_posts_order='date';
-         
-            /*
-             * images sizes
-             */
-        
-			
-            $ctl_post_per_page=$ctl_post_per_page ? $ctl_post_per_page : 10;
-            $ctl_title_text = $ctl_title_text ? $ctl_title_text : 'Timeline';
-            $ctl_title_tag = $ctl_title_tag ? $ctl_title_tag : 'H2';
-            //$ctl_title_pos = $ctl_title_pos ? $ctl_title_pos : 'left';
-            $ctl_content_length ? $ctl_content_length : 100;
-			
-			
-			$display_year = '';
-            $format =__('d/M/Y','cool_timeline');
-			$output='';
-            $year_position = 2;
-           $args = array(
-		   'post_type' => 'cool_timeline', 
-		   'posts_per_page' => $ctl_post_per_page,
-		   //'orderby' => 'ID',
-		  // 'order' => $ctl_posts_order
-			'orderby' => 'date',
-			'order' =>$ctl_posts_orders
-		   );
-			$i = 0;
-			$row = 1;
-			
-			  $ctl_loop = new WP_Query($args);
-
-            if ($ctl_loop->have_posts()){
-				
-                while ($ctl_loop->have_posts()) : $ctl_loop->the_post();
-                    $img_cont_size = get_post_meta(get_the_ID(), 'image_container_type', true);
-
-						switch ($img_cont_size) {
-                        case'Full':
-                            $cont_size_cls = 'full';
-							break;
-						/*case'Medium':
-                            $cont_size_cls = 'medium';
-                            $image_sizes = array($ctl_img_medium['width'], $ctl_img_medium['height']);
-                            break;
-							*/
-                        case'small':
-                            $cont_size_cls = 'small';
-							break;
-                        default;
-                            $cont_size_cls = 'full';
-							break;
-                    }	
-					
-						 if (isset($cont_size_cls) && !empty($cont_size_cls)) {
-                        $container_cls = $cont_size_cls;
-                    } else {
-							 $container_cls ='full';
-                    }
-
-					   /*
-                         * Display By date
-                         */
-                        $post_date = explode('/', get_the_date($format));
-
-                        $post_year = $post_date[$year_position];
-                        if ($post_year != $display_year) {
-                        
-						 /* $post_year
-						   $post_date[1] */
-                            $display_year = $post_year;
-							$ctl_html.=' <dl><dt>'. $post_year.'</dt>';
-                        }
-
-					if($story_desc_type=='full'){
-						$story_cont = get_the_content();
-					}else{
-						$story_cont =get_the_excerpt();
-					}
-
-					if ( '' != $story_cont ) {
-						 $post_content= $story_cont;
-					}else{
-					 $post_content="";
-					}
-				
-					$posted_date=get_the_date(__('M d','cool_timeline'));
-
-					//esc_html__( 'Hello, dear user!', 'my-text-domain' );
-					   if($cont_size_cls=="full"){
-					$ctl_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'large');
-					}else{
-					$ctl_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'thumbnail');
-					}
-				   // $ctl_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),$ctl_image_size);
-                    $ctl_thumb_url = $ctl_thumb['0'];
-                    $ctl_thumb_width = $ctl_thumb['1'];
-                    $ctl_thumb_height = $ctl_thumb['2'];
-				
-                    if ($i % 2 == 0) {
-                        $even_odd = "even";
-                        $ctl_html .='<dd id="' . $row . '" class="pos-right clearfix ' . $even_odd . ' ' . $container_cls . '">';
-						$ctl_html .='<div class="circ"></div>';
-						
-						if($disable_months=="no"){
-							$ctl_html .='<div class="time">'.$posted_date.'</div>';
-							} 
-							
-						$ctl_html .='<div class="events"><h4 class="events-heading">' . get_the_title() . '</h4>';
-                   
-						 $ctl_html   .= '<div class="ctl_info event-description '.$cont_size_cls.'">';
-						if(isset($ctl_thumb_url)&& !empty($ctl_thumb_url)){
-					   if($cont_size_cls=="full"){
-								$ctl_html.='<div class="full-width"><img  width="100%" class="events-object" src="'.$ctl_thumb_url.'"></div>';
-							}else{
-							$ctl_html.='<div class="pull-left"><img  class="events-object left_small" src="'.$ctl_thumb_url.'"></div>';
-							}
-						}
-					/* if ($ctl_display_readmore == 'yes') {
-							$read_more=' ..<a class="read_more" href="' . get_the_permalink() . '">Read more</a>';
-							}else{
-							$read_more="";
-							}
-							*/
-						if(!empty($post_content)){
-						$ctl_html.='<div class="events-body"><p>' . $post_content. '</p></div>';
-						 }
-						 
-					    $ctl_html .='</div>';
-						
-                        $ctl_html .='</dd>';
-                    } else {
-                        $even_odd = "odd";
-						$ctl_html .='<dd id="' . $row . '" class="pos-left clearfix ' . $even_odd . ' ' . $container_cls . '">';
-						$ctl_html .='<div class="circ"></div>';
-							if($disable_months=="no"){
-							$ctl_html .='<div class="time">'.$posted_date.'</div>';
-							}
-							
-						$ctl_html .='<div class="events"><h4  class="events-heading">' . get_the_title() . '</h4>';
-						
-						 $ctl_html   .= '<div class="ctl_info event-description '.$cont_size_cls.'">';
-						if(isset($ctl_thumb_url)&& !empty($ctl_thumb_url)){
-					   if($cont_size_cls=="full"){
-								$ctl_html.='<div class="full-width"><img  width="100%" class="events-object" src="'.$ctl_thumb_url.'"></div>';
-							}else{
-							$ctl_html.='<div class="pull-left"><img  class="events-object left_small" src="'.$ctl_thumb_url.'"></div>';
-							}
-						}
-						
-							if(!empty($post_content)){
-						$ctl_html.='<div class="events-body"><p>'.$post_content.'</p></div>';
-						 }
-					    $ctl_html .='</div>';
-						
-                        $ctl_html .='</dd>';
-                    }
-                    if ($row >= 3) {
-                        $row = 0;
-                    }
-                    $row++;
-                    $i++;
-                endwhile;
-                wp_reset_query();
-			 $ctl_html .=' </dl>';
-			
-			}else{
-				$ctl_html.='<div class="no-content">';
-				$ctl_html.=$ctl_no_posts;
-				$ctl_html.='</div>';
-				}
-	 
-		
-	$output .='<div class="clearfix"></div>
-	  <!-- Cool TimeLine
-      ================================================== -->
-    <div class="cool_timeline">';
-		if(isset($user_avatar[0])&& !empty($user_avatar[0])){
-			$output .='<div class="avatar_container row"><a href="#" title="'.$ctl_title_text.'"><img  class=" center-block img-responsive img-circle" alt="'.$ctl_title_text.'" src="'.$user_avatar[0].'"></a></div> ';
-		  }
-		  $output .='<' . $ctl_title_tag . '  class="timeline-main-title center-block">' . $ctl_title_text . '</' . $ctl_title_tag . '>';
-         $output .='<div class="row">
-		  <div class="col-md-12">
-			  <div class="timeline cooltimeline_cont">';
-		$output.=$ctl_html;
-		$output.='</div>
-			</div>
-		</div>
-    </div>';
-		
-			
-            return $output ;
-		}
-
 		/*
 		* Include this plugin's public JS & CSS files on posts.
 		*/
 		
      
         function ctl_load_scripts_styles() {
-
-            wp_register_script('bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), NULL, true);
-            wp_register_style('bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', false, NULL, 'all');
-    	
 			/*
 			 * google fonts
 			 */

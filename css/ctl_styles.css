@@ -1,39 +1,93 @@
-
-/* CSS Reset */
-
-h4.events-heading {
-  margin: 0;
-  padding: 15px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: lighter;
-  background: #2d2d2d url(../images/dust-bg.png);
-  text-shadow: 1px 1px 0px #555;
-  color: #fff;
-  text-transform: uppercase;
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
-.cool_timeline .timeline-main-title{text-align:center;}
-.events .small ,.event-description {
-  padding:10px;
+dt,
+dd {
+  line-height: 1.42857143;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .dl-horizontal dt {
+    float: left;
+    width: 160px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .dl-horizontal dd {
+    margin-left: 180px;
+  }
+}
+.clearfix:before,
+.clearfix:after,
+.dl-horizontal dd:before,
+.dl-horizontal dd:after
+{
+ display: table;
+  content: " ";	
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-circle {
+    border-radius: 50%;
+}
+
+.clearfix:before,
+.clearfix:after,
+.dl-horizontal dd:before,
+.dl-horizontal dd:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after
+ {
+  display: table;
+  content: " ";
+}
+.clearfix:after,
+.dl-horizontal dd:after,
+.container:after,
+.container-fluid:after,
+.row:after
+{
+  clear: both;
 }
 
 .cool_timeline {
-  background-color:none;
+  background-color:inherit;
   padding:5px;
 }
-
-.avatar_container{
+.cool_timeline .timeline-main-title{text-align:center;}
+.cool_timeline .avatar_container{
 text-align:center;
 }
-.avatar_container img.center-block.img-responsive.img-circle{
+ .cool_timeline .timeline-main-title.center-block{
+margin:10px 0;
+}
+.cool_timeline  .events .small ,.event-description {
+  padding:10px;
+}
+
+.cool_timeline  .avatar_container img.center-block.img-responsive.img-circle{
 border:2px solid #8D9298;
-box-shadow: 10px 10px 10px #888888;
 -webkit-box-shadow:10px 10px 10px #888888;
 -moz-box-shadow:10px 10px 10px #888888;
 box-shadow:10px 10px 10px #888888;
 }
-h1.timeline-main-title.center-block{
-margin:10px 0;
-}
+
 .timeline dl dd.even .circ, .timeline dl dd.even  .events h4 {
   background: #1b949e url(../images/dust-bg.png);
 }
@@ -178,9 +232,7 @@ text-decoration:none;
 .timeline dl dd .events .events-body a.read_more:hover{
 text-decoration:underline;
 }
-.full p{
-padding:10px;
-}  
+
 .timeline dl dd .events .events-body .events-heading {
   margin: 0 0 10px;
   font-size: 14px;
@@ -226,9 +278,34 @@ padding:10px;
   border-bottom-color: transparent;
   border-right-color: transparent;
 }
-.ctl_info.event-description{
+
+.timeline .events h4.events-heading {
+  margin: 0;
+  padding: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  background: #2d2d2d url(../images/dust-bg.png);
+  text-shadow: 1px 1px 0px #555;
+  color: #fff;
+  text-transform: uppercase;
+}
+.timeline .events .ctl_info.event-description{
 display:inline-block;
 width:100%;
+}
+
+.timeline .events .full p{
+padding:10px;
+}  
+img.center-block.img-responsive.img-circle{
+	width:250px;
+	height:250px;
+}
+.pull-left {
+    float: left!important;
+}
+.pull-right {
+    float: right!important;
 }
 @media screen and (max-width:767px) {
   .timeline dl:before {
@@ -301,7 +378,10 @@ width:80%;
 .timeline dl::before{
 left:0%;
 }
-.circ{
+.timeline dl dd.even .circ{
+display:none;
+}
+.timeline dl dd.odd .circ{
 display:none;
 }
 .timeline dl dd.odd .events::before{

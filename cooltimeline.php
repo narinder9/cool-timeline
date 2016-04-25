@@ -3,7 +3,7 @@
   Plugin Name:Cool Timeline 
   Plugin URI:http://www.cooltimeline.com
   Description: Cool Timeline is a responsive wordpress plugin that allows you to create beautiful verticle storyline. You simply create posts, set images and date then Cool Timeline will automatically populate these posts in chronological order, based on the year and date
-  Version:1.0.8
+  Version:1.0.9
   Author: Narinder singh
   Author URI:http://www.cooltimeline.com
   License: GPL2
@@ -30,7 +30,7 @@
 
 /** Configuration * */
 if (!defined('COOL_TIMELINE_VERSION_CURRENT'))
-    define('COOL_TIMELINE_VERSION_CURRENT', '1.0.8');
+    define('COOL_TIMELINE_VERSION_CURRENT', '1.0.9');
      define('COOL_TIMELINE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
      define('COOL_TIMELINE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 

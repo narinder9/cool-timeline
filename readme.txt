@@ -1,10 +1,10 @@
 ﻿=== Cool Timeline ===
 Contributors:Narinder singh
 Donate link: http://www.cooltimeline.com
-Tags:timelines, wp timeline,responsive timeline,timeline,time,simple timeline,timeline for wordpress ,timeline responsive,Lifestream,history,
+Tags:timelines, wp timeline,responsive timeline,timeline,time,simple timeline,timeline for wordpress ,timeline responsive,Lifestream,history,time,stage,life,achievements
 Requires at least: 3.9
-Stable tag:1.0.8
-Tested up to: 4.4
+Stable tag:1.0.9
+Tested up to: 4.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,9 @@ Cool Timeline plugin creates responsive vertical storyline automatically in chro
 Cool Timeline is a responsive Wordpress Plugin that allows you to create beautiful vertical storyline. You simply create posts, set images and date then Cool Timeline will automatically populate these posts in chronological order, based on the year and date.
 
 Check Demo:- www.cooltimeline.com
+
+Github:- https://github.com/narinder9/cool-timeline.git
+
 
 Features:
 
@@ -66,6 +69,12 @@ Cool Timeline express displays best on full width pages, but is not limited to t
 5. Cool timeline style settings section.
 
 == Changelog ==
+= 1.0.9 =
+* Removed:bootstrap.css styles.
+* Added:Independent styles.
+* Added:future Posts feature.
+* Fixed:Fixed css overriding issues.
+* Enhancement:removed extra div's.
 = 1.0.8 =
 * Added:Added options in settings panel to Enable/Disable stories date.
 * Added:Main title alignments options in option panel.

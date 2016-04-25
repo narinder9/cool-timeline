@@ -225,3 +225,6 @@ div.iris-picker{z-index: 100;}
    float:left;
      width:30%;
 }
+span.mupload_img_holder{
+	display:block;
+}
