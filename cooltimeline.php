@@ -3,7 +3,7 @@
   Plugin Name:Cool Timeline 
   Plugin URI:http://www.cooltimeline.com
   Description: Cool Timeline is a responsive wordpress plugin that allows you to create beautiful verticle storyline. You simply create posts, set images and date then Cool Timeline will automatically populate these posts in chronological order, based on the year and date
-  Version:1.0.9
+  Version:1.1
   Author: Narinder singh
   Author URI:http://www.cooltimeline.com
   License: GPL2
@@ -30,7 +30,7 @@
 
 /** Configuration * */
 if (!defined('COOL_TIMELINE_VERSION_CURRENT'))
-    define('COOL_TIMELINE_VERSION_CURRENT', '1.0.9');
+    define('COOL_TIMELINE_VERSION_CURRENT', '1.1');
      define('COOL_TIMELINE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
      define('COOL_TIMELINE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
@@ -112,6 +112,7 @@ if (!class_exists('Cool_Timeline')) {
                     'options_1' => __('General Settings', 'apc'),
 					'options_2' => __('Style Settings', 'apc'),
 					'options_3' => __('Typography Settings', 'apc'),
+                    'options_4' => __('Advance Settings', 'apc'),
                 )
             ));
 
@@ -132,7 +133,7 @@ if (!class_exists('Cool_Timeline')) {
             //An optionl descrption paragraph
          //   $options_panel->addParagraph(__("This is a simple paragraph", "apc"));
             //text field
-            $options_panel->addText('title_text', array('name' => __('Title ', 'apc'), 'std' => 'Cool Timeline', 'desc' => __('', 'apc')));
+            $options_panel->addText('title_text', array('name' => __('Timeline Title (Default)  ', 'apc'), 'std' => 'Cool Timeline', 'desc' => __('', 'apc')));
 
             //select field
             $options_panel->addSelect('title_tag', array('h1' => 'H1',
@@ -141,12 +142,13 @@ if (!class_exists('Cool_Timeline')) {
                 'h4' => 'H4',
                 'h5' => 'H5',
                 'h6' => 'H6'), array('name' => __('Title Heading Tag ', 'apc'), 'std' => array('h1'), 'desc' => __('', 'apc')));
-
-            $options_panel->addText('post_per_page', array('name' => __('Number of post to display ', 'apc'), 'std' => 10, 'desc' => __('', 'apc')));
+			$options_panel->addRadio('title_alignment', array('left' => 'Left',
+                'center' => 'Center','right'=>'Right'), array('name' => __('Title Alignment ?', 'apc'), 'std' => array('center'), 'desc' => __('', 'apc')));
+            $options_panel->addText('post_per_page', array('name' => __('Number of stories to display ?', 'apc'), 'std' => 10, 'desc' => __('', 'apc')));
 			$options_panel->addText('content_length', array('name' => __('Content Length ', 'apc'), 'std' => 50, 'desc' => __('', 'apc')));
 			//Image field
 		
-			$options_panel->addImage('user_avatar',array('name'=> __('Profile Image','apc'), 'desc' => __('','apc')));
+			$options_panel->addImage('user_avatar',array('name'=> __('Timeline default Image','apc'), 'desc' => __('','apc')));
 
           $options_panel->addRadio('desc_type', array('short' => 'Short (Default)',
               'full' => 'Full (with HTML)'), array('name' => __('Stories Description?', 'apc'), 'std' => array('short'), 'desc' => __('', 'apc')));
@@ -157,11 +159,6 @@ if (!class_exists('Cool_Timeline')) {
 			$options_panel->addRadio('posts_orders', array('DESC' => 'DESC',
                 'ASC' => 'ASC'), array('name' => __('Stories Order ?', 'apc'), 'std' => array('DESC'), 'desc' => __('', 'apc')));
 			
-			$options_panel->addRadio('disable_months', array('yes' => 'Yes',
-                'no' => 'no'), array('name' => __('Disable Stoires Months ?', 'apc'), 'std' => array('no'), 'desc' => __('', 'apc')));
-			
-			$options_panel->addRadio('title_alignment', array('left' => 'Left',
-                'center' => 'Center','right'=>'Right'), array('name' => __('Title Alignment ?', 'apc'), 'std' => array('center'), 'desc' => __('', 'apc')));
 			//select field
            
            
@@ -177,58 +174,67 @@ if (!class_exists('Cool_Timeline')) {
 			  $options_panel->addWysiwyg('no_posts',array('name'=> __('No Timeline Posts content','apc'), 'desc' => __('','apc')));
 			
 
-		   $options_panel->CloseTab();
+	$options_panel->CloseTab();
 
-            /**
+          /**
+           * Open admin page 2 tab
+           */
+   $options_panel->OpenTab('options_2');
+          $options_panel->Title(__("Style Settings", "apc"));
+          /**
+           * To Create a Conditional Block first create an array of fields (just like a repeater block
+           * use the same functions as above but add true as a last param
+           */
+          //   $Conditinal_fields[] = $options_panel->addText('con_text_field_id', array('name' => __('My Text ', 'apc')), true);
+          $Conditinal_fields[] =$options_panel->addColor('bg_color', array('name' => __('Background Color', 'apc')), true);
+
+
+          /**
+           * Then just add the fields to the repeater block
+           */
+          //conditinal block
+          $options_panel->addCondition('background', array(
+              'name' => __('Container Background ', 'apc'),
+              'desc' => __('', 'apc'),
+              'fields' => $Conditinal_fields,
+              'std' => false
+          ));
+
+          //Color field
+          $options_panel->addColor('content_bg_color',array('name'=> __('Story Background Color','apc'),'std'=>'#000000', 'desc' => __('','apc')));
+
+          $options_panel->addColor('circle_border_color',array('name'=> __('Circle Color','apc'),'std'=>'#000000', 'desc' => __('','apc')));
+
+          $options_panel->addColor('line_color',array('name'=> __('Line Color','apc'),'std'=>'#000000', 'desc' => __('','apc')));
+          //Color field
+          $options_panel->addColor('first_post',array('name'=> __('First Color','apc'),'std'=>'#000000', 'desc' => __('','apc')));
+          $options_panel->addColor('second_post',array('name'=> __('Second Color','apc'),'std'=>'#000000', 'desc' => __('','apc')));
+   $options_panel->CloseTab();
+
+
+          /**
              * Open admin page third tab
              */
-		$options_panel->OpenTab('options_3');
+   $options_panel->OpenTab('options_3');
 			
 			//title
             $options_panel->Title(__("Typography Settings", "apc"));
             $options_panel->addTypo('main_title_typo', array('name' => __("Main Title", "apc"), 'std' => array('size' => '14px', 'color' => '#000000', 'face' => 'arial', 'style' => 'normal'), 'desc' => __('', 'apc')));
-            $options_panel->addTypo('post_title_typo', array('name' => __("Post Title", "apc"), 'std' => array('size' => '14px', 'color' => '#000000', 'face' => 'arial', 'style' => 'normal'), 'desc' => __('', 'apc')));
+            $options_panel->addTypo('post_title_typo', array('name' => __("Story Title", "apc"), 'std' => array('size' => '14px', 'color' => '#000000', 'face' => 'arial', 'style' => 'normal'), 'desc' => __('', 'apc')));
+			
+				$options_panel->addRadio('post_title_text_style', array('lowercase' => 'Lowercase',
+                'uppercase' => 'Uppercase','capitalize'=>'Capitalize'), array('name' => __('Story Title Style ?', 'apc'), 'std' => array('capitalize'), 'desc' => __('', 'apc')));
+				
             $options_panel->addTypo('post_content_typo', array('name' => __("Post Content", "apc"), 'std' => array('size' => '14px', 'color' => '#000000', 'face' => 'arial', 'style' => 'normal'), 'desc' => __('', 'apc')));
-             $options_panel->CloseTab();
+           
+		
+	
+		   $options_panel->CloseTab();
 
+          $options_panel->OpenTab('options_4');
 
-            /**
-             * Open admin page third tab
-             */
-    $options_panel->OpenTab('options_2');
-            $options_panel->Title(__("Style Settings", "apc"));
-            /**
-             * To Create a Conditional Block first create an array of fields (just like a repeater block
-             * use the same functions as above but add true as a last param
-             */
-         //   $Conditinal_fields[] = $options_panel->addText('con_text_field_id', array('name' => __('My Text ', 'apc')), true);
-            $Conditinal_fields[] =$options_panel->addColor('bg_color', array('name' => __('Background Color', 'apc')), true);
-            $Conditinal_fields[] = $options_panel->addImage('bg_img', array('name' => __('Background Image', 'apc')), true);
-         
-            /**
-             * Then just add the fields to the repeater block
-             */
-            //conditinal block 
-            $options_panel->addCondition('background', array(
-                'name' => __('Container Background ', 'apc'),
-                'desc' => __('', 'apc'),
-                'fields' => $Conditinal_fields,
-                'std' => false
-            ));
-         
-           //Color field
-             $options_panel->addColor('content_bg_color',array('name'=> __('Post Background Color','apc'),'std'=>array('#000000'), 'desc' => __('','apc')));
-            
-       //     $options_panel->addColor('content_color',array('name'=> __('Content font color','apc'),'std'=>array('#000000'), 'desc' => __('','apc')));
-             
-            $options_panel->addColor('circle_border_color',array('name'=> __('Circle Color','apc'),'std'=>array('#000000'), 'desc' => __('','apc')));
-            
-            $options_panel->addColor('line_color',array('name'=> __('Line Color','apc'),'std'=>array('#000000'), 'desc' => __('','apc')));
-				//Color field
-            $options_panel->addColor('first_post',array('name'=> __('First Post','apc'),'std'=>array('#000'), 'desc' => __('','apc')));
-            $options_panel->addColor('second_post',array('name'=> __('Second Post','apc'),'std'=>array('#000'), 'desc' => __('','apc')));
-           // $options_panel->addColor('third_post',array('name'=> __('Third Post','apc'),'std'=>array('#000'), 'desc' => __('','apc')));
-			 
+         $options_panel->addParagraph(__('<div class="advance_options"><a target="_blank" href="https://codecanyon.net/item/cool-timeline-pro-wordpress-responsive-timeline-plugin/17046256?ref=CoolHappy"><img src="'.COOL_TIMELINE_PLUGIN_URL.'/images/timeline-pro-buy.png"></a></div>', "apc"));
+    $options_panel->CloseTab();
 		
 		
   //Now Just for the fun I'll add Help tabs

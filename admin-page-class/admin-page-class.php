@@ -208,7 +208,7 @@ if ( ! class_exists( 'BF_Admin_Page_Class') ) :
       //add hooks for export download
       add_action('template_redirect',array($this, 'admin_redirect_download_files'));
       add_filter('init', array($this,'add_query_var_vars'));
-      
+      add_action('admin_page_class_after_page',array($this,'ctl_add_section'));
       // If we are not in admin area exit.
       if ( ! is_admin() )
         return;
@@ -317,6 +317,9 @@ if ( ! class_exists( 'BF_Admin_Page_Class') ) :
     }
 
 
+    function ctl_add_section(){
+      return"<div>karandeep</div>";
+    }
     /**
      * Does all the complicated stuff to build the menu and its first page
      * 
@@ -650,6 +653,7 @@ if ( ! class_exists( 'BF_Admin_Page_Class') ) :
      * @access public
        * @since 0.1
      */
+
     public function panel_style(){
       //echo '<style></style>';
     }
@@ -776,13 +780,25 @@ if ( ! class_exists( 'BF_Admin_Page_Class') ) :
           <br><br>
         </div>'."\n".'
         <br style="clear:both"><br>
-
-      <h4>Please Give us Your support by <a  target="_blank" href="https://wordpress.org/plugins/cool-timeline/">voting for it.</a></h4>
-        <h5>If you have any idea to improve this plugin or any bug to report, please email me at : <a target="_top" href="mailto:narinder99143@gmail.com">narinder99143@gmail.com</a></h5>
       .</div>'."\n";
     echo '<input type="hidden" name="action" value="save" />'."\n";
     echo '</form>'."\n".'</div>'."\n".'
-    </div>'."\n";
+    </div>'.'<div class="ctl_right_section">
+    <div class="ctl_pro_logo"> <a target="_blank" href="http://www.cooltimeline.com">
+    <img src="' . COOL_TIMELINE_PLUGIN_URL . '/images/cool-timeline-pro.png"></a>
+    </div>
+    <hr>  
+    <div>
+	<h2 class="ctl_add_head">Leave A Review</h2>
+	<p>Please Give us Your support by providing <br> positive rating.</p>
+	<div><a target="_blank" href="https://wordpress.org/support/view/plugin-reviews/cool-timeline"><img src="' . COOL_TIMELINE_PLUGIN_URL . '/images/stars5.png"></a>
+	</div>
+   
+    <hr>
+    <div><h2 class="ctl_add_head">Upgrade to Pro version</h2>
+    <a target="_blank" href="http://www.cooltimeline.com">
+    <img src="' . COOL_TIMELINE_PLUGIN_URL . '/images/7-cool-timeline-demos.png"></a> <a target="_blank" href="https://codecanyon.net/item/cool-timeline-pro-wordpress-responsive-timeline-plugin/17046256?ref=CoolHappy"><img src="' . COOL_TIMELINE_PLUGIN_URL . '/images/6-buy-cool-timeline.png"></a></div>
+    </div>';
     do_action('admin_page_class_after_page');
     }
 
