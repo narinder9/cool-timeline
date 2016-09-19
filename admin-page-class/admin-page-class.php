@@ -208,7 +208,7 @@ if ( ! class_exists( 'BF_Admin_Page_Class') ) :
       //add hooks for export download
       add_action('template_redirect',array($this, 'admin_redirect_download_files'));
       add_filter('init', array($this,'add_query_var_vars'));
-      add_action('admin_page_class_after_page',array($this,'ctl_add_section'));
+
       // If we are not in admin area exit.
       if ( ! is_admin() )
         return;
@@ -315,11 +315,7 @@ if ( ! class_exists( 'BF_Admin_Page_Class') ) :
       add_action('wp_ajax_plupload_action', array( $this,"Handle_plupload_action"));
 
     }
-
-
-    function ctl_add_section(){
-      return"<div>karandeep</div>";
-    }
+    
     /**
      * Does all the complicated stuff to build the menu and its first page
      * 
@@ -793,7 +789,19 @@ if ( ! class_exists( 'BF_Admin_Page_Class') ) :
 	<p>Please Give us Your support by providing <br> positive rating.</p>
 	<div><a target="_blank" href="https://wordpress.org/support/view/plugin-reviews/cool-timeline"><img src="' . COOL_TIMELINE_PLUGIN_URL . '/images/stars5.png"></a>
 	</div>
-   
+   <h2 class="ctl_add_head">Cool Timeline PRO features</h2>
+<ul style="list-style:disc;margin: 2px 16px;">
+<li>Create multiple timeline stories</li>
+<li>Horizontal timeline</li>
+<li>Historical dates - (starting from 1000)</li>
+<li>Multiple timeline skins (light, dark & multicolor)</li>
+<li>Multiple Layouts (one side ,both side)</li>
+<li>Advanced style options</li>
+<li>Beautiful <strong>timeline</strong> scrolling navigation</li>
+<li>Add slider & video inside timeline</li>
+<li>Stories category management</li>
+<li>Add icons inside timeline</li>
+</ul>
     <hr>
     <div><h2 class="ctl_add_head">Upgrade to Pro version</h2>
     <a target="_blank" href="http://www.cooltimeline.com">

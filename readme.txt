@@ -1,60 +1,77 @@
 ﻿=== Cool Timeline ===
-Contributors:Narinder singh
+Contributors:CoolHappy
 Donate link: http://www.cooltimeline.com
-Tags:timeline,timeline plugin,wordpress timeline plugin, responsive timeline, cool  timeline pro, story timeline,company timeline,achievements,history, lifestream,biography ,simple timeline, Timeline for WordPress,timelines,history timeline,history, about us , our story , story, log, activity log, company timeline , awesome company timeline, your company  storyline, events  timeline, life achievements , personal  timeline.
+Tags:timeline plugin, cool timeline, timeline pro, express timeline, ultimate timeline, history timeline, achievements timeline, animated timeline, company timeline, biography, events timeline, life achievements, lifestream, log, our story, personal timeline, responsive timeline, simple timeline, story, story timeline, timeline, timeline for wordpress, timelines, wordPress timeline plugin, storyline, wp timeline
 Requires at least: 3.9
-Stable tag:1.1
-Tested up to: 4.5.3
+Stable tag:1.1.1
+Tested up to:4.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Cool Timeline plugin creates responsive vertical storyline automatically in chronological order based on the year and date of your posts.
+Cool Timeline plugin creates responsive vertical history timeline automatically in chronological order based on the year and date of your posts.
+
 
 == Description ==
-Cool Timeline is a responsive Wordpress Plugin that allows you to create beautiful vertical storyline. You simply create posts, set images and date then Cool Timeline will automatically populate these posts in chronological order, based on the year and date.
+Cool Timeline is a responsive WordPress pure HTML & CSS <strong>Timeline Plugin</strong> that allows you to create beautiful vertical <strong>history timeline</strong>. You simply create posts, set images and date then Cool Timeline will automatically populate these posts in chronological order, based on the year and date. You can easily show timeline on any page of your website using shorcode - <strong>[cool-timeline]</strong>
 
-Check Demo:- www.cooltimeline.com
 
-<strong>Features:</strong>
+<blockquote>
+Check <strong>Timeline</strong> Demo:- <a href="http://www.cooltimeline.com">http://www.cooltimeline.com</a>
+</blockquote>
+
+
+<h4>Cool Timeline Features</h4>
 <ul>
- 	<li>Specify Timeline Title.</li>
- 	<li>Specify the length to trim each story.</li>
- 	<li>Hide the read more button for each story.</li>
- 	<li>Add default content if no any story post.</li>
- 	<li>Specify Story background color.</li>
- 	<li>Specify Year circle color.</li>
- 	<li>You can specify different color for story posts title.</li>
- 	<li>Easy to use shortcode to place the cool timeline wherever your heart desires ( [cool-timeline] )</li>
- 	<li>TinyMCE button to generate the shortcode</li>
- 	<li>Responsive and mobile ready.</li>
+<li>Create histroy timeline</li>
+<li>Specify timeline title</li>
+<li>Specify story background custom colors</li>
+<li>Specify year circle custom color</li>
+<li>You can specify different colors for story posts title</li>
+<li>Show read more button for full story page</li>
+<li>Easy to use shortcode to place the cool timeline wherever your heart desires ( [cool-timeline] )</li>
+<li>TinyMCE button to generate the shortcode</li>
+<li>Responsive and mobile ready timeline</li>
 </ul>
-  <strong>Pro Features</strong>
-  <ul>
-   	<li>Create Multiple Timeline Stories</li>
-   	<li>Timeline Scrolling Navigation</li>
-   	<li>Historical Dates</li>
-   	<li>Stories Content Format</li>
-   	<li>Stories Category Management</li>
-   	<li>Advanced Style Options</li>
-   	<li>Story Single Page</li>
-   	<li>Animation Effects</li>
-   	<li>Stories Images in popup</li>
-   	<li>Stories Images Slideshow</li>
-   	<li>Related Stories</li>
-  </ul>
-  <p><a href="http://www.cooltimeline.com/#cool-demos">View demos</a></p>
 
-<strong>The plugin is used to create:- </strong>
+
+<blockquote>
+Cool timeline free version has many limitations so we created a pro version of this plugin - <strong>Cool Timeline Pro</strong>
+
+<h4>Cool Timeline Pro Features</h4>
 <ul>
- 	<li>Awesome Company Timeline</li>
- 	<li>Cool Timeline</li>
- 	<li>Program History</li>
- 	<li>Your Company Storyline</li>
- 	<li>Events Timeline</li>
- 	<li>Life Stories/Timeline</li>
- 	<li>Life Achievements</li>
- 	<li>Personal Timeline</li>
+<li>Create multiple timeline stories</li>
+<li>Historical dates - (starting from 1000)</li>
+<li>Multiple timeline skins (light, dark & multicolor)</li>
+<li>Create horizontal timeline</li>
+<li>Multiple Layouts (One side , both side).</li>
+<li>Add icons inside timeline</li>
+<li>Beautiful <strong>timeline</strong> scrolling navigation</li>
+<li>Add slider & video inside timeline</li>
+<li>Stories category management</li>
+<li>Story single page</li>
+<li>Cool animation effects</li>
+<li>Show stories in ASC/DESC order</li>
+<li>Advanced style options</li>
 </ul>
+</blockquote>
+
+<h4>Cool Timeline plugin can be used to create</h4>
+<ul>
+<li>Awesome Company Story Timeline</li>
+<li>Process Timeline</li>
+<li>Cool History Timeline</li>
+<li>Program History</li>
+<li>Your Company Storyline</li>
+<li>Events Timeline</li>
+<li>Life Stories/Timeline</li>
+<li>Life Achievements</li>
+<li>Personal Timeline</li>
+</ul>
+
+<blockquote>
+Buy Cool Timeline Pro:- <a href="https://codecanyon.net/item/cool-timeline-pro-wordpress-responsive-timeline-plugin/17046256?ref=CoolHappy">https://codecanyon.net/item/cool-timeline-pro-wordpress-responsive-timeline-plugin/17046256?ref=CoolHappy</a>
+</blockquote>
+
 
 == Installation ==
 *	Download the plugin .zip file
@@ -85,6 +102,9 @@ Cool Timeline express displays best on full width pages, but is not limited to t
 5. Cool timeline style settings section.
 
 == Changelog ==
+= 1.1.1 =
+* Fixed:Minor bug fixings.
+
 = 1.1 =
 * Enhancement:Responsive styles
 * Fixed:Read more priority issue
@@ -134,4 +154,3 @@ Cool Timeline express displays best on full width pages, but is not limited to t
 * updated icons.
 = 1.0 =
 * Initial Release.
-

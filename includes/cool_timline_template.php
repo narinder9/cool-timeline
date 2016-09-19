@@ -380,7 +380,7 @@ if (!class_exists('CoolTimeline_Template')) {
 			$selected_fonts = array_unique($selected_fonts);
 			// If it is a Google font, go ahead and call the function to enqueue it
 			foreach ( $selected_fonts as $font ) {
-				if ($font != 'inherit') {
+				if ($font) {
 			
 			// Certain Google fonts need slight tweaks in order to load properly
 			// Like our friend "Raleway"
