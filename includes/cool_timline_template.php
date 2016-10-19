@@ -14,7 +14,8 @@ if (!class_exists('CoolTimeline_Template')) {
 			add_action('wp_enqueue_scripts', array(&$this, 'ctl_custom_style'));
 			// Call actions and filters in after_setup_theme hook
 			add_action( 'after_setup_theme',array(&$this, 'ctl_custom_read_more') );
-			add_filter( 'excerpt_length',array(&$this,'ctl_custom_excerpt_length' ));
+
+			add_filter('excerpt_length', array(&$this, 'ctl_custom_excerpt_length'), 999);
         }
 		
 		function ctl_custom_read_more() {
@@ -30,7 +31,7 @@ if (!class_exists('CoolTimeline_Template')) {
 				  	return $more;
 				 }
 			}
-		   add_filter('excerpt_more', 'ctl_custom_excerpt_more');
+			add_filter('excerpt_more', 'ctl_custom_excerpt_more', 999);
 		}
 		function ctl_custom_excerpt_length( $length ) {
 			global $post;
@@ -168,7 +169,7 @@ if (!class_exists('CoolTimeline_Template')) {
 					   if($cont_size_cls=="full"){
 					$ctl_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'large');
 					}else{
-					$ctl_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'thumbnail');
+					$ctl_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'medium');
 					}
 			
                     $ctl_thumb_url = $ctl_thumb['0'];
@@ -191,7 +192,7 @@ if (!class_exists('CoolTimeline_Template')) {
 					   if($cont_size_cls=="full"){
 								$ctl_html.='<div class="full-width"><img  width="100%" class="events-object" src="'.$ctl_thumb_url.'"></div>';
 							}else{
-							$ctl_html.='<div class="pull-left"><img  class="events-object left_small" src="'.$ctl_thumb_url.'"></div>';
+							$ctl_html.='<div class="pull-left"><img  class="events-object img-responsive left_small" src="'.$ctl_thumb_url.'"></div>';
 							}
 						}
 					
@@ -282,8 +283,7 @@ if (!class_exists('CoolTimeline_Template')) {
 
 			$third_post_color=isset($ctl_options_arr['third_post'])?$ctl_options_arr['third_post']:"#a086d3";
 			$bg_color = $ctl_options_arr['background']['bg_color']?$ctl_options_arr['background']['bg_color']:'none';
-            $bg_img = $ctl_options_arr['background']['bg_img'];
-            $bg_img = $bg_img['src'] ? $bg_img['src'] : '';
+           
             $content_bg_color = isset($ctl_options_arr['content_bg_color'])?$ctl_options_arr['content_bg_color']:'#fff';
             $cont_border_color =isset( $ctl_options_arr['circle_border_color'])? $ctl_options_arr['circle_border_color']:'#414a54';
 			
@@ -294,7 +294,9 @@ if (!class_exists('CoolTimeline_Template')) {
 			$ctl_main_title_typo = $ctl_options_arr['main_title_typo'];
             $ctl_post_title_typo = $ctl_options_arr['post_title_typo'];
             $ctl_post_content_typo = $ctl_options_arr['post_content_typo'];
-
+			
+			$post_title_text_style = $ctl_options_arr['post_title_text_style'];
+ 
 			$events_body_f=$ctl_post_content_typo['face']?$ctl_post_content_typo['face']:'inherit';
 			$events_body_w=$ctl_post_content_typo['weight']?$ctl_post_content_typo['weight']:'inherit';
 			$events_body_s=$ctl_post_content_typo['size']?$ctl_post_content_typo['size']:'inherit';
@@ -306,15 +308,13 @@ if (!class_exists('CoolTimeline_Template')) {
 			$post_content_f=$ctl_post_content_typo['face']?$ctl_post_content_typo['face']:'inherit';
 			$post_content_w=$ctl_post_content_typo['weight']?$ctl_post_content_typo['weight']:'inherit';
 			$post_content_s=$ctl_post_content_typo['size']?$ctl_post_content_typo['size']:'inherit';
-
+			
 			//line_type = $ctl_options_arr['line_type'];
             $line_color =isset($ctl_options_arr['line_color'])?$ctl_options_arr['line_color']:'#414a54';
 			  $styles = '';
 
             if ($background_type == 'on') {
-                if ($bg_img) {
-                    $styles.='.cool_timeline{background-image:url("' . $bg_img . '")};';
-                }
+
                 $styles.='.cool_timeline{background-color:' . $bg_color . ';}';
             }
 				$styles .=' 
@@ -345,7 +345,8 @@ if (!class_exists('CoolTimeline_Template')) {
 			$styles .='.timeline dl dd .events .events-body{font-weight:' . $post_content_w.';'
 				. 'font-family:' . $post_content_f . ';font-size:' .$post_content_s. ';}';
 
-			$styles .='.timeline dl dd.even .events h4,.timeline dl dd.odd .events h4 {font-weight:' .$post_title_w. ';'
+			$styles .='.timeline dl dd.even .events h4,.timeline dl dd.odd .events h4 {
+					text-transform:'.$post_title_text_style.';font-weight:' .$post_title_w. ';'
 				. 'font-family:' . $post_title_f. ';font-size:' .$post_title_s. ';}';
 
 			$styles .='.timeline dl dt , .timeline dl dd.pos-right .time ,{font-weight:' .$events_body_w. ';'
@@ -379,7 +380,7 @@ if (!class_exists('CoolTimeline_Template')) {
 			$selected_fonts = array_unique($selected_fonts);
 			// If it is a Google font, go ahead and call the function to enqueue it
 			foreach ( $selected_fonts as $font ) {
-				if ($font) {
+				if ($font != 'inherit') {
 			
 			// Certain Google fonts need slight tweaks in order to load properly
 			// Like our friend "Raleway"

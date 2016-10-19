@@ -1,10 +1,10 @@
 ﻿=== Cool Timeline ===
 Contributors:Narinder singh
 Donate link: http://www.cooltimeline.com
-Tags:timelines, wp timeline,responsive timeline,timeline,time,simple timeline,timeline for wordpress ,timeline responsive,Lifestream,history,time,stage,life,achievements
+Tags:timeline,timeline plugin,wordpress timeline plugin, responsive timeline, cool  timeline pro, story timeline,company timeline,achievements,history, lifestream,biography ,simple timeline, Timeline for WordPress,timelines,history timeline,history, about us , our story , story, log, activity log, company timeline , awesome company timeline, your company  storyline, events  timeline, life achievements , personal  timeline.
 Requires at least: 3.9
-Stable tag:1.0.9
-Tested up to: 4.5
+Stable tag:1.1
+Tested up to: 4.5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,30 +15,46 @@ Cool Timeline is a responsive Wordpress Plugin that allows you to create beautif
 
 Check Demo:- www.cooltimeline.com
 
-Github:- https://github.com/narinder9/cool-timeline.git
+<strong>Features:</strong>
+<ul>
+ 	<li>Specify Timeline Title.</li>
+ 	<li>Specify the length to trim each story.</li>
+ 	<li>Hide the read more button for each story.</li>
+ 	<li>Add default content if no any story post.</li>
+ 	<li>Specify Story background color.</li>
+ 	<li>Specify Year circle color.</li>
+ 	<li>You can specify different color for story posts title.</li>
+ 	<li>Easy to use shortcode to place the cool timeline wherever your heart desires ( [cool-timeline] )</li>
+ 	<li>TinyMCE button to generate the shortcode</li>
+ 	<li>Responsive and mobile ready.</li>
+</ul>
+  <strong>Pro Features</strong>
+  <ul>
+   	<li>Create Multiple Timeline Stories</li>
+   	<li>Timeline Scrolling Navigation</li>
+   	<li>Historical Dates</li>
+   	<li>Stories Content Format</li>
+   	<li>Stories Category Management</li>
+   	<li>Advanced Style Options</li>
+   	<li>Story Single Page</li>
+   	<li>Animation Effects</li>
+   	<li>Stories Images in popup</li>
+   	<li>Stories Images Slideshow</li>
+   	<li>Related Stories</li>
+  </ul>
+  <p><a href="http://www.cooltimeline.com/#cool-demos">View demos</a></p>
 
-
-Features:
-
-*  	Specify Timeline Title.
-*  	Set the profile image .
-*	Specify the length to trim each story.
-*	Hide the read more button for each story.
-*	Add default content if no any story post.
-*	Background Image for Timeline area.
-*	Specify Story background color.
-*	Specify Year circle color.
-*	Specify Line color.
-*	You can specify different color for story posts title.
-*	Hundreds of google fonts included. Specify a different fonts for  title and content.
-*	Timeline Post Title Font Size and color.
-*	Set Post Content color and size.
-*	Specify an image size to display for each story e.g (Full,Small) .
-*	Easy to use shortcode to place the cool timeline wherever your heart desires ( [cool-timeline] )
-*	TinyMCE button to generate the shortcode
-*	Highly extensible.
-*	Responsive and mobile ready.
-
+<strong>The plugin is used to create:- </strong>
+<ul>
+ 	<li>Awesome Company Timeline</li>
+ 	<li>Cool Timeline</li>
+ 	<li>Program History</li>
+ 	<li>Your Company Storyline</li>
+ 	<li>Events Timeline</li>
+ 	<li>Life Stories/Timeline</li>
+ 	<li>Life Achievements</li>
+ 	<li>Personal Timeline</li>
+</ul>
 
 == Installation ==
 *	Download the plugin .zip file
@@ -69,6 +85,14 @@ Cool Timeline express displays best on full width pages, but is not limited to t
 5. Cool timeline style settings section.
 
 == Changelog ==
+= 1.1 =
+* Enhancement:Responsive styles
+* Fixed:Read more priority issue
+* Removed:background image options.
+* Fixed:Options panel color options default value issue.
+* Enhancement:Enhancement of all labels.
+* Fixed:Minor bug fixings.
+
 = 1.0.9 =
 * Removed:bootstrap.css styles.
 * Added:Independent styles.

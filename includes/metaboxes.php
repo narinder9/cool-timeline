@@ -12,7 +12,7 @@ function metaboxes_options_array()
 // Woo Metabox Options
 $ct_metaboxes = array();
 if( get_post_type() == 'cool_timeline' || !get_post_type() ){
-	$ptype=get_post_type();
+	    $ptype=get_post_type();
 
 //        $ct_metaboxes[] = array('name' => 'text',
 //            'label' => __('text', 'cool_timeline'),
@@ -31,11 +31,8 @@ if( get_post_type() == 'cool_timeline' || !get_post_type() ){
     }
 
 	if ( get_option('ct_metaboxes') != $ct_metaboxes) update_option('ct_metaboxes',$ct_metaboxes);   
-	
-	
- }
 
-
+}
 
 
 /**
@@ -54,7 +51,7 @@ function weothemes_metabox_add() {
             $custom_post_list = get_post_types();
 
             // Get the theme name for use in multiple meta boxes.
-            $theme_name = get_option('ct_themename');
+            $theme_name ='Cool Timeline';
 
             foreach ($custom_post_list as $type) {
 
@@ -71,11 +68,32 @@ function weothemes_metabox_add() {
                 $settings = apply_filters('weothemes_metabox_settings', $settings, $type, $settings['id']);
                 add_meta_box($settings['id'], $settings['title'], $settings['callback'], $settings['page'], $settings['priority'], $settings['callback_args']);
             }
+
+//add_meta_box('weo-side-settings',sprintf(__('%s Custom Settings', 'cool_timeline'),'ct_metabox_create','cool_timeline','side','low');
+			add_meta_box(
+				'ctl-pro-banner',
+				__( 'Support Cool Timeline','cool-timeline'),
+				'ctl_right_section',
+				'cool_timeline',
+				'side',
+				'low'
+			);
         }/* else {
           add_meta_box( 'weo-settings', sprintf( __( '%s Custom Settings', 'cool_timeline' ), $theme_name ), 'ct_metabox_create', 'post', 'normal' );
           add_meta_box( 'weo-settings', sprintf( __( '%s Custom Settings', 'cool_timeline' ), $theme_name ), 'ct_metabox_create', 'page', 'normal' );
           } */
     }
+}
+
+
+function ctl_right_section($post, $callback){
+	global $post;
+	$pro_add='<div>
+	<strong class="ctl_add_head">Leave A Review</strong>';
+	$pro_add .='<div><a target="_blank" href="https://wordpress.org/support/view/plugin-reviews/cool-timeline"><img src="'.COOL_TIMELINE_PLUGIN_URL.'/images/stars5.png"></a></div>';
+
+	$pro_add .='</div><hr><div><strong class="ctl_add_head">Upgrade to Pro version</strong><a target="_blank" href="http://www.cooltimeline.com"><img src="'.COOL_TIMELINE_PLUGIN_URL.'/images/7-cool-timeline-demos.png"></a> <a target="_blank" href="https://codecanyon.net/item/cool-timeline-pro-wordpress-responsive-timeline-plugin/17046256?ref=CoolHappy"><img src="'.COOL_TIMELINE_PLUGIN_URL.'/images/6-buy-cool-timeline.png"></a></div>';
+	echo $pro_add ;
 }
 
 // End cool_timeline_metabox_add()
