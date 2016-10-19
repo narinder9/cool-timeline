@@ -387,7 +387,7 @@ if (!class_exists('CoolTimeline_Template')) {
 			if ( $font == 'Raleway' )
 				$font = 'Raleway:100';
 			$font = str_replace(" ", "+", $font);
-			wp_enqueue_style( "ctl_gfonts$font", "http://fonts.googleapis.com/css?family=$font", false, null, 'all' );
+			wp_enqueue_style( "ctl_gfonts$font", "https://fonts.googleapis.com/css?family=$font", false, null, 'all' );
 			wp_enqueue_style( "ctl_default_fonts","https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800",false,null,'all');
 		
 			/*
