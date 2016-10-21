@@ -81,7 +81,7 @@ if (!class_exists('CoolTimeline_Template')) {
 			$ctl_no_posts= isset($ctl_options_arr['no_posts'])?$ctl_options_arr['no_posts']:"No timeline post found";
 			$ctl_content_length = $ctl_options_arr['content_length'];
 			$ctl_posts_orders = $ctl_options_arr['posts_orders']?$ctl_options_arr['posts_orders']:"DESC";
-			$disable_months = $ctl_options_arr['disable_months']?$ctl_options_arr['disable_months']:"no";
+			$disable_months =isset($ctl_options_arr['disable_months'])?$ctl_options_arr['disable_months']:"no";
 			$title_alignment = $ctl_options_arr['title_alignment']?$ctl_options_arr['title_alignment']:"center";
 		
 			//$ctl_posts_order='date';

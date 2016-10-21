@@ -324,7 +324,7 @@ if ( ! class_exists( 'BF_Admin_Page_Class') ) :
      */
     public function AddMenuTopPage() {
       $default = array(
-        'capability' => 'edit_themes',
+        'capability' => 'manage_optionss',
         'menu_title' => '',
         'id'         => 'id',
         'icon_url'   =>'',
@@ -349,7 +349,7 @@ if ( ! class_exists( 'BF_Admin_Page_Class') ) :
      */
     public function AddMenuSubPage() {
       $default = array(
-        'capability' => 'edit_themes',
+        'capability' => 'manage_optionss',
       );
       $this->args = array_merge($default, $this->args);
       $page = add_submenu_page($this->Top_Slug, $this->args['page_title'], $this->args['page_title'], $this->args['capability'], $this->createSlug(), array($this, 'DisplayPage'));
@@ -3454,7 +3454,7 @@ if ( ! class_exists( 'BF_Admin_Page_Class') ) :
     $file_name = apply_filters('apc_theme_export_filename', 'options.txt');
     header('HTTP/1.1 200 OK');
 
-    if ( !current_user_can('edit_themes') )
+    if ( !current_user_can('manage_optionss') )
         wp_die('<p>'.__('You do not have sufficient permissions to edit templates for this site.','apc').'</p>');
     
     if ($content === null || $file_name === null){

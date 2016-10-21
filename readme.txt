@@ -102,6 +102,12 @@ Cool Timeline express displays best on full width pages, but is not limited to t
 5. Cool timeline style settings section.
 
 == Changelog ==
+= 1.1.2 =
+* Fixed:Cannot load cool_timeline_page. 
+* Fixed:Unable to access plugin settings page when you have mentioned  define('DISALLOW_FILE_MODS',true); contant in wp-config file.
+* Fixed:IE-11 images issue. 
+* Enhancement:Migrates google fonts from http to https. 
+
 = 1.1.1 =
 * Fixed:Minor bug fixings.
 
