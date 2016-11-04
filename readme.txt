@@ -1,9 +1,9 @@
 ﻿=== Cool Timeline ===
-Contributors:CoolHappy
+Contributors:narinder-singh
 Donate link: http://www.cooltimeline.com
-Tags:timeline plugin, cool timeline, timeline pro, express timeline, ultimate timeline, history timeline, achievements timeline, animated timeline, company timeline, biography, events timeline, life achievements, lifestream, log, our story, personal timeline, responsive timeline, simple timeline, story, story timeline, timeline, timeline for wordpress, timelines, wordPress timeline plugin, storyline, wp timeline
+Tags:timeline plugin, cool timeline, timeline pro, timeline, ultimate timeline, history timeline, achievements timeline, animated timeline, company timeline, biography, events timeline, life achievements, lifestream, log, our story, personal timeline, responsive timeline, simple timeline, story, story timeline, timeline, timeline for wordpress, timelines, wordPress timeline plugin, storyline, wp timeline
 Requires at least: 3.9
-Stable tag:1.1.1
+Stable tag:1.1.3
 Tested up to:4.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -74,34 +74,41 @@ Buy Cool Timeline Pro:- <a href="https://codecanyon.net/item/cool-timeline-pro-w
 
 
 == Installation ==
-*	Download the plugin .zip file
-*	Login in to admin Click Plugins -> Add New -> Upload
-*	Find Cool Timeline  in plugin list  and activate it.
-*	After activate plugin you will see Timeline Posts menu at left side on WordPress dashboard,
-*	Click Add New to add story.
-*	Begin populating the timeline with stories. (Note: Story will appear in chronological order according to the story date)
-*	Once you have populated the timeline stories, head over to the settings page (Cool Timeline) to customize your timeline.
-*	Create a new page, and enter the shortcode [cool-timeline] to display the your timeline (Note:Cool  Timeline displays best on full width pages)
+
+There are 3 ways to install Cool Timeline inside your wordpress website.
+
+1. Automatically install our plugin via Wordpress admin panel:- Just go to Plugins > Click Add New & search 'Cool Timeline' at here > Here you will find our plugin > Now click on install button > After this you will see a activate button > Just activate it to use Cool Timeline inside your website
+
+2. Install via Zip file:- In this method first you need to download our plugin from wordpress plugins directory. Go to https://wordpress.org/plugins/cool-timeline/ & Download Cool Timeline. After this inside your WP-admin panel click on Plugins > Add New > Upload Button. Now choose the plugin zip file that you just downloaded from wordpress plugins directory & activate it.
+
+3. Install plugin via FTP:- In this method you also first need to download plugin zip file from wordpress plugins directory. After this open your FTP manager and Go to > wp-content/plugins folder. Here you need to upload extracted version of plugin.(please remember don't upload zip file directly at here) After this you can activate plugin from wp-admin panel plugins page.
 
 == Frequently Asked Questions ==
 
-= Is there some demo I can checkout? I want to see how the plugin appears on the front end of a WordPress site before I install it?. =
 
-You can check out the demo we have set up for users displaying  timeline.  www.cooltimeline.com.
+= Can I choose any historical date/year? =
+Year starts from 1970 in free version but in pro version you can choose any historical year from 1000 to 2050 for creating a story inside Cool Timeline.
 
-= How do I use this plugin? =
-Begin by simply installing the plugin. Once the plugin has been installed, go ahead and begin creating stories . You will find a new menu item just below Posts. After you have a find number of stories set up, you are ready to display the timeline on the front end of your site.
-Cool Timeline express displays best on full width pages, but is not limited to them. Create a new page, and drop the shortcode into the page - [cool-timeline]. Publish your page, and view it on the front end the see your new cool timeline!.
+= Can I see online demo? =
+
+Yes, Check free version demo at - http://free.cooltimeline.com
+For Pro demo please check - www.cooltimeline.com/#cool-demos
+
 
 == Screenshots ==
 1. Cool timeline frontend view.
 2. Cool timeline story elements.
 3. Cool timeline story creation screen with instructions.
-2. Cool timeline all stories list.
 4. Cool timeline general settings section.
-5. Cool timeline style settings section.
+5. Cool timeline PRO features.
+6. Cool timeline PRO Single Sided.
+7. Cool timeline PRO Horizontal view.
 
 == Changelog ==
+
+= 1.1.3 =
+* Enhancement: Plugin documentation, demo and screenshots.
+
 = 1.1.2 =
 * Fixed:Cannot load cool_timeline_page. 
 * Fixed:Unable to access plugin settings page when you have mentioned  define('DISALLOW_FILE_MODS',true); contant in wp-config file.

@@ -3,7 +3,7 @@
   Plugin Name:Cool Timeline 
   Plugin URI:http://www.cooltimeline.com
   Description: Cool Timeline is a responsive wordpress plugin that allows you to create beautiful verticle storyline. You simply create posts, set images and date then Cool Timeline will automatically populate these posts in chronological order, based on the year and date
-  Version:1.1.2
+  Version:1.1.3
   Author:narinder-singh
   Author URI:http://www.cooltimeline.com
   License: GPL2
@@ -27,7 +27,7 @@
  */
 /** Configuration * */
 if (!defined('COOL_TIMELINE_VERSION_CURRENT'))
-    define('COOL_TIMELINE_VERSION_CURRENT', '1.1.2');
+    define('COOL_TIMELINE_VERSION_CURRENT', '1.1.3');
      define('COOL_TIMELINE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
      define('COOL_TIMELINE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
  	 
@@ -72,7 +72,7 @@ if (!class_exists('Cool_Timeline')) {
 
        
 
-// END public static funct
+
         // Add the settings link to the plugins page
         function plugin_settings_link($links) {
             $settings_link = '<a href="options-general.php?page=cool_timeline_page">Settings</a>';
@@ -265,11 +265,10 @@ if (!class_exists('Cool_Timeline')) {
             add_filter( 'mce_buttons', array( &$this , 'ctl_add_tinymce_button' ) );
                  }
 
-         // inlcude the js for tinymce
+         
         public function ctl_add_tinymce_plugin( $plugin_array ) {
-            $plugin_array['cool_timeline'] = plugins_url( 'cool-timeline/includes/js/cooltimeline-button-script.js' );
-            // Print all plugin js path
-            // var_dump( $plugin_array );
+            $plugin_array['cool_timeline'] = plugins_url( 'cool-timeline/includes/js/clt-btn.js' );
+       
             return $plugin_array;
     }
 
