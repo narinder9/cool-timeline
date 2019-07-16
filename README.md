@@ -1,9 +1,6 @@
 <h1>Cool Timeline - WordPress #1 Timeline Plugin</h1>
 <p>Cool Timeline WordPress plugin creates vertical and horizontal history timeline blocks in ASC or DESC order based on year and date of stories.
 </p>
-<H3>Description</h3>
-
-### Cool Timeline - WordPress #1 Timeline Plugin
 
 **Cool Timeline** is a responsive WordPress pure HTML & CSS timeline plugin that allows you to create beautiful horizontal and vertical history timeline. You simply create posts, set images and date then Cool Timeline will automatically populate these posts in chronological order(ASC or DESC), based on the year and date of stories. You can easily show timeline on any page of your website using shortcode - [cool-timeline]
 
@@ -42,7 +39,7 @@ Cool Timeline (version 1.8+) now also provides instant timeline builder for Gute
 * TinyMCE button to generate the timeline shortcode or easily add shortcode on any page using **Gutenberg ready blocks**.
 * Responsive and mobile ready timeline.
 
-= Cool Timeline Pro Features =
+###Cool Timeline Pro Features###
 
 To make it more cool we have enhanced our plugin by adding many advanced design features in pro version - multiple design options, animation effects, advanced horizontal timeline support, create multiple timelines and more. Here you can check our pro features:-
  
@@ -119,7 +116,7 @@ To make it more cool we have enhanced our plugin by adding many advanced design 
         </li>
     </ul>
 
-= Where can you use Cool Timeline plugin? =
+###Where can you use Cool Timeline plugin?###
 
 You can show history/future stories, events, appointments and many other cool things using our **Cool Timeline** plugin. Here are all areas where you can use this plugin:-
  
@@ -135,9 +132,9 @@ We have tried our best to create an awesome **timeline plugin** but still if you
 
 > [Buy Cool Timeline Pro](https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcool-timeline-pro-wordpress-timeline-plugin%2F17046256) | [Check Timeline Pro Documentation](https://docs.coolplugins.net/doc/cool-timeline-pro/installation/)
 
-== Installation ==
+###  Installation ### 
 
-### 3 Ways To Install Cool Timeline
+ 3 Ways To Install Cool Timeline
 
 1. **Automatically install our plugin via WordPress admin panel**:- Open your WordPress website admin panel and go to Plugins > Click Add New & search '**Cool Timeline**' at here > Here you will find our plugin > Now click on install button > After this you will see a activate button > Just activate it to use Cool Timeline inside your website.
 2. **Install via Zip file**:- In this method first you need to download our plugin from wordpress plugins directory. Go to https://wordpress.org/plugins/cool-timeline/ & **Download Cool Timeline**. After this inside your WP-admin panel, click on Plugins > Add New > Upload Button. Now choose the plugin zip file that you just downloaded from wordpress plugins directory & activate it.
@@ -153,7 +150,7 @@ We have tried our best to create an awesome **timeline plugin** but still if you
 = Final Words! =
 If you are facing any difficulty in **Cool Timeline** plugin installation then you can contact our support at here - contact@coolplugins.net
 
-== Frequently Asked Questions ==
+### Frequently Asked Questions ###
 
 = How to install Cool Timeline plugin & create timeline? =
 Please check - [plugin installation guide](https://wordpress.org/plugins/cool-timeline/#installation) or [Cool Timeline Pro documentation](https://docs.coolplugins.net/doc/cool-timeline-pro/installation/)
@@ -234,19 +231,7 @@ function ctl_stories_readmore($read_more_text) {
 	return $read_more_text;
 }
 </pre>
-
-== Screenshots ==
-
-1. WordPress Timeline plugin frontend view.
-2. Cool Timeline story creation screen with instructions.
-3. Wordpress Cool Timeline general settings.
-5. Gutenberg Instant Timeline Builder Demo
-5. Cool Timeline PRO features.
-6. Cool Timeline PRO Single Sided.
-7. Cool Timeline PRO Horizontal view.
-8. Create any type of timeline using Cool timeline PRO .
-
-== Changelog ==
+###Changelog ###
 = Version 1.8 | June 27, 2019 =
 * Added: Integrated new Gutenberg based instant timeline builder
 
