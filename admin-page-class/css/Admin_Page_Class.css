@@ -16,6 +16,18 @@
 .at-file-upload-label{ clear: both; margin: 5px 0px 5px 1px; }  
 
 
+.wrap.ctl_left_section {
+    max-width: 66%;
+}
+.ctl_right_section {
+    max-width: 25%;
+}
+.ctl_left_section #tabs .panel_menu {
+    max-width: 25%;
+}
+.ctl_left_section #tabs .sections {
+    max-width: 75%;
+}
 /* =Form Fields
 ----------------------------------------------- */
 .postbox .at-field input,
@@ -65,10 +77,14 @@ font-size:11px;
 
 /* =panel style
 ----------------------------------------------- */
-.wrap{background: none repeat scroll 0 0 #EAEEF3;border: 1px solid #CCCCCC; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); margin: 17px 0 40px 10px;width: 800px;border-radius: 6px 6px 6px 6px;}
+.wrap{/*background: none repeat scroll 0 0 #EAEEF3;border: 1px solid #CCCCCC; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+*/
+ width: 800px; /*border-radius: 6px 6px 6px 6px;*/}
 .header_wrap{border-radius: 6px 6px 6px 6px;background: -moz-linear-gradient(center top , #FEFEFE, #E9EAEE) repeat scroll 0 0 transparent;  padding: 5px 20px 10px;}
 .footer_wrap{border-radius: 6px 6px 6px 6px;background: -moz-linear-gradient(center top , #E9EAEE,#FEFEFE) repeat scroll 0 0 transparent;  padding: 5px 20px 10px;}
 .panel_menu{float: left;width: 160px;}
+.panel_menu ul{margin:0;margin-top:1px;}
+.setingstab h2{ margin-left:10px; }
 .clearboth{clear: both;}
 .f_row{border-bottom: 1px solid #F9F9F9;}
 .sections{background: none repeat scroll 0 0 #FFFFFF;float: left;margin-top: 1px;min-height: 520px;padding-bottom: 10px;width: 639px;}

@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cool Timeline\n"
+"POT-Creation-Date: 2017-01-11 09:48+0000\n"
+"PO-Revision-Date: 2017-01-12 05:26+0000\n"
+"Last-Translator: admin <satinder.abc@gmail.com>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: cooltimeline.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Report-Msgid-Bugs-To: \n"
+"Language: de-DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1"
+
+#: fa-icons/fa-icons-class.php:159
+msgid "Add Icon"
+msgstr "Symbol hinzufügen"
+
+#: includes/cool_timline_template.php:316
+msgid "Sorry,You have not added any story yet"
+msgstr "Sie haben noch keine Geschichte hinzugefügt"
+
+#: includes/cool_timline_template.php:332
+#, php-format
+msgid "<%s class=\"timeline-main-title center-block\">%s</%s>"
+msgstr "<%s class=\"timeline-main-title center-block\">%s</%s>"
+
+#: includes/ctl-helper-functions.php:191
+msgid " of "
+msgstr " of "
+
+#: includes/ctl-helper-functions.php:193
+msgid " Page "
+msgstr " Page "
+
+#. Author of the plugin
+msgid "narinder-singh"
+msgstr "narinder-singh"
+
+#: fa-icons/fa-icons-class.php:82
+msgid "Select Font Awesome Icon"
+msgstr "Schriftart auswählen Super Icon"
+
+#: fa-icons/fa-icons-class.php:136
+msgid "Select Story Icon"
+msgstr "Wählen Geschichte Icon"
+
+#: includes/cool_timeline_posttype.php:23
+msgctxt "Post Type General Name"
+msgid "Timeline Stories"
+msgstr "Zeitgeschichte"
+
+#: includes/cool_timeline_posttype.php:24
+msgctxt "Post Type Singular Name"
+msgid "Timeline Stories"
+msgstr "Zeitgeschichte"
+
+#: includes/cool_timeline_posttype.php:25
+#: includes/cool_timeline_posttype.php:26
+msgid "Timeline Stories"
+msgstr "Zeitgeschichte"
+
+#: includes/cool_timeline_posttype.php:27
+msgid "Parent Item:"
+msgstr "Übergeordnetes Element:"
+
+#: includes/cool_timeline_posttype.php:28
+msgid "All Stories"
+msgstr "Alle Geschichten"
+
+#: includes/cool_timeline_posttype.php:29
+msgid "Add New Story"
+msgstr "Neue Geschichte hinzufügen"
+
+#: includes/cool_timeline_posttype.php:30
+msgid "Add New"
+msgstr "Neue hinzufügen"
+
+#: includes/cool_timeline_posttype.php:31
+msgid "New Story"
+msgstr "Neue Geschichte"
+
+#: includes/cool_timeline_posttype.php:32
+msgid "Edit Story"
+msgstr "Geschichte bearbeiten"
+
+#: includes/cool_timeline_posttype.php:33
+msgid "Update Story"
+msgstr "Update Geschichte"
+
+#: includes/cool_timeline_posttype.php:34
+msgid "View Story"
+msgstr "Sehen Sie Geschichte"
+
+#: includes/cool_timeline_posttype.php:35
+msgid "Search Story"
+msgstr "Suche Story"
+
+#: includes/cool_timeline_posttype.php:36
+msgid "Not found"
+msgstr "Nicht gefunden"
+
+#: includes/cool_timeline_posttype.php:37
+msgid "Not found in Trash"
+msgstr "Nicht gefunden im Papierkorb"
+
+#: includes/cool_timeline_posttype.php:40
+msgid "cool_timeline"
+msgstr "Cool_timeline"
+
+#: includes/cool_timeline_posttype.php:41
+msgid "Timeline Post Type Description"
+msgstr "Zeitleisten-Posttyp Beschreibung"
+
+#: includes/cool_timline_template.php:28
+msgid "Read More"
+msgstr "Weiterlesen"
+
+#: includes/cool_timline_template.php:134
+#: includes/cool_timline_template.php:136
+msgid "d/M/Y"
+msgstr "D / M / Y"
+
+#: includes/metaboxes.php:75
+msgid "Support Cool Timeline"
+msgstr "Unterstützung Cool Timeline"
+
+#. Plugin Name of the plugin/theme
+msgid "Cool Timeline"
+msgstr "Cool Zeitleiste"
+
+#. Description of the plugin/theme
+msgid ""
+"Cool Timeline is a responsive wordpress plugin that allows you to create "
+"beautiful verticle storyline. You simply create posts, set images and date "
+"then Cool Timeline will automatically populate these posts in chronological "
+"order, based on the year and date"
+msgstr ""
+"Cool Timeline ist ein reaktionsschnelles WordPress-Plugin, mit dem Sie "
+"schöne verticle storyline erstellen können. Sie erstellen einfach Beiträge, "
+"stellen Bilder und Datum dann Cool Timeline wird automatisch diese Beiträge "
+"in chronologischer Reihenfolge, basierend auf dem Jahr und Datum"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://www.cooltimeline.com"
+msgstr "http://www.cooltimeline.com"

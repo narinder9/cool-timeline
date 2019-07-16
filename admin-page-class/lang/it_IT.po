@@ -1,0 +1,465 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cool Timeline\n"
+"POT-Creation-Date: 2016-08-05 12:25+0530\n"
+"PO-Revision-Date: 2017-01-11 05:52+0000\n"
+"Last-Translator: admin <satinder.abc@gmail.com>\n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: cooltimeline.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Report-Msgid-Bugs-To: \n"
+"Language: it-IT\n"
+"Plural-Forms: nplurals=2; plural=n != 1"
+
+#: admin-page-class/admin-page-class.php:403
+msgid "Allowed Files"
+msgstr "ammessi Files"
+
+#: admin-page-class/admin-page-class.php:640
+#: admin-page-class/admin-page-class.php:642
+msgid "Insert into Post"
+msgstr "Inserire nel post"
+
+#: admin-page-class/admin-page-class.php:640
+msgid "Use this File"
+msgstr "Utilizzare questo file"
+
+#: admin-page-class/admin-page-class.php:642
+msgid "Use this Image"
+msgstr "Utilizzare questa immagine"
+
+#: admin-page-class/admin-page-class.php:676
+#: admin-page-class/admin-page-class.php:775
+msgid "Save Changes"
+msgstr "Salva I Cambiamenti"
+
+#: admin-page-class/admin-page-class.php:689
+msgid "Settings saved."
+msgstr "Impostazioni salvate."
+
+#: admin-page-class/admin-page-class.php:1166
+msgid "Delete this image"
+msgstr "Elimina questa immagine"
+
+#: admin-page-class/admin-page-class.php:1166
+#: admin-page-class/admin-page-class.php:1865
+msgid "Delete"
+msgstr "cancellare"
+
+#: admin-page-class/admin-page-class.php:1261
+msgid "Cannot delete file. Something's wrong."
+msgstr "Impossibile eliminare il file. Qualcosa è sbagliato."
+
+#: admin-page-class/admin-page-class.php:1466
+#: admin-page-class/admin-page-class.php:1511
+msgid "Remove"
+msgstr "Rimuovere"
+
+#: admin-page-class/admin-page-class.php:1478
+msgid "Add"
+msgstr "Aggiungere"
+
+#: admin-page-class/admin-page-class.php:1652
+msgid "Select Files"
+msgstr "Seleziona file"
+
+#: admin-page-class/admin-page-class.php:1861
+msgid "Uploaded files"
+msgstr "file caricati"
+
+#: admin-page-class/admin-page-class.php:1872
+msgid "Upload new files"
+msgstr "Caricare nuovi file"
+
+#: admin-page-class/admin-page-class.php:1878
+msgid "Add more files"
+msgstr "Aggiungere altri file"
+
+#: admin-page-class/admin-page-class.php:1898
+#: admin-page-class/admin-page-class.php:1931
+msgid "Delete Image"
+msgstr "Elimina Immagine"
+
+#: admin-page-class/admin-page-class.php:1903
+#: admin-page-class/admin-page-class.php:1936
+msgid "Upload Image"
+msgstr "Carica immagine"
+
+#: admin-page-class/admin-page-class.php:2087
+msgid "Select a color"
+msgstr "Selezionare un colore"
+
+#: admin-page-class/admin-page-class.php:3340
+msgid "Export"
+msgstr "Esportare"
+
+#: admin-page-class/admin-page-class.php:3341
+msgid ""
+"To export saved settings click the Export button bellow and you will get the "
+"export Code in the box bellow, which you can later use to import."
+msgstr ""
+"Per esportare le impostazioni salvate fare clic sul pulsante Esporta "
+"soffietto e si otterrà il codice di esportazione nel soffietto scatola, che "
+"in seguito sarà possibile utilizzare per importare."
+
+#: admin-page-class/admin-page-class.php:3343
+msgid "Export Code"
+msgstr "Code Export"
+
+#: admin-page-class/admin-page-class.php:3345
+msgid "Get Export"
+msgstr "Get Export"
+
+#: admin-page-class/admin-page-class.php:3350
+#: admin-page-class/admin-page-class.php:3355
+msgid "Import"
+msgstr "Importare"
+
+#: admin-page-class/admin-page-class.php:3351
+msgid ""
+"To Import saved settings paste the Export output in to the Import Code box "
+"bellow and click Import."
+msgstr ""
+"Per l'importazione salvate le impostazioni di incollare l'uscita Esporta al "
+"box qui sotto Codice importare e fare clic su Importa."
+
+#: admin-page-class/admin-page-class.php:3353
+msgid "Import Code"
+msgstr "Codice Import"
+
+#: admin-page-class/admin-page-class.php:3380
+msgid "error in ajax request! (1)"
+msgstr "errore nella richiesta AJAX! (1)"
+
+#: admin-page-class/admin-page-class.php:3390
+msgid "error in ajax request! (2)"
+msgstr "errore nella richiesta AJAX! (2)"
+
+#: admin-page-class/admin-page-class.php:3411
+msgid "error in ajax request! (3)"
+msgstr "errore nella richiesta AJAX! (3)"
+
+#: admin-page-class/admin-page-class.php:3423
+msgid "Setting imported, make sure you "
+msgstr "Impostazione importato, assicuratevi"
+
+#: admin-page-class/admin-page-class.php:3423
+msgid "Refresh this page"
+msgstr "Aggiorna la pagina"
+
+#: admin-page-class/admin-page-class.php:3425
+msgid "Could not import settings! (4)"
+msgstr "Impossibile importare le impostazioni! (4)"
+
+#: admin-page-class/admin-page-class.php:3446
+msgid "You do not have sufficient permissions to edit templates for this site."
+msgstr ""
+"Non si dispone di autorizzazioni sufficienti per modificare i modelli di "
+"questo sito."
+
+#: admin-page-class/admin-page-class.php:3449
+msgid "Error Downloading file."
+msgstr "Errore file di download."
+
+#: admin-page-class/admin-page-class.php:3471
+#: admin-page-class/admin-page-class.php:3474
+msgid "Download Export"
+msgstr "Scarica Export"
+
+#: admin-page-class/admin-page-class.php:3541
+msgid "Not Valid "
+msgstr "Non valido"
+
+#: admin-page-class/admin-page-class.php:3559
+msgid "Errors in saving changes"
+msgstr "Errori nella salvando le modifiche"
+
+#: admin-page-class/admin-page-class.php:3584
+msgid "Unkown Error"
+msgstr "Errore sconosciuto"
+
+#. Plugin Name of the plugin/theme
+#: cooltimeline.php:92
+msgid "Cool Timeline"
+msgstr "raffreddare Timeline"
+
+#: cooltimeline.php:112 cooltimeline.php:132
+msgid "General Settings"
+msgstr "Impostazioni generali"
+
+#: cooltimeline.php:113 cooltimeline.php:183
+msgid "Style Settings"
+msgstr "Regolazioni"
+
+#: cooltimeline.php:114 cooltimeline.php:221
+msgid "Typography Settings"
+msgstr "impostazioni tipografiche"
+
+#: cooltimeline.php:115
+msgid "Advance Settings"
+msgstr "Impostazioni avanzate"
+
+#: cooltimeline.php:136
+msgid "Timeline Title (Default)  "
+msgstr "Timeline Titolo (Default)"
+
+#: cooltimeline.php:144
+msgid "Title Heading Tag "
+msgstr "Titolo Tag"
+
+#: cooltimeline.php:146
+msgid "Title Alignment ?"
+msgstr "Titolo allineamento?"
+
+#: cooltimeline.php:147
+msgid "Number of stories to display ?"
+msgstr "Numero di storie da visualizzare?"
+
+#: cooltimeline.php:148
+msgid "Content Length "
+msgstr "contenuto Lunghezza"
+
+#: cooltimeline.php:151
+msgid "Timeline default Image"
+msgstr "Timeline di default Immagine"
+
+#: cooltimeline.php:154
+msgid "Stories Description?"
+msgstr "Storie Descrizione?"
+
+#: cooltimeline.php:157
+msgid "Display read more ?"
+msgstr "Mostra maggiori informazioni?"
+
+#: cooltimeline.php:160
+msgid "Stories Order ?"
+msgstr "Storie ordine?"
+
+#: cooltimeline.php:174
+msgid "No Timeline Posts content"
+msgstr "Nessun contenuto Timeline Messaggi"
+
+#: cooltimeline.php:189
+msgid "Background Color"
+msgstr "Colore di sfondo"
+
+#: cooltimeline.php:197
+msgid "Container Background "
+msgstr "contenitore di sfondo"
+
+#: cooltimeline.php:204
+msgid "Story Background Color"
+msgstr "Story colore di sfondo"
+
+#: cooltimeline.php:206
+msgid "Circle Color"
+msgstr "cerchio di colore"
+
+#: cooltimeline.php:208
+msgid "Line Color"
+msgstr "Color Line"
+
+#: cooltimeline.php:210
+msgid "First Color"
+msgstr "Prima colori"
+
+#: cooltimeline.php:211
+msgid "Second Color"
+msgstr "secondo colore"
+
+#: cooltimeline.php:222
+msgid "Main Title"
+msgstr "Titolo principale"
+
+#: cooltimeline.php:223
+msgid "Story Title"
+msgstr "Story Titolo"
+
+#: cooltimeline.php:226
+msgid "Story Title Style ?"
+msgstr "Story Titolo Style?"
+
+#: cooltimeline.php:228
+msgid "Post Content"
+msgstr "Messaggio Content"
+
+#: cooltimeline.php:236
+msgid ""
+"<div class=\"advance_options\"><a target=\"_blank\" href=\"https:"
+"//codecanyon.net/item/cool-timeline-pro-wordpress-responsive-timeline-"
+"plugin/17046256?ref=CoolHappy\"><img src=\""
+msgstr ""
+
+#: cooltimeline.php:243
+msgid "My help tab title"
+msgstr "Il mio titolo scheda Guida"
+
+#: cooltimeline.php:244
+msgid "This is my Help Tab content"
+msgstr "Questa è la mia scheda contenuto Aiuto"
+
+#: cooltimeline.php:248
+msgid "My 2nd help tab title"
+msgstr "Il mio 2 ° aiuto titolo della scheda"
+
+#: cooltimeline.php:254
+msgid "This is my 2nd Help Tab content from a callback function"
+msgstr ""
+"Questo è il mio secondo Nella scheda contenuto della Guida da una funzione "
+"di callback"
+
+#: includes/cool_timeline_posttype.php:23
+msgctxt "Post Type General Name"
+msgid "Timeline Stories"
+msgstr "Storie Timeline"
+
+#: includes/cool_timeline_posttype.php:24
+msgctxt "Post Type Singular Name"
+msgid "Timeline Stories"
+msgstr "Storie Timeline"
+
+#: includes/cool_timeline_posttype.php:25
+#: includes/cool_timeline_posttype.php:26
+msgid "Timeline Stories"
+msgstr "Storie Timeline"
+
+#: includes/cool_timeline_posttype.php:27
+msgid "Parent Item:"
+msgstr "Articolo principale:"
+
+#: includes/cool_timeline_posttype.php:28
+msgid "All Stories"
+msgstr "tutte le storie"
+
+#: includes/cool_timeline_posttype.php:29
+msgid "Add New Story"
+msgstr "Add New Story"
+
+#: includes/cool_timeline_posttype.php:30
+msgid "Add New"
+msgstr "Aggiungere nuova"
+
+#: includes/cool_timeline_posttype.php:31
+msgid "New Story"
+msgstr "Nuova storia"
+
+#: includes/cool_timeline_posttype.php:32
+msgid "Edit Story"
+msgstr "Modifica brano"
+
+#: includes/cool_timeline_posttype.php:33
+msgid "Update Story"
+msgstr "Aggiornamento Story"
+
+#: includes/cool_timeline_posttype.php:34
+msgid "View Story"
+msgstr "Vedi storia"
+
+#: includes/cool_timeline_posttype.php:35
+msgid "Search Story"
+msgstr "Search Story"
+
+#: includes/cool_timeline_posttype.php:36
+msgid "Not found"
+msgstr "Non trovato"
+
+#: includes/cool_timeline_posttype.php:37
+msgid "Not found in Trash"
+msgstr "Non trovato nel Cestino"
+
+#: includes/cool_timeline_posttype.php:40
+msgid "cool_timeline"
+msgstr "cool_timeline"
+
+#: includes/cool_timeline_posttype.php:41
+msgid "Timeline Post Type Description"
+msgstr "Timeline Messaggio Tipo Descrizione"
+
+#: includes/cool_timeline_posttype.php:64
+msgid "Images"
+msgstr "immagini"
+
+#: includes/cool_timeline_posttype.php:65
+msgctxt "column name"
+msgid "Title"
+msgstr "Titolo"
+
+#: includes/cool_timeline_posttype.php:66
+msgid "Year"
+msgstr "Anno"
+
+#: includes/cool_timeline_posttype.php:67
+msgctxt "column name"
+msgid "Date"
+msgstr "Data"
+
+#: includes/cool_timeline_posttype.php:69
+msgctxt "column name"
+msgid "Content"
+msgstr "contenuto"
+
+#: includes/cool_timline_template.php:28
+msgid "Read More"
+msgstr "Leggi di più"
+
+#: includes/cool_timline_template.php:102
+msgid "d/M/Y"
+msgstr "d / M / Y"
+
+#: includes/cool_timline_template.php:167
+msgid "M d"
+msgstr "M d"
+
+#: includes/metaboxes.php:23
+msgid "default"
+msgstr "predefinito"
+
+#: includes/metaboxes.php:24
+msgid "Image Size"
+msgstr "Dimensione dell'immagine"
+
+#: includes/metaboxes.php:26
+msgid "You can update these size from admin plugin option panel"
+msgstr ""
+"È possibile aggiornare queste dimensioni dal pannello di opzione plug-in di "
+"amministrazione"
+
+#: includes/metaboxes.php:60
+#, php-format
+msgid "%s Custom Settings"
+msgstr "% s Impostazioni personalizzate"
+
+#: includes/metaboxes.php:75
+msgid "Support Cool Timeline"
+msgstr "Supporto fresco Timeline"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://www.cooltimeline.com"
+msgstr "http://www.cooltimeline.com"
+
+#. Description of the plugin/theme
+msgid ""
+"Cool Timeline is a responsive wordpress plugin that allows you to create "
+"beautiful verticle storyline. You simply create posts, set images and date "
+"then Cool Timeline will automatically populate these posts in chronological "
+"order, based on the year and date"
+msgstr ""
+"Raffreddare Timeline è un plugin per WordPress reattivo che permette di "
+"creare bella verticle trama. È sufficiente creare i messaggi, le immagini "
+"fissi e data poi raffreddare Timeline popolerà automaticamente questi "
+"messaggi in ordine cronologico, in base all'anno e la data"
+
+#. Author of the plugin/theme
+msgid "Narinder singh"
+msgstr "Narinder singh"

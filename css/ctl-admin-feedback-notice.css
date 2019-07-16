@@ -1,0 +1,28 @@
+.cool-feedback-notice-wrapper.notice.notice-info.is-dismissible {
+    padding: 5px 0px;
+    display: inline-block;
+    width: 100%;
+}
+.cool-feedback-notice-wrapper .logo_container {
+    width:100px;
+    display:inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+}
+.cool-feedback-notice-wrapper .logo_container img {
+    width:100%;
+    height:auto;
+}
+.cool-feedback-notice-wrapper .message_container {
+    width: calc(100% - 140px);
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+}
+.cool-feedback-notice-wrapper ul li {
+    float: left;
+    margin: 0px 5px;
+}
+.clrfix{
+    clear:both;
+}
