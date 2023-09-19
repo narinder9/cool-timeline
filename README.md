@@ -11,6 +11,7 @@ It is really important to let your audience know about the **history** of your *
 - **Timeline Block For Gutenberg [Free]** - [View Demo](https://cooltimeline.com/demo/gutenberg-timeline-block/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=tbg_demo)
 - 
 [Watch Demo Video](https://youtu.be/GElgo91RAmE)
+
 [Watch Video on YouTube](https://www.youtube.com/watch?v=QkjCEnz2RoQ)
 
 **Cool Timeline** is a powerful WordPress plugin that enables you to create visually striking and informative timelines. It is built with pure HTML and CSS for maximum compatibility and offers both horizontal and vertical layout options.
@@ -53,6 +54,7 @@ You can show history/future stories, events, appointments, and many other cool t
 - Telling a **brand's story** through a timeline format.
 - Showcasing a project or **company's roadmap**.
 We have tried our best to create an awesome **timeline plugin** but still, if you face any installation, coding, or design error, you can [contact us](mailto:contact@coolplugins.net) anytime. Also, remember to try our Cool Timeline Pro version for extra cool features and design options.
+test
 
 
 
