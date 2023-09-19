@@ -12,6 +12,7 @@ It is really important to let your audience know about the **history** of your *
 - 
 [Watch Demo Video](https://youtu.be/GElgo91RAmE)
 [Watch Video on YouTube](https://www.youtube.com/watch?v=QkjCEnz2RoQ)
+
 **Cool Timeline** is a powerful WordPress plugin that enables you to create visually striking and informative timelines. It is built with pure HTML and CSS for maximum compatibility and offers both horizontal and vertical layout options.
 Creating a timeline is straightforward and intuitive: simply create posts, set images, and assign dates. The plugin will automatically organize your posts in chronological order, whether you prefer ascending or descending.
 With the simple shortcode [cool-timeline], you can easily display a timeline on any page of your website. The plugin is also fully responsive, ensuring that your timelines look great on any device.
