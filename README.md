@@ -9,13 +9,13 @@ It is really important to let your audience know about the **history** of your *
 - **Timeline Widget For Elementor PRO [PRO]** - [View Demo](https://cooltimeline.com/demo/elementor-timeline/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=twea_pro_demo)
 - **Timeline Builder PRO [PRO]** - [View Demo](https://cooltimeline.com/demo/timeline-builder-pro/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=tbp_view_demo)
 - **Timeline Block For Gutenberg [Free]** - [View Demo](https://cooltimeline.com/demo/gutenberg-timeline-block/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=tbg_demo)
+- 
 [Watch Demo Video](https://youtu.be/GElgo91RAmE)
 [Watch Video on YouTube](https://www.youtube.com/watch?v=QkjCEnz2RoQ)
-### Features Of Cool Timeline
 **Cool Timeline** is a powerful WordPress plugin that enables you to create visually striking and informative timelines. It is built with pure HTML and CSS for maximum compatibility and offers both horizontal and vertical layout options.
 Creating a timeline is straightforward and intuitive: simply create posts, set images, and assign dates. The plugin will automatically organize your posts in chronological order, whether you prefer ascending or descending.
 With the simple shortcode [cool-timeline], you can easily display a timeline on any page of your website. The plugin is also fully responsive, ensuring that your timelines look great on any device.
-## Cool Timeline Shortcode
+
 Use the following shortcode to create a timeline:
 - **Gutenberg Timeline Block:** An advanced **Timeline Block for Gutenberg**, which allows you to easily create elegant timelines using pre-made presets. With this block, you can create any type of timeline, from roadmaps to process steps and events, opening up endless possibilities for showcasing your content in a visually compelling way.
 
@@ -32,10 +32,10 @@ Use the following shortcode to create a timeline:
 - A read more button for linking to the full story page.
 - The ability to sort stories in either ascending or descending order.
 - Easy to use shortcode to place the cool timeline wherever your heart desires - [cool-timeline].
-- The plugin is Translation ready and has already been translated into 4 languages - German, French, Indonesian, and Italian.
+- The plugin is Translation-ready and has already been translated into 4 languages - German, French, Indonesian, and Italian.
 - TinyMCE button to generate the timeline shortcode or easily add the shortcode on any page using **Gutenberg ready blocks**.
 - Responsive and mobile-ready timeline.
-- 
+
 ## Where can you use the Cool Timeline plugin?
 You can show history/future stories, events, appointments, and many other cool things using our **Cool Timeline** plugin. Here are all areas where you can use this plugin:
 - Highlight your company's achievements and significant milestones.
@@ -51,7 +51,6 @@ You can show history/future stories, events, appointments, and many other cool t
 - Developing a product **roadmap**.
 - Telling a **brand's story** through a timeline format.
 - Showcasing a project or **company's roadmap**.
-- 
 We have tried our best to create an awesome **timeline plugin** but still, if you face any installation, coding, or design error, you can [contact us](mailto:contact@coolplugins.net) anytime. Also, remember to try our Cool Timeline Pro version for extra cool features and design options.
 
 
