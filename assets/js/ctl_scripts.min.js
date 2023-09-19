@@ -1,0 +1,1 @@
+jQuery("document").ready((function($){$(".cooltimeline_cont").each((function(index){var animations;"none"!=$(this).attr("data-animations")&&AOS.init({disable:"mobile",startEvent:"DOMContentLoaded",offset:75,delay:0,duration:750,easing:"ease-in-out-sine",mirror:!0})}))}));

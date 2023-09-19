@@ -1,0 +1,72 @@
+.ctl-feedback-notice-wrapper.notice.notice-info.is-dismissible,
+.ctl-elementor-addon-notice_admin_notice {
+  padding: 5px;
+  display: table;
+  width: calc(100% - 10px);
+  max-width: 870px;
+  clear: both;
+  border-radius: 5px;
+  border: 2px solid #b7bfc7;
+  box-sizing: border-box;
+  /* margin: 5px; */
+}
+
+.ctl-feedback-notice-wrapper .logo_container,
+.ctl-simple-notice .logo_container {
+  width: 80px;
+  display: table-cell;
+  padding: 0 10px 0 0;
+  vertical-align: middle;
+}
+
+.ctl-feedback-notice-wrapper .logo_container a,
+.ctl-feedback-notice-wrapper .logo_container img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.ctl-feedback-notice-wrapper .message_container,
+.ctl-simple-notice .message_container {
+  display: table-cell;
+  padding: 0px 22px 0px 0px;
+  vertical-align: middle;
+}
+
+.ctl-feedback-notice-wrapper ul li {
+  float: left;
+  margin: 0px 10px 0 0;
+}
+
+.ctl-feedback-notice-wrapper ul li.already_rated a:after {
+  color: #f12945;
+  content: "\f153";
+  font: normal 18px/21px dashicons;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 3px;
+}
+
+.ctl-feedback-notice-wrapper ul li .button-primary {
+  background: #f12945;
+  box-shadow: none;
+  border: 1px solid #a50b21;
+  text-shadow: none;
+}
+
+.ctl-feedback-notice-wrapper ul li .button-primary:hover {
+  background: #02c5be;
+  border: 1px solid #017571;
+}
+
+.ctp-notice-red.uninstall {
+  max-width: 700px;
+  display: block;
+  padding: 8px;
+  border: 2px solid #157d0f;
+  margin: 10px 0;
+  background: #13a50b;
+  font-weight: bold;
+  font-size: 13px;
+  color: #ffffff;
+}

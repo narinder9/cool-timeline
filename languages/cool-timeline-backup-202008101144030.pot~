@@ -1,0 +1,201 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Cool Timeline\n"
+"POT-Creation-Date: 2020-01-23 07:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: cooltimeline.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
+
+#: cooltimeline.php:235
+msgid "Please Give Us Your Feedback"
+msgstr ""
+
+#: cooltimeline.php:246
+msgid ""
+"If you find our plugin and support helpful.<br>Please rate and review us,It "
+"helps us grow <br>and improve our services"
+msgstr ""
+
+#: cooltimeline.php:248
+msgid "Submit Review ★★★★★"
+msgstr ""
+
+#: cooltimeline.php:250
+msgid "Upgrade to Pro version"
+msgstr ""
+
+#: admin/class.cool-timeline-posttype.php:71
+msgid "Story Year"
+msgstr ""
+
+#: admin/class.cool-timeline-posttype.php:72
+msgid "Story Date"
+msgstr ""
+
+#: admin/class.cool-timeline-posttype.php:73
+msgid "Story Icon"
+msgstr ""
+
+#: admin/class.cool-timeline-posttype.php:104
+msgid "Not Matched"
+msgstr ""
+
+#: admin/class.review-notice.php:70
+msgid "I already rated it"
+msgstr ""
+
+#: admin/class.review-notice.php:71
+msgid "Not Interested"
+msgstr ""
+
+#: admin/class.review-notice.php:72
+msgid "No, not good enough, i do not like to rate it!"
+msgstr ""
+
+#: admin/cool-timeline-settings.php:67
+msgid "Stories Description?"
+msgstr ""
+
+#: admin/cool-timeline-settings.php:67
+msgid ""
+"This option is overridden by shortcode in version 1.7. Please check "
+"shortcode generator."
+msgstr ""
+
+#: admin/cool-timeline-settings.php:70
+msgid "Stories Order ?"
+msgstr ""
+
+#: admin/cool-timeline-settings.php:70
+msgid ""
+"This option is overridden by shortcode in version 1.7. Please check your "
+"shortcode generator."
+msgstr ""
+
+#: admin/cool-timeline-settings.php:124
+msgid "assets/images/pro-features-list.png\"></a></div>"
+msgstr ""
+
+#: admin/ctl-meta-fields.php:12
+msgid "Timeline Story Settings"
+msgstr ""
+
+#: admin/ctl-meta-fields.php:24
+msgid "Story Date / Year <span class=\"ctl_required\">*</span>"
+msgstr ""
+
+#: admin/ctl-meta-fields.php:24
+msgid ""
+"<p class=\"ctl_required\">Please select story Story Date / Year / Time using "
+"datepicker only. <strong>Date Format( mm/dd/yy hh:mm )</strong></p>"
+msgstr ""
+
+#: admin/ctl-meta-fields.php:26
+msgid "d MM yy"
+msgstr ""
+
+#: admin/ctl-meta-fields.php:28
+msgid "Full"
+msgstr ""
+
+#: admin/ctl-meta-fields.php:28
+msgid "Small"
+msgstr ""
+
+#: admin/ctl-meta-fields.php:28
+msgid "Story image size"
+msgstr ""
+
+#: admin/ctl-meta-fields.php:29
+msgid ""
+"<div class=\"desc-field\"><strong style=\"width: 100%;display: inline-block;"
+"margin-top: 40px;\">Premium Settings | <a target=\"_blank\" href=\"https://1."
+"envato.market/7QLxy\">Buy Pro</a></strong><img src=\"https://res.cloudinary."
+"com/pinkborder/image/upload/v1556354078/cool-timeline-pro-wp-plugin/timeline-"
+"premium-features.png\" style=\"max-width: 100%;border: 2px solid #ef2e2e;\">"
+"</div>"
+msgstr ""
+
+#: fa-icons/fa-icons-class.php:88
+msgid "Select Story Icon"
+msgstr ""
+
+#: fa-icons/fa-icons-class.php:119
+msgid "Add Icon"
+msgstr ""
+
+#: fa-icons/fa-icons-class.php:123
+msgid "Select Font Awesome Icon"
+msgstr ""
+
+#: includes/ctl-helper-functions.php:440
+msgid " of "
+msgstr ""
+
+#: includes/ctl-helper-functions.php:441
+msgid " Page "
+msgstr ""
+
+#: admin/meta-box-class/my-meta-box-class.php:820
+msgid "Select a color"
+msgstr ""
+
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:32
+msgid "Read More"
+msgstr ""
+
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:133
+msgid "d/M/Y"
+msgstr ""
+
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:314
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:319
+msgid "Y"
+msgstr ""
+
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:350
+msgid "Sorry,You have not added any story yet"
+msgstr ""
+
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:436
+msgid "F j"
+msgstr ""
+
+#. Name of the plugin
+msgid "Cool  Timeline"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Cool Timeline is a responsive WordPress timeline plugin that allows you to "
+"create beautiful vertical storyline. You simply create posts, set images and "
+"date then Cool Timeline will automatically populate these posts in "
+"chronological order, based on the year and date"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://cooltimeline.com"
+msgstr ""
+
+#. Author of the plugin
+msgid "Cool Plugins"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://coolplugins.net/our-cool-plugins-list/"
+msgstr ""

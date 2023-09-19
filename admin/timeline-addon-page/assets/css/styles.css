@@ -1,0 +1,183 @@
+.plugin-not-required {
+    opacity: 0.4;
+}
+li#toplevel_page_cool-plugins-timeline-addon img {
+    width: 18px;
+    height: 18px;
+}
+#cool-plugins-container.cool-plugins-timeline-addon {
+    display: inline-block;
+    margin: 15px auto;
+    padding: 0;
+    box-sizing: border-box;
+    width: calc(100% - 20px);
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px -5px #afafaf;
+    overflow: hidden;
+}
+
+#cool-plugins-container.cool-plugins-timeline-addon * {
+    box-sizing: border-box;
+}
+
+#cool-plugins-container.cool-plugins-timeline-addon .button {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    height: 24px;
+    line-height: 22px;
+    min-height: 24px;
+}
+
+#cool-plugins-container.cool-plugins-timeline-addon .cool-header {
+    background-color: #f12945;
+    background: linear-gradient(to right, #f12945, #dfacb3, #6cddd9, #02c5be);
+    padding: 20px 10px;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+#cool-plugins-container.cool-plugins-timeline-addon .cool-header h2 {
+    color: #fff;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    width: auto;
+}
+
+#cool-plugins-container.cool-plugins-timeline-addon .cool-header a.button {
+    float: right;
+    margin: 0 5px;
+}
+
+.cool-body-left {
+    display: inline-block;
+    width: calc(100% - 231px);
+    vertical-align: top;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.cool-body-right {
+    display: inline-block;
+    width: 230px;
+    vertical-align: top;
+    float: right;
+    padding: 10px;
+}
+
+.cool-body-right ul li {
+    list-style: square;
+    margin-left: 15px;
+}
+
+.cool-body-left h3 {
+    padding: 0 0 10px;
+    margin: 0 0 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cool-body-left .plugins-list {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.cool-body-left .plugin-block {
+    display: inline-block;
+    width: calc(50% - 2px);
+    padding: 0 10px 30px;
+}
+
+.cool-body-left .plugin-block-inner {
+    display: inline-flex;
+}
+
+.plugin-info {
+    padding-left: 10px;
+}
+
+.plugin-logo img {
+    width: 72px;
+    height: 72px;
+}
+
+h4.plugin-title {
+    margin: 0 0 3px;
+    font-size: 14px;
+}
+
+.plugin-desc {
+    color: #a0a0a0;
+    font-size: 12px;
+}
+
+.plugin-stats {
+    display: inline-flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+#cool-plugins-container.cool-plugins-timeline-addon .plugin-stats * {
+    border-radius: 0;
+    height: 24px;
+    line-height: 22px;
+    min-height: 24px;
+}
+
+.plugin-version {
+    background: #1bb95a;
+    border: 1px solid #139648;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+span.plugin-update-available {
+    padding: 0 5px;
+    color: #d21e01;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.wp-submenu a[href*="edit.php?post_type=timeline-builder"],
+.wp-submenu a[href*="post-new.php?post_type=timeline-builder"],
+.wp-submenu a[href*="admin.php?page=timeline-demo-preview"] {
+    /*box-shadow: inset 2px 0 0 0 currentColor;*/
+    color: #27e4dd !IMPORTANT;
+    background: #0c1111 !IMPORTANT;
+}
+.wp-submenu a[href*="edit.php?post_type=cool_timeline"],
+.wp-submenu a[href*="post-new.php?post_type=cool_timeline"],
+.wp-submenu a[href*="edit-tags.php?taxonomy=ctl-stories&post_type=cool_timeline"],
+.wp-submenu a[href*="admin.php?page=cool_timeline_settings"] {
+    color: #f98f9e !IMPORTANT;
+    background: #0c1111 !IMPORTANT;
+}
+
+@media only screen and (max-width: 600px) {
+    .cool-body-left,
+    .cool-body-right {
+        width: 100%;
+    }
+    .cool-body-left .plugin-block {
+        width: 100%;
+        padding: 0 0 30px;
+    }
+}
+
+/*   Manager Icons Select Box height */
+.ctl-modal-icon .ctl-modal-inner {
+    height: 550px !important;
+}
+.ctl-modal-icon .ctl-modal-content {
+    padding: 10px;
+    height: 400px !important;
+}

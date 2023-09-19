@@ -1,0 +1,118 @@
+/*
+|------------------------------------------
+|       Deactivation feedback form
+|------------------------------------------
+*/
+#cool-plugins-deactivate-feedback-dialog-wrapper.hide-feedback-popup{
+    opacity: 0;
+}
+.cool-plugins-deactivation-response{
+    position: fixed;
+    left: 35%;
+    top: 22%;
+    z-index: 9999;
+    color:white;
+}
+.cool-plugins-button{
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #7bc6de;
+    color: white;
+}
+#cool-plugins-deactivate-feedback-dialog-form-body .cool-plugins-deactivate-feedback-dialog-input:not(:checked)~.cool-plugins-feedback-text {
+    display: none;
+}
+.cool-plugins-deactivation-response label{
+    display: block;
+}
+.cool-plugins-deactivation-response textarea {
+    margin: 10px;
+    width: -webkit-fill-available;
+}
+#cool-plugins-deactivate-feedback-dialog-form-body {
+    margin-top: 10px;
+}
+.cool-plugins-deactivation-response input[type=radio]{
+    float: left;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+label.cool-plugins-deactivate-feedback-dialog-label {
+    margin-bottom: 10px;
+}
+span#cool-plugins-feedback-form-title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.cool-plugin-popup-button-wrapper {
+    margin-top: 25px;
+}
+#cool-plugins-deactivate-feedback-dialog-form-caption {
+    font-weight: 600;
+    margin-bottom: 17px;
+    font-size: 15px;
+}
+
+/*
+|-----------------------
+|       Preloader
+|-----------------------
+*/
+.cool-plugins-deactivation-response #cool-plugins-loader-wrapper{
+    display: none;
+    float: left;
+    width: 100%;
+    height: 85%;
+    position: absolute;
+    text-align: center;   
+    opacity: .9;
+    background: white;
+}
+.cool-plugins-deactivation-response .cool-plugins-loader-container {
+    display: block;
+    text-align: center;
+    top: 38%;
+    position: absolute;
+    left: 42%;
+    text-align: center;
+  }
+.cool-plugins-deactivation-response img.cool-plugins-preloader {
+    width: 40px;
+    height: 40px;
+}
+
+/*
+|----------------------
+|        Colors
+|----------------------
+*/
+#cool-plugins-form-wrapper {
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+#cool-plugins-deactivate-feedback-dialog-header {
+    padding: 20px;
+    background-color: #7bc6de;
+}
+a.cool-plugins-button:hover {
+    background: #adebff;
+    color: white;
+}
+.cool-plugins-button.button-deactivate,
+.cool-plugins-button.button-deactivate:hover{
+    cursor: initial;
+    background-color: silver;
+}
+
+#cool-plugins-form-wrapper input#cool-plugins-GDPR-data-notice {
+    float: left;
+    margin-top: 4px !important;
+}

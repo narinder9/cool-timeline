@@ -1,61 +1,101 @@
-﻿=== Cool Timeline ===
+﻿=== Cool Timeline (Horizontal & Vertical Timeline) ===
 Contributors: narinder-singh,satindersingh,coolplugins
-Tags: timeline, events, history, roadmap, event timeline, horizontal timeline, vertical timeline, story timeline, event, calendar, events manager, timeline block
+Tags: timeline, history, roadmap, horizontal timeline, vertical timeline, story timeline,elementor timeline,gutenberg timeline
 Donate link: https://cooltimeline.com
-Requires at least: 3.5
-Tested up to: 5.2
-Stable tag: trunk
+Requires at least:4.6
+Tested up to: 6.3
+Stable tag:2.7
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Cool Timeline WordPress plugin creates vertical and horizontal history timeline blocks in ASC or DESC order based on year and date of stories.
+Showcase your story or company history, events, and roadmap in a precise and elegant way using the powerful Cool Timeline plugin.
 
 == Description ==
 
-### Cool Timeline - WordPress #1 Timeline Plugin
+### Horizontal & Vertical Timeline, History Timeline 
 
-**Cool Timeline** is a responsive WordPress pure HTML & CSS timeline plugin that allows you to create beautiful horizontal and vertical history timeline. You simply create posts, set images and date then Cool Timeline will automatically populate these posts in chronological order(ASC or DESC), based on the year and date of stories. You can easily show timeline on any page of your website using shortcode - [cool-timeline]
+Showcase your story or **company history** in a precise and elegant way using a powerful and advanced **Cool Timeline**
 
-### Check Cool Timeline Demos
+It is really important to let your audience know about the **history** of your **brand** especially when you are promoting it through a website. Our plugin will help you to **highlight events** and stories precise way.
 
-[Cool Timeline Pro Demo](https://cooltimeline.com/demo/) | [Cool Timeline Free Demo](https://free.cooltimeline.com)
 
-You can show your stories, events, appointments, concerts, future & history happenings by using **Cool Timeline plugin** on your website.
+### Check our Timeline plugins demos
+<ul>
+
+<li><strong>Cool Timeline [Free]</strong>- <a href="https://cooltimeline.com/demo/cool-timeline-free/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=view_free_demo" target="_blank">View Demo</a></li>
+
+<li><strong>Cool Timeline Pro [Pro]</strong>- <a href="https://cooltimeline.com/demo/cool-timeline-pro/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=view_pro_demo" target="_blank">View Demo</a></li>
+<li><strong>Timeline Widget For Elementor [Free]</strong>-<a href="https://cooltimeline.com/demo/elementor-timeline/free/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=twea_free_demo">View Demo</a></li>
+<li><strong>Timeline Widget For Elementor PRO [PRO]</strong>- <a href="https://cooltimeline.com/demo/elementor-timeline/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=twea_pro_demo">View Demo</a></li>
+<li><strong>Timeline Builder PRO [PRO]</strong>- <a href="https://cooltimeline.com/demo/timeline-builder-pro/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=tbp_view_demo">View Demo</a></li>
+
+<li><strong>Timeline Block For Gutenberg [Free]</strong>- <a href="https://cooltimeline.com/demo/gutenberg-timeline-block/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=tbg_demo" target="_blank">View Demo</a>
+</li>
+
+</ul>
+
+https://youtu.be/GElgo91RAmE
+
+https://www.youtube.com/watch?v=QkjCEnz2RoQ
+### Features Of Cool Timeline
+
+**Cool Timeline** is a powerful WordPress plugin that enables you to create visually striking and informative timelines. It is built with pure HTML and CSS for maximum compatibility and offers both horizontal and vertical layout options.
+Creating a timeline is straightforward and intuitive: simply create posts, set images, and assign dates. The plugin will automatically organize your posts in chronological order, whether you prefer ascending or descending.
+With the simple shortcode [cool-timeline], you can easily display a timeline on any page of your website. The plugin is also fully responsive, ensuring that your timelines look great on any device."
 
 = Cool Timeline Shortcode =
 
 > [cool-timeline layout="default" skin="default" date-format="F j" icons="YES" show-posts="20" order="DESC" story-content="full"]
 
-### Gutenberg Friendly - Instant Timeline Builder
+* <a href="https://cooltimeline.com/demo/gutenberg-timeline-block/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=tbg_demo" target="_blank">**Gutenberg Timeline Block**</a>:- An advanced **Timeline Block for Gutenberg**, which allows you to easily create elegant timelines using pre-made presets. With this block, you can create any type of timeline, from roadmaps to process steps and events, opening up endless possibilities for showcasing your content in a visually compelling way.
 
-Cool Timeline (version 1.8+) now also provides instant timeline builder for Gutenberg lovers. You can easily create timeline in a real time using Gutenberg blocks and settings.
-
-[Learn More About Shortcode](https://wordpress.org/plugins/cool-timeline/#faq) | [Check Timeline Installation Guide](https://wordpress.org/plugins/cool-timeline/#installation)
-
-### Features Of Cool Timeline
-
-* **Compact Timeline**:- Now our free users can also create a compact timeline, means a timeline without a lot of space between stories. [Check Demo Here >>](https://free.cooltimeline.com/compact-timeline/)
-* **Clean Layout**:- If you love clean and clear look without a lot of colors then you can showcase your story via our clean layout. [Check Demo Here >>](https://free.cooltimeline.com)
-* **Horizontal Roadmap Timeline**:- With help of Roadmap desgin, you can represent your Project/Company Plans and Phases. [Check Demo Here >>](https://free.cooltimeline.com/12193-2/)
-* **Advanced Design & Optimized Code**:- We have also made it developer friendly, you can easily customize timeline story default query.
-* Create both-sided or one-sided vertical timeline.
-* Show timeline images in pop-up or link to full story.
-* Choose cool icons along with stories.
-* Specify story background custom colors.
-* Specify year circle custom color.
-* You can specify different colors for story posts title.
-* Show read more button for full story page.
-* Show stories in DESC or ASC order.
+* **Compact Timeline**:-Our free users can also create a compact timeline, which means a timeline without a lot of space between stories.
+* **Clean Layout**:- If you love a clean and clear look without a lot of colors then you can showcase your story via our clean layout.
+* **Horizontal Roadmap Timeline**:- With the help of the Roadmap design, you can represent your Project/Company Plans and Phases.
+* **Advanced Design & Optimized Code**:- We have also made it developer-friendly, you can easily customize the timeline story default query.
+* The ability to create both one-sided and two-sided vertical timelines.
+* The option to display timeline images in a pop-up or link to the full story.
+* The ability to include cool icons alongside stories.
+* Customizable background colors for stories and year circles.
+* The option to specify different title colors for stories.
+* You can specify different colors for the story post's title.
+* A read more button for linking to the full story page.
+* The ability to sort stories in either ascending or descending order.
 * Easy to use shortcode to place the cool timeline wherever your heart desires - [cool-timeline].
-* Translation ready and translated in 4 languages **(German, French, Indonesian & Italian)**.
-* TinyMCE button to generate the timeline shortcode or easily add shortcode on any page using **Gutenberg ready blocks**.
-* Responsive and mobile ready timeline.
+* The plugin is Translation ready and has already been translated into 4 languages - German, French, Indonesian, and Italian.
+* TinyMCE button to generate the timeline shortcode or easily add the shortcode on any page using **Gutenberg ready blocks**.
+* Responsive and mobile-ready timeline.
+
+
+= Where can you use the Cool Timeline plugin? =
+
+You can show history/future stories, events, appointments, and many other cool things using our **Cool Timeline** plugin. Here are all areas where you can use this plugin:-
+
+* Highlight your company's achievements and significant milestones.
+* Creating a **historical timeline** to showcase a **company's history**.
+* Presenting tutorial or **process steps** in a timeline format.
+* Illustrating a program's timeline.
+* Using a timeline as a visually effective way to depict **historical events**.
+* Building a timeline to highlight job stories or accomplishments.
+* Representing a **personal story** through a timeline.
+* Detailing **work experience** through a timeline format.
+* Providing a step-by-step guide using a timeline.
+* Creating an **events timeline**.
+* Developing a product **roadmap**.
+* Telling a **brand's story** through a timeline format.
+* Showcasing a project or **company's roadmap**."
+
+
+We have tried our best to create an awesome **timeline plugin** but still, if you face any installation, coding, or design error, you can [contact us](mailto:contact@coolplugins.net) anytime. Also, remember to try our Cool Timeline Pro version for extra cool features and design options.
+
+> [Buy Cool Timeline Pro](https://cooltimeline.com/demo/cool-timeline-pro/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=view_pro_demo) | [Check Timeline Pro Documentation](https://docs.coolplugins.net/docs/cool-timeline-pro/installation/)
 
 = Cool Timeline Pro Features =
 
-To make it more cool we have enhanced our plugin by adding many advanced design features in pro version - multiple design options, animation effects, advanced horizontal timeline support, create multiple timelines and more. Here you can check our pro features:-
- 
+"Cool Timeline Pro is an advanced version of our popular timeline plugin that offers even more design options and functionalities to help you create stunning timelines. Whether you're looking to create a historical timeline for your company, showcase your personal story, or plan a product roadmap, the pro version gives you more flexibility and control to make your timelines truly unique.
+ With the pro version, you'll have access to a range of advanced features such as:
+
 <ul>
         <li><strong>40+ Timeline Designs</strong>
         <strong>Cool Timeline Pro Provides 4 Timeline Layouts:-</strong>
@@ -65,7 +105,7 @@ To make it more cool we have enhanced our plugin by adding many advanced design 
             <li>Vertical One-Side Timeline</li>
             <li>Horizontal Timeline</li>
             </ul>
-            <strong>Every Timeline Layout Supports 5+ Design Options &amp; 2 Skins(light, dark):-</strong>
+            <strong>Every Timeline Layout Supports 5+ Design Options & 2 Skins(light, dark):-</strong>
             <ul>
                 <li>Default Design</li>
                 <li>Flat Design</li>
@@ -74,90 +114,77 @@ To make it more cool we have enhanced our plugin by adding many advanced design 
                 <li>Classic Design</li>
                 <li>Modern Design</li>
                 </ul>
-                <a href="https://cooltimeline.com/demo/" target="_blank">Check All Demos…</a>
+                <a href="https://cooltimeline.com/demo/cool-timeline-pro/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=view_pro_demo" target="_blank">Check All Demos…</a>
         </li>
-        <li><strong>Timeline Settings, Colors &amp; Typography:-</strong>
-            Cool Timeline Pro provides advanced setting panel to easily manage timeline visibility settings, background / timeline elements colors and fonts / typography styles and color options.
+        <li><strong>Timeline Settings, Colors & Typography:-</strong>
+            Cool Timeline Pro provides an advanced setting panel to easily manage timeline visibility settings, background/timeline elements colors and fonts/typography styles, and color options.
         </li>
         <li><strong>Video, Images & Slider:-</strong>
-            You can easily display small and big images, YouTube / Vimeo videos and images slide-show inside Cool Timeline Pro. You can add them easily while adding a timeline story.
+            You can easily display small and big images, YouTube / Vimeo videos, and images slide-show inside Cool Timeline Pro. You can add them easily while adding a timeline story.
         </li>
         <li><strong>Custom Color Option For Every Story:-</strong>
-            While adding stories in Cool Timeline Pro, you can provide different colors for different stories, means you can easily create a multi-color timeline by using this advanced custom color feature provided by Cool Timeline Pro.
+            While adding stories in Cool Timeline Pro, you can provide different colors for different stories, which means you can easily create a multi-color timeline by using this advanced custom color feature provided by Cool Timeline Pro.
         </li>
         <li><strong>Multiple Timelines:-</strong>
-            You can create multiple timelines in one website based on different categories by using Cool Timeline Pro WordPress plugin. You can display these timelines in any layout(vertical / horizontal) or design.
+            You can create multiple timelines in one website based on different categories by using the Cool Timeline Pro WordPress plugin. You can display these timelines in any layout(vertical/horizontal) or design.
         </li>
         <li><strong>Easily Add Shortcode Using Smart Generator:-</strong>
-        If you are using classic code editor inside WordPress while adding new page or post then you can easily add shortcode inside any page by using smart shortcode generator tool inside your code editor.
+        If you are using a classic code editor inside WordPress while adding a new page or post then you can easily add a shortcode inside any page by using the smart shortcode generator tool inside your code editor.
     </li>
         <li><strong>Gutenberg / Elementor / WPBakery:-</strong>
-        First publish stories one by one then you can show these stories in a timeline layout easily inside any page builder :- Gutenberg blocks, Elementor or WPBakery.
+        First, publish stories one by one then you can show these stories in a timeline layout easily inside any page builder:- Gutenberg blocks, Elementor, or WPBakery.
         </li>
         <li><strong>Show Custom Label Instead Of Date:-</strong>
-            Cool Timeline Pro provides a features to show custom text in-place of date/time in timeline. You can add custom text and custom story order easily via simple settings while adding a timeline story.
+            Cool Timeline Pro provides features to show custom text in place of date/time in the timeline. You can add custom text and custom story order easily via simple settings while adding a timeline story.
         </li>
         <li><strong>Timeline In Any Order ASC / DESC:-</strong>
-            Timeline shortcode provides an option to show timeline in any order, you can show either ascending or descending order according to your needs.
+            Timeline shortcode provides an option to show timelines in any order, you can show either ascending or descending order according to your needs.
         </li>
         <li><strong>Show Filters In Timeline:-</strong><br>
-            You can show category based filters above a timeline and user can see different category based timelines on one page by selecting a filter/category.
+            You can show category-based filters above a timeline and users can see different category-based timelines on one page by selecting a filter/category.
         </li>
         <li><strong>Blog Posts Timeline:-</strong><br>
-            You can show your website blog posts on any page in a timeline layout using Cool Timeline Pro. Also you can represent any post-type in timeline layout by simply adding post-type slug in timeline shortcode.
+            You can show your website blog posts on any page in a timeline layout using Cool Timeline Pro. Also, you can represent any post type in the timeline layout by simply adding a post-type slug in the timeline shortcode.
         </li>
         <li><strong>Ajax Load More And Pagination Support:-</strong>
-            Cool Timeline Pro provides both features – pagination and load more. If you have a lot of stories inside your timeline then you can add pagination or load more button after a particular number of stories in your timeline.
+            Cool Timeline Pro provides both features – pagination and loads more. If you have a lot of stories inside your timeline then you can add pagination or load more buttons after a particular number of stories in your timeline.
         </li>
         <li><strong>Scrolling Navigation:-</strong>
-            You can show a small scrolling navigation in your timeline page for quick timeline navigation. A user can quickly and easily reach to a particular year story by this small timeline navigation.
+            You can show small scrolling navigation on your timeline page for quick timeline navigation. A user can quickly and easily reach a particular year story through this small timeline navigation.
         </li>
         <li><strong>FontAwesome or Custom Image Icons:-</strong>
-            You can show fontawesome or custom image icon along with every story inside your timeline.
+            You can show font awesome or custom image icons along with every story inside your timeline.
         </li>
         <li><strong>Show HTML or Read More Inside Timeline:-</strong>
-            You can show links, bold text or any custom HTML tag inside timeline stories or you can also show a read more link to full story page or any custom url.
+            You can show links, bold text, or any custom HTML tag inside timeline stories or you can also show a read-more link to the full story page or any custom URL.
         </li>
         <li><strong>Add Any Date Format Inside Timeline:-</strong>
-            You can represent timeline dates inside any date format, just add a date format inside your shortcode and it will show date/year in your desired format. Check this url:- <a href="https://codex.wordpress.org/Formatting_Date_and_Time" target="_blank">https://codex.wordpress.org/Formatting_Date_and_Time</a>
+            You can represent timeline dates inside any date format, just add a date format inside your shortcode and it will show the date/year in your desired format. Check this URL:- <a href="https://codex.wordpress.org/Formatting_Date_and_Time" target="_blank">https://codex.wordpress.org/Formatting_Date_and_Time</a>
         </li>
         <li><strong>15+ Animation Effects:-</strong>
             Cool Timeline Pro provides 15+ cool animation effects for a premium timeline design experience.
         </li>
         <li><strong>Premium Support For Pro Users:-</strong>
-            We provide premium support service to our Pro users. If you face any issue while creating your dream timeline inside your website, just drop us a mail at here – <a href="mailto:contact@coolplugins.net">contact@coolplugins.net</a> and we will provide a solution in 24 hours.
+            We provide premium support services to our Pro users. If you face any issue while creating your dream timeline inside your website, just drop us a mail at here – <a href="mailto:contact@coolplugins.net">contact@coolplugins.net</a> and we will provide a solution in 24 hours.
         </li>
     </ul>
 
-= Where can you use Cool Timeline plugin? =
+Get the most out of your timelines with Cool Timeline Pro and elevate your website's visual storytelling to the next level."
 
-You can show history/future stories, events, appointments and many other cool things using our **Cool Timeline** plugin. Here are all areas where you can use this plugin:-
- 
-* Represent your company story.
-* Showcase tutorial/process steps in timeline format.
-* Create a **program timeline**.
-* Timeline is best way to represent history.
-* Create events / appointments timeline.
-* Job stories / achievements timeline.
-* Personal **story timeline**.
-
-We have tried our best to create an awesome **timeline plugin** but still if you face any installation, coding or design error, you can [contact us](mailto:contact@coolplugins.net) anytime. Also remember to try our Cool Timeline Pro version for extra cool features and design options.
-
-> [Buy Cool Timeline Pro](https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcool-timeline-pro-wordpress-timeline-plugin%2F17046256) | [Check Timeline Pro Documentation](https://docs.coolplugins.net/doc/cool-timeline-pro/installation/)
 
 == Installation ==
 
 ### 3 Ways To Install Cool Timeline
 
 1. **Automatically install our plugin via WordPress admin panel**:- Open your WordPress website admin panel and go to Plugins > Click Add New & search '**Cool Timeline**' at here > Here you will find our plugin > Now click on install button > After this you will see a activate button > Just activate it to use Cool Timeline inside your website.
-2. **Install via Zip file**:- In this method first you need to download our plugin from wordpress plugins directory. Go to https://wordpress.org/plugins/cool-timeline/ & **Download Cool Timeline**. After this inside your WP-admin panel, click on Plugins > Add New > Upload Button. Now choose the plugin zip file that you just downloaded from wordpress plugins directory & activate it.
-3. **Install plugin via FTP**:- In this method you also first need to download plugin zip file from wordpress plugins directory. After this open your FTP manager and Go to > wp-content/plugins folder. Here you need to upload extracted version of **Cool Timeline** (please remember don't upload zip file directly at here). After this you can activate plugin from wp-admin panel plugins page.
+2. **Install via Zip file**:- In this method first you need to download our plugin from the WordPress plugins directory. Go to https://wordpress.org/plugins/cool-timeline/ & **Download Cool Timeline**. After this inside your WP-admin panel, click on Plugins > Add New > Upload Button. Now choose the plugin zip file that you just downloaded from the WordPress plugins directory & activate it.
+3. **Install the plugin via FTP**:- In this method, you also first need to download the plugin zip file from the WordPress plugins directory. After this open your FTP manager and Go to > wp-content/plugins folder. Here you need to upload the extracted version of **Cool Timeline** (please remember don't upload zip files directly here). After this, you can activate the plugin from the wp-admin panel plugins page.
 
 = Create Timeline =
 
-* After installation and plugin activation, you will find 2 extra tabs in Wp-admin panel sidebar - **Timeline Stories** and **Cool Timeline**.
-* Under "**Cool Timeline**" tab, you can select different colors, fonts and other design options of timeline according to your website style.
-* Under "**Timeline Stories**" tab, You can add all of your stories by selecting appropriate date and year.
+* After installation and plugin activation, you will find 2 extra tabs in the wp-admin panel sidebar - **Timeline Stories** and **Cool Timeline**.
+* Under the "**Cool Timeline**" tab, you can select different colors, fonts, and other design options for timelines according to your website style.
+* Under "** Timeline Stories**" tab, You can add all of your stories by selecting the appropriate date and year.
 * After adding all of your stories, Go to Pages > Add New, Here you can create a timeline by using our in-build short-code generator or simply place this short-code - [cool-timeline].
 
 = Final Words! =
@@ -165,83 +192,82 @@ If you are facing any difficulty in **Cool Timeline** plugin installation then y
 
 == Frequently Asked Questions ==
 
-= How to install Cool Timeline plugin & create timeline? =
+= How to install the Cool Timeline plugin & create a timeline? =
 Please check - [plugin installation guide](https://wordpress.org/plugins/cool-timeline/#installation) or [Cool Timeline Pro documentation](https://docs.coolplugins.net/doc/cool-timeline-pro/installation/)
 
 = Can I choose any historical date/year? =
-Year starts from 1970 in free version but in [pro version](https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcool-timeline-pro-wordpress-timeline-plugin%2F17046256) you can choose any historical year from 1000 to 2050 for creating a story inside Cool Timeline or you can also add custom text instead of date/year.
+The year starts from 1970 in the free version but in [pro version](https://cooltimeline.com/buy-cool-timeline-pro/) you can choose any historical year from 1000 to 2050 to create a story inside Cool Timeline or you can also add custom text instead of date/year.
 
 = What is plugin shortcode & how can we use it? =
-Here is full short-code of Cool Timeline plugin:-
+Here is the full shortcode of the Cool Timeline plugin:-
 
 > [cool-timeline layout="default" skin="default" date-format="F j" icons="YES" show-posts="20" animation="FadeInOut" order="DESC" story-content="full"]
 
 * **[cool-timeline]** = It is our default short-code syntax.
-* **layout** = We have five layout options (**default, horizontal, one-side, simple, compact**). In simple timeline you can create a timeline without bigger year circle in between the stories.
+* **layout** = We have five layout options (**default, horizontal, one-side, simple, compact**). In a simple timeline, you can create a timeline without a bigger year circle in between the stories.
 * **skin** = 2 skins available (**default, clean**)
 * **date-format** = You can choose any date-format to show with the stories according to your language and requirements.
 * **icons** = You can show(**YES/NO**) cool icons along with timeline stories.
-* **show-posts** = If you have a large timeline with a lot of stories then you can use this option to show pagination option after a number of stories.
-* **animation** = We have only 1 animation effect (**FadeInOut**) in Cool Timeline free version. You can purchase pro for more effects.
+* **show-posts** = If you have a large timeline with a lot of stories then you can use this option to show the pagination option after a number of stories.
+* **animation** = We have only 1 animation effect (**FadeInOut**) in Cool Timeline free version. You can purchase Pro for more effects.
 * **order** = Now easily manage timeline stories order(ASC/DESC) from shortcode.
 * **story-content** = (short/full) Now show full HTML content or short description with read-more inside timeline stories.
 
-= Can I see online demo? =
-Yes, Check free version demo at - https://free.cooltimeline.com
-For Pro demo please check - https://cooltimeline.com/demo/
+= Can I see an online demo? =
+For the Pro demo please check - https://cooltimeline.com/demo/cool-timeline-pro/?utm_source=ctl_plugin&utm_medium=readme&utm_campaign=demo&utm_content=view_pro_demo
 
-= Can I convert my blog posts into timeline? =
+= Can I convert my blog posts into a timeline? =
 No, This facility is only available in **Cool Timeline PRO** version. You can only create a blog/content timeline using Cool Timeline Pro
 
 = Can I create multiple timelines based on different categories? =
-Timeline category option is only available in our Pro version so you need to purchase pro if you want to create category specific **multiple timelines**.
+The timeline category option is only available in our Pro version so you need to purchase Pro if you want to create category-specific **multiple timelines**.
 
 = Can I choose custom colors and fonts? =
-Yes, You can choose 2 custom colors and any font-family from our font-list according to your website style. These colors will automatically apply on all of your **timeline stories** in an alternative way.
+Yes, You can choose 2 custom colors and any font family from our font list according to your website style. These colors will automatically apply to all of your **timeline stories** in an alternative way.
 
-= Can I hide bigger circular year circle? =
-Yes, You need to select "simple" layout while adding the short-code. In this shortcode you can **create a timeline** by hiding bigger year circle.
+= Can I hide a bigger circular year circle? =
+Yes, You need to select "simple" layout while adding the shortcode. In this shortcode, you can **create a timeline** by hiding a bigger year circle.
 
-= Is it possible to create both horizontal & vertical timeline? =
-You can only create **vertical timeline** in our free version. But We have cool design options to create both vertical and horizontal timeline in our Pro version.
+= Is it possible to create both horizontal & vertical timelines? =
+You can only create **vertical timeline** in our free version. But We have cool design options to create both vertical and horizontal timelines in our Pro version.
 
 = Do you have any support email for extra questions? =
-Yes, You can contact us anytime at here - **contact@coolplugins.net**. We will try to provide an answer with in 24 hours.
+Yes, You can contact us anytime here - **contact@coolplugins.net**. We will try to provide an answer within 24 hours.
 
 = Can, I customize the plugin with Hooks? =
-Yes, You can easily customize the main elements of timeline stories using below mentioned hooks.
+Yes, You can easily customize the main elements of timeline stories using the below-mentioned hooks.
 <pre>
 // customize Stories dates format
 add_filter('cool_timeline_story_date',array($this,'ctl_story_date_filter'));
 function ctl_story_date_filter($format) {
-	// you can find complete list of date formats from:- https://secure.php.net/manual/en/function.date.php
-	$format='Y';
-	return $format;
+    //You can find a complete list of date formats from- https://secure.php.net/manual/en/function.date.php
+    $format='Y';
+    return $format;
 }
 
 add_filter('cool_timeline_story_content',array($this,'ctl_story_content_filter'));
 function ctl_story_content_filter($content) {
-	return $content;
+    return $content;
 }
 
-// changes stories images size
+// changes stories image size
 add_filter('cool_timeline_story_img_size',array($this,'ctl_story_image_size_filter'));
 function ctl_story_image_size_filter($img_size) {
-	// thumbnail:- Thumbnail (150 x 150 hard cropped)
-	// medium :- Medium resolution (300 x 300 max height 300px)
-	//'medium_large' :- Medium Large (added in WP 4.4) resolution (768 x 0 infinite height)
-	//'large':- Large resolution (1024 x 1024 max height 1024px)
-	//'full':- Full resolution (original size uploaded)
-	// array(200,200): custom size
-	$img_size='thumbnail';
-	return $img_size;
+    // thumbnail:- Thumbnail (150 x 150 hard cropped)
+    // medium :- Medium resolution (300 x 300 max height 300px)
+    //'medium_large' :- Medium Large (added in WP 4.4) resolution (768 x 0 infinite height)
+    //'large':- Large resolution (1024 x 1024 max height 1024px)
+    //'full':- Full resolution (original size uploaded)
+    // array(200,200): custom size
+    $img_size='thumbnail';
+    return $img_size;
 }
 
 // change read-more text
 add_filter('cool_timeline_read_more_text',array($this,'ctl_stories_readmore'));
 function ctl_stories_readmore($read_more_text) {
-	$read_more_text="test";
-	return $read_more_text;
+    $read_more_text="test";
+    return $read_more_text;
 }
 </pre>
 
@@ -249,184 +275,125 @@ function ctl_stories_readmore($read_more_text) {
 
 1. WordPress Timeline plugin frontend view.
 2. Cool Timeline story creation screen with instructions.
-3. Wordpress Cool Timeline general settings.
-5. Gutenberg Instant Timeline Builder Demo
-5. Cool Timeline PRO features.
-6. Cool Timeline PRO Single Sided.
-7. Cool Timeline PRO Horizontal view.
-8. Create any type of timeline using Cool timeline PRO .
+3. Timeline Block for Gutenberg preview.
+4. Timeline Block for Gutenberg story preview.
+5. Cool Timeline PRO Vertical Layout.
+5. Cool Timeline PRO Single-Sided.
+6. Cool Timeline PRO Horizontal view.
+7. Create any type of timeline using Cool Timeline PRO.
 
 == Changelog ==
-= Version 1.8 | June 27, 2019 =
-* Added: Integrated new Gutenberg based instant timeline builder
 
-= Version 1.7 | April 27, 2019 =
-* Added: Integrated standalone story date picker.
-* Added: Integrated fontawesome 5 font and added search icon feature
-* Added: Timeline sorting settings in the shortcode
-* Added: Added story content settings in shortcode
-* Fixed: Wrong time based sorting bug
-= Version 1.6.3 | Feb 19, 2019 =
-* Fixed:gutenberg-block/ctl-block.php syntax error .
-* Improvment:compatibility checks with WordPress 5.1
-= Version 1.6.1 | JAN 01, 2019 =
-= Version 1.6.2 | Feb 19, 2019 =
-* Fixed: 404 Stories not found bug.
-* Fixed: Read more button don't appear first time.
-= Version 1.6.1 | JAN 01, 2019 =
-* Improvment: loaded all block assets in  enqueue_block_editor_assets hook
-* Fixed:- Fixed compatibility issues with autooptimize.
-* Improvment:- Added setting descriptions
-* Improvment:- Minor Block improvements
+= Version 2.7 | 07/09/2023 =
 
-= Version 1.6 | DEC 24, 2018 =
-* Added:- Integrated Timeline Shortcode Block for Gutenberg
-* Fixed:- Fixed compatibility issues with Gutenberg. 
-* Improvments:- Minor Style improvements
+**Fixes:**
+- Fixed an issue with the conditional loading of styles and assets.
 
-= Version 1.5 | OCT 26, 2018 =
-* Added:- Integrated brand new layout for Horizontal Timeline
-* Added:- Integarted Horizontal Timeline next/previous navigation buttons. 
-* Added:- Added Story date format settings in horizontal timeline
-* Added:- Create any date/time based RoadMap 
-* Added:- Integrated filters:- 
-1).cool_timeline_story_date,
-2).cool_timeline_story_content,
-3).cool_timeline_story_img_size
-4).cool_timeline_read_more_text
-* Fixed: Compact timeline stories positioning bug
-* Fixed: Compact timeline icon wrong position problem
-* Fixed: In stories content HTML not working problem
-* Fixed: In Safari stories Blur issue
-* Improvements: Compact timeline JS
+**New Features:**
+- Added an "Add New Story" button to the story toolbar.
+- Introduced a "Go To Settings" button in the story settings panel.
+- Included new settings for Heading Tags.
+- Integrated a new Font Icon library.
 
-= Version 1.4 | APR 17, 2018 =
-* Added:- Integrated Horizontal Timeline layout,Using this layout you can easily create Roadmap and small Horizontal timeline.We have represented story full content in popup
-* Added:- Introducted Elementor Page Builder support
-* Improvements: Minor Code Improvements
+**Improvements:**
+- Fixed an issue with icons and center line positioning.
+- Removed the old Font Icon library for better performance.
+- Addressed the ALT Tag issue in images.
 
-= Version 1.3.2 | SEPT 13, 2017 =
-* Fixed:- Fixed animation effect compatibility issue with new version of google chrome(Version 61.0.3163.79)
-* Improvements:- added timeline styles in header and scripts in footer
+**Compatibility:**
+- Tested and verified compatibility with WordPress 6.3.
 
-= Version 1.3.1 | SEPT 5, 2017 =
-* Fixed: Fixed Minor Clean Timeline styling issues.
+= Version 2.6.1 | 20/03/2023 =
+* Fixed:-Minor design issues with compact layout
+* Fixed:-Minor textual changes
+* Updated:- changed constants
+* Tested up to:- Tested upto WordPress 6.2
+* Updated:- updated links and assets
 
-= Version 1.3 | SEPT 4, 2017 =
-* Added:- Added new skins options in shortcode generator.Now user can easily create simple and clean timeline without background colors.  
-* Added:- Added new setting panel for story image size 
-* Added:- Integrated Hooks.User can easily customize timeline stories query arguments using add_filter('ctl_stories_query','callback_function'); filter hook.
-* Added:- Added ctl_story_clasess filter hook.Using this hook users can easily add your own custom classes in timeline stories
-* Improvements:- Improved All stories section added story dates and story icons sections
-* Added:- Integrated new font awesome icons Version 4.7
-* Improvements:- Improved overall code.included files based upon conditions
-* Improvements:- Created function for story images and story date
-* Improvements:- Optimized timeline loading speed. Minified all CSS and JS files.
+= Version 2.6 | 15/03/2023 =
+* Added:- Integrated New Cool Timeline Shortcode Block 
+* Added:- Integrated New Glightbox
+* Improved:- Updated Year section position in one-sided layout.
+* Improved:- Horizontal layout settings and design.
+* Removed:- PrettyPhoto Popup.
+* Improved: Responsive design and timeline elements.
+* Improved:- Improved settings Tabs
+* Remove:- Cool Timeline Shorcode Generator removed from Gutenberg
+* Fixed:- Fixed styling issue
 
-= Version 1.2 | MAY 8, 2017 =
-* Added:- Added brand new compact timeline layout.Using this layout you can easily show your stories in compact mode like(facebook timeline)
-* Added:- Added shortcode generator in all type of posts and pages.
-* Fixed:- Google fonts loading problem of all pages 
-* Improvements:- Minor Textual changes
-* Fixed:- Minor CSS and js Fixes
+= Version 2.5 | 11/01/2023 =
+* Integration:- Alternating setting option
+* Integration:- Content alignment Setting
+* Integration:- Title bottom spacing setting
+* Integration:- Description Bottom spacing setting
+* Integration:- Item spacing setting
+* Integration:- Icon box size setting
+* Integration:- Icon size setting
+* Integration:- Line size setting
+* Integration:- Container padding setting
+* Improved:- Content update / CoolTimeline Timeline Builder Block
+* Updated:- Dashboard API.
 
-= Version 1.1.8 | JAN 12, 2017 =
-* Added:- Added brand new designs for default timeline
-* Added:- Translation ready and translated in 4 languages(German,French,Indonesian ,Italian)
-* Added:- Added one sided timeline
-* Added:- Show timeline images in pop-up or link to full story
-* Added:- Cool Animation effects
-* Added:- Simple timeline without year circle
-* Added:- You can easily set icons in your stories.
-* Added:- Pagination to limit the number of stories displayed for a large timeline
-* Added:- Custom stories date format feature in shortcode generator
-* Imporved:- Improved over all CSS of timeline
-* Fixed:- Minor bug fixings
-* Improved:- Improved frontend script
-* compatibility:- compatibility with WordPress 4.7.1 and twenty seventeen theme
+= Version 2.4.5 | 28/09/2022 =
+* Improved:-Minor textual changes
 
-= Version 1.1.7 | JAN 12, 2017 =
-* Fixed:- Fixed fatal errors.
+= Version 2.4.4 | 15/04/2022 =
+* Improved:-Used sanitize_text_field  and removed PHP filter vars
+= Version 2.4.3 | 14/04/2022 =
+* Improved:-Updated settings framework latest version
 
-= Version 1.1.6 =
-* Enhancement: IE imageproblem fixed
-* Fixed : Minor styling fixes.
+= Version 2.4.2 | 08/04/2022 =
+* Improved:- Updated settings framework latest version
+* Improved:- replace date function with gmdate() for better date function support.
+* Improved: escaped attribute and HTML output in overall code.
+= Version 2.4.1 | 06/04/2022 =
+* Improvements:- Removed all CDN and external images and JS file links.
+* Improvements:- loaded all images from the plugin folder.
 
-= Version 1.1.5 =
-* Enhancement: Minor bug fixings
+= Version 2.4 | 05/04/2022 =
+* Fixed: Major security issue.
+* Improved: overall code improvements.
 
-= Version 1.1.4 =
-* Enhancement: Added new shortcode generator.
+= Version 2.3.3 | 02/02/2022 =
+* New:  Quick Date Select Button in  Timeline Story Setting meta box
+* Fixed:  Pagination issue on the home page.
+* Fixed: Minor CSS issue in horizontal Layouts.
 
-= Version 1.1.3 =
-* Enhancement: Plugin documentation, demo and screenshots.
+= Version 2.3.2 | 17 Nov 2021 =
+* Improved: Added check for WordPress 4.9 versions.
+= Version 2.3 | 09 Nov 2021 =
+* New: Added image size option, Font Awesome icons, color and typography settings for each element of Cool Timeline Gutenberg Timeline Block
+* New: Added right-aligned one-sided timeline layout in Cool Timeline Gutenberg Timeline Block
+* New: Story position(left/right) option or both-sided layout of Cool Timeline Gutenberg Timeline Block
+= Version 2.2.3 | 22 Oct 2021 =
+* Fixed: Fixed missing icon issue
+* Fixed: Loaded settings framework only on cool_timeline post type and settings panel
+* Fixed: Conflict with WP Quiz PRO and CMB2
+* Improved: Minor code improvements
 
-= Version 1.1.2 =
-* Fixed: Cannot load cool_timeline_page. 
-* Fixed: Unable to access plugin settings page when you have mentioned  define('DISALLOW_FILE_MODS',true); contant in wp-config file.
-* Fixed: IE-11 images issue. 
-* Enhancement: Migrates google fonts from http to https. 
+= Version 2.2.2 | 07 Oct 2021 =
+* Fixed: Shortcode generator generating the wrong shortcode
+* Fixed: review notice bug
 
-= Version 1.1.1 =
-* Fixed: Minor bug fixings.
-
-= Version 1.1 =
-* Enhancement: Responsive styles
-* Fixed: Read more priority issue
-* Removed: background image options.
-* Fixed: Options panel color options default value issue.
-* Enhancement: Enhancement of all labels.
-* Fixed: Minor bug fixings.
-
-= Version 1.0.9 =
-* Removed: bootstrap.css styles.
-* Added: Independent styles.
-* Added: future Posts feature.
-* Fixed: Fixed css overriding issues.
-* Enhancement: removed extra div's.
-
-= Version 1.0.8 =
-* Added: Added options in settings panel to Enable/Disable stories date.
-* Added: Main title alignments options in option panel.
-* Fixed: Fixed read more overriding issue.
-* Enhancement: included ctl_styles and bootstrap styles only on timeline page.
-
-= Version 1.0.7 =
-* Fixed: Minor Fixes.
-
-= Version 1.0.6 =
-* Fixed: Date issues
-* Fixed: styles settings issue
-* Fixed: Minor css issues.
-* Enhancement: included styles only on timeline page.
-
-= Version 1.0.5 =
-* Removed: Removed bootflat.css file.
-* Fixed: css issue resolved.
-
-= Version 1.0.4 =
-* Added: Stoires description type short/Full(with HTML) in option panel.
-* Fixed: Typography issues.
-* Fixed: Minor css issues.
-* Fixed: Minor images size issues.
-
-= Version 1.0.3 =
-* Fixed: stories date issue resolved.
-* Fixed: background color issue resolved.
-* Fixed: minor javascript bug removed.
-
-= Version 1.0.2 =
-* Minor bug fixes.
-
-= Version 1.0.1 =
-* Added Stories order option in settings panel for post order by(Ascending ,Descending)
-* improved short description content.
-* updated icons.
-
-= Version 1.0 =
-* Initial Release.
-
+= Version 2.2 | 05 Oct 2021 =
+* Added: integrated New settings panel
+* Added: integrated New meta boxes and shortcode generator
+* Added: Vertical story position settings
+* Improved: improved overall code managed codes in functionality base class
+* Improved: managed assets management in a standalone class
+* Improved: folder structure
+= Version 2.1 | 13 July 2021 =
+* Added: Story Ordering/sorting feature in Instant timeline builder block
+* Added: Extended support for older Years from 1800 to 1970 years and dates 
+* Added:- Alt tag in Instant Timeline Builder images
+* Fixed: VC addon integration not working
+* Fixed: story wrong order bug
+* Fixed:- Timeline Year issue in the Spanish language
+* Updated: Gutenberg Timeline block code and libraries
+* Updated: Deprecated libraries from the timeline block
+* Updated: tested up to 5.8
+<strong>More:- check <a target="_blank" href="https://bitbucket.org/!api/2.0/snippets/CoolHappy/7XXdBp/91a4ecee991e51318af6635e383e96f7b125dbc5/files/changelog">changelog.txt</a> file here.</strong>
 == Upgrade Notice ==
 
 = 1.1.8 =
-A new look of cool timeline after changing a lot of css styles. Upgrade Now!
+A new look of cool timeline after changing a lot of CSS styles. Upgrade Now!
