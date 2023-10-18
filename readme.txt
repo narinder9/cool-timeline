@@ -4,7 +4,7 @@ Tags: timeline, history, roadmap, horizontal timeline, vertical timeline, story 
 Donate link: https://cooltimeline.com
 Requires at least:4.6
 Tested up to: 6.3
-Stable tag:2.7
+Stable tag:2.7.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -283,6 +283,9 @@ function ctl_stories_readmore($read_more_text) {
 7. Create any type of timeline using Cool Timeline PRO.
 
 == Changelog ==
+
+= Version 2.7.1 | 17/10/2023 =
+- Fixed:- Minor Security fix
 
 = Version 2.7 | 07/09/2023 =
 
