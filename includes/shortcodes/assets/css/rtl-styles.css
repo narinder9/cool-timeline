@@ -1,0 +1,44 @@
+.rtl .cool-timeline-horizontal [dir="rtl"] .ctl-slick-next::before {
+    display: none !important;
+}
+
+.rtl .cool-timeline-horizontal [dir="rtl"] .slick-arrow .fa-arrow-alt-circle-right:before {
+    content: "\f190";
+    margin-left: -20px;
+}
+
+.rtl .cool-timeline-horizontal [dir="rtl"] .slick-arrow .fa-arrow-alt-circle-left:before {
+    content: "\f18e";
+    margin-right: -20px;
+}
+
+.rtl .cool-timeline-horizontal [dir="rtl"] .slick-arrow .fa-chevron-right:before {
+    content: "\f053";
+    margin-left: -20px;
+}
+
+.rtl .cool-timeline-horizontal [dir="rtl"] .slick-arrow .fa-chevron-left:before {
+    content: "\f054";
+    margin-right: -20px;
+}
+
+.rtl .cool-timeline-horizontal .clt_caru_slider ul.slick-slider .slick-list li.slick-slide .timeline-post a.ctl_read_more {
+    float: left;
+}
+
+.rtl .cool-timeline-horizontal .pull-left {
+    float: right;
+}
+
+.rtl .cool-timeline .ctl_slideshow {
+    direction: ltr;
+}
+
+.rtl .cool-timeline.compact .timeline-post.timeline-mansory {
+    margin: 40px 0px 25px;
+}
+
+.rtl .cooltimeline_cont .center-line:before,
+.rtl .cooltimeline_cont .center-line:after {
+    margin-right: calc(50% - 10px);
+}

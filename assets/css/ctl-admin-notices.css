@@ -48,14 +48,14 @@
 }
 
 .ctl-feedback-notice-wrapper ul li .button-primary {
-  background: #f12945;
+  background: #02c5be;
   box-shadow: none;
-  border: 1px solid #a50b21;
+  border: 1px solid #02c5be;
   text-shadow: none;
 }
 
 .ctl-feedback-notice-wrapper ul li .button-primary:hover {
-  background: #02c5be;
+  background: #01b8b2;
   border: 1px solid #017571;
 }
 

@@ -31,6 +31,10 @@
 	min-height: 300px;
 	height: 100%;
 }
+
+.timeline-block-font-family-option .timeline-block-typography-advanced{
+	min-height: unset;
+}
 .timeline-block-typography-advanced::before,
 .timeline-block-box-shadow-advanced::before {
 	border: 8px solid #e2e4e7;
@@ -626,22 +630,18 @@ i.fipicon-angle-left:before {
 .block-editor-block-list__insertion-point.is-horizontal.is-with-inserter .block-editor-block-list__insertion-point-inserter{
 	display: none;
 }
-
-.cool-horizontal-timeline-body .swiper-pagination{
-	bottom:58px
+  .child-swiper-outer{
+	position: relative;
   }
-
-  .cool-timeline-block .swiper-button-next{
-	right: -4%;
-	top:100px;
-	color:#D91B3E
+  .child-swiper{
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1
   }
-  .cool-timeline-block .swiper-button-prev{
-  left: -4%;
-  top:100px;
-  color:#D91B3E
-  }
-
   .timeline-block-pre-loader{
 	  text-align: center;
   }
@@ -674,18 +674,25 @@ i.fipicon-angle-left:before {
 	.timeline-container_pd_apply span{
 	  color: var(--wp-admin-theme-color) !important;
     }
-  .cool-timeline-content-alignment-buttons {
+	.ctl-timeline-video-control-box{
+		margin-bottom: 0px !important;
+	}
+  .cool-timeline-content-alignment-buttons,
+  .ctl_media_control {
     width: 100%;
+	margin-bottom: 5px;
   }
   
-  .cool-timeline-content-alignment-buttons button {
-    width: 33%;
+  .cool-timeline-content-alignment-buttons button,
+  .ctl_media_control button {
+    width: 33.6%;
     justify-content: center;
     box-shadow: inset 0 0 0 1px #ccc !important;
     color: #ccc !important;
   }
   
-  .cool-timeline-content-alignment-buttons button.active {
+  .cool-timeline-content-alignment-buttons button.active,
+  .ctl_media_control button.active {
     color: var(--wp-admin-theme-color) !important;
     background-color: #dff4ff;
   }
@@ -761,12 +768,13 @@ i.fipicon-angle-left:before {
   }
   
   .cool-timeline-gt-block-review-tab a {
-	margin-top: 10px;
     text-decoration: none;
-    font-size: 20px;
-}
-.cool-timeline-gt-block-review-tab a span{
-	color: #ffb900;
+    color: #ffb900;
+    font-size: 15px;
+	margin-top: 10px;
+  }
+  .cool-timeline-gt-block-review-tab a span{
+	color: #ffb900 !important;
 	margin-left: 5px;
   }
   .cp-timeline-block-demo-button {
@@ -795,6 +803,24 @@ i.fipicon-angle-left:before {
     box-shadow: 0px 0px transparent;
   }
   
+  	.cooltimeline-tab-settings .tab-one.active-tab,
+	.cooltimeline-tab-settings .tab-two.active-tab,
+	.cooltimeline-tab-settings .tab-three.active-tab{
+		position: relative;
+	}
+	.cooltimeline-tab-settings .tab-one.active-tab::before,
+	.cooltimeline-tab-settings .tab-two.active-tab::before,
+	.cooltimeline-tab-settings .tab-three.active-tab::before{
+		content: '';
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		z-index: 999;
+		background-color: #fff;
+		bottom: -1px;
+		left: 0px;
+	}
+
   .cooltimeline-tab-settings .components-tab-panel__tabs {
     justify-content: space-between;
   }
@@ -807,9 +833,7 @@ i.fipicon-angle-left:before {
     margin-bottom: 8px;
     padding: 0px;
   }
-  /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-    !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/component/customComponents/styling.scss ***!
-    \************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+
   .timeline-block-spacing-control {
     position: relative;
     display: inline-block;
@@ -902,3 +926,67 @@ i.fipicon-angle-left:before {
   .timeline-block-Orientation_checkbox {
     margin-left: auto;
   }
+  .ctl-slider-images-view_box {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    border-radius: 5px;
+	margin-bottom: 5px;
+}
+.ctl-slider-images-button{
+	margin-left: 15px;
+}
+.ctl-slider-images-view_box .ctl-slider-images {
+    flex-basis: 29.3%;
+    margin: 2%;
+	height: 68px;
+}
+.ctl-slider-images-view_box .ctl-slider-images img{
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	border: 1px solid #9f9f9f;
+}
+.ctl-timeline-media-remove-button{
+	margin-right: 10px;
+}
+
+/* block style tab css start */
+.cooltimeline-tab-settings .ctlb-tabs{
+	padding-top: 25px;
+	position: relative
+}
+.cooltimeline-tab-settings .ctlb-tabs::before{
+	font-family: dashicons;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    speak: never;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    vertical-align: top;
+    text-align: center;
+    transition: color 0.1s ease-in;
+	position: absolute;
+	left: 50%;
+	top: 2px;
+	transform: translateX(-50%);
+}
+.cooltimeline-tab-settings .ctlb-general-tab.ctlb-tabs::before{
+	content: '\f108';
+	transform: translateX(-50%) rotate(90deg);
+}
+.cooltimeline-tab-settings .ctlb-style-tab::before{
+	content: '\f540';
+}
+.cooltimeline-tab-settings .ctlb-advanced-tab::before{
+	content: '\f111';
+}

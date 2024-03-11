@@ -1,0 +1,460 @@
+/* --------------------------- Horizontal Wrapper --------------------------- */
+
+.ctl-horizontal-timeline {
+    --ctw-ibx-position: 50;
+    --ctw-ybx-size: 50px;
+    --ctw-ybx-text-size: 16px;
+    --ctw-cbx-text-align: center;
+    --ctw-cbx-img-order: 0;
+    --nav-icon-height: 30px;
+    --nav-icon-width: 30px;
+    --nav-icon-color: var(--ctw-line-bg, #222);
+    --nav-icon-radius: 0;
+    --nav-icon-bd-width: 0px;
+    --nav-icon-bd-clr: var(--ctw-line-bg);
+    --nav-icon-bd-style: solid;
+    overflow: visible;
+    --ctw-ibx-radius: 0;
+    padding: 0px;
+    max-width: 100%;
+    --ctw-cbx-img-padding: 10px 10px 10px 10px;
+}
+
+.ctl-wrapper .ctl-horizontal-timeline{
+    --ctw-cbx-date-font-size: 13px;
+    --ctw-cbx-date-font-weight: 500;
+    --ctw-cbx-title-font-size: 15px;
+    --ctw-cbx-title-font-weight: 500;
+}
+
+
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-story.odd .ctl-label-big {
+    --ctw-lbl-big-color: var(--ctw-lbel-big-color, var(--ctw-first-story-color));
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-story.even .ctl-label-big {
+    --ctw-lbl-big-color: var(--ctw-lbel-big-color, var(--ctw-second-story-color));
+}
+
+.ctl-wrapper .ctl-horizontal-timeline {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+
+.ctl-wrapper .ctl-horizontal-timeline {
+    width: calc(100% - var(--nav-icon-width) * 2);
+    margin: 0 var(--nav-icon-width);
+}
+
+.ctl-wrapper-inside {
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* ------------------------ Horizontal Wrapper - END ------------------------ */
+
+
+/* --------------------------------- Slider --------------------------------- */
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-slider-container {
+    width: calc(100% - var(--ctw-cbx-space));
+    margin: 0 calc(var(--ctw-cbx-space) * 0.5px);
+    display: block;
+    position: relative;
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-slider-container.swiper-container {
+    overflow: hidden;
+    transition: height .3s ease-in-out;
+}
+
+/* ------------------------------ Slider - END ------------------------------ */
+
+
+/* --------------------------- Next / Prev Buttons -------------------------- */
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-button-prev,
+.ctl-wrapper .ctl-horizontal-timeline .ctl-button-next {
+    position: absolute;
+    top: calc(calc(0px + var(--ctw-lbl-big-size) + var(--ctw-lbl-small-size) + var(--ctw-lbl-gap) + 20px + var(--ctw-ibx-size) - var(--nav-icon-height) * .5 + var(--lbl-bd-width)*2));
+    background: var(--nav-icon-background);
+    color: var(--nav-icon-color);
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
+    font-size: calc(var(--nav-icon-height) - 6px);
+    line-height: 1em;
+    border: var(--nav-icon-bd-width) var(--nav-icon-bd-style) var(--nav-icon-bd-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 17px;
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-button-prev svg path,
+.ctl-wrapper .ctl-horizontal-timeline .ctl-button-next svg path {
+    fill: var(--nav-icon-color);
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-button-prev:hover svg path,
+.ctl-wrapper .ctl-horizontal-timeline .ctl-button-next:hover svg path {
+    fill: #ffffff;
+}
+
+.ctl-wrapper .ctl-horizontal-timeline :where(.ctl-button-prev, .ctl-button-next).swiper-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-button-prev:hover,
+.ctl-wrapper .ctl-horizontal-timeline .ctl-button-next:hover {
+    background: var(--ctw-line-bg)!important;
+    color: #ffffff!important;
+    border-color: var(--ctw-line-bg)!important;
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-button-next {
+    right: calc(0px - var(--nav-icon-width));
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-button-prev {
+    left: calc(0px - var(--nav-icon-width));
+}
+
+.ctl-button-next i.fas.fa-long-arrow-alt-right {
+    display: block !important;
+}
+
+
+/* ------------------------ Next / Prev Buttons - END ----------------------- */
+
+
+/* ---------------------------- Horizontal Line ---------------------------- */
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-story-line {
+    position: absolute;
+    top: calc(0px - var(--ctw-ibx-size) - var(--ctw-line-width) / 2);
+    left: calc(0px - var(--ctw-cbx-space) * 0.5px);
+    display: block;
+    width: calc(100% + var(--ctw-cbx-space) * 1px);
+    height: var(--ctw-line-width);
+    background-color: var(--ctw-line-bg);
+    border-width: calc(var(--ctw-line-bd-width) * 1px) 0px calc(var(--ctw-line-bd-width) * 1px) 0px;
+    border-style: var(--ctw-line-bd-style);
+    border-color: var(--ctw-line-bd-color);
+}
+
+/* -------------------------- Horizontal Line - END ------------------------ */
+
+
+/* -------------------------------- Line Fill ------------------------------- */
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-h-line {
+    position: absolute;
+    top: calc(0px + var(--ctw-lbl-big-size) + var(--ctw-lbl-small-size) + var(--ctw-lbl-gap) + 20px + var(--ctw-ibx-size) - var(--ctw-line-width) * 0.5);
+    left: 0;
+    display: block;
+    width: 100%;
+    height: var(--ctw-line-width);
+    background-color: var(--ctw-line-bg);
+    border-width: calc(var(--ctw-line-bd-width) * 1px) 0px calc(var(--ctw-line-bd-width) * 1px) 0px;
+    border-style: var(--ctw-line-bd-style);
+    border-color: var(--ctw-line-bd-color);
+}
+
+/* ----------------------------- Line Fill - END ---------------------------- */
+
+
+/* ------------------------ Line Year Box Horizontal ------------------------ */
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-year {
+    position: absolute;
+    top: calc(var(--ctw-ibx-size) / 1 - var(--ctw-ibx-size) * 2 - (var(--ctw-ybx-size) * ((60 + var(--ctw-ibx-radius) / 1.25) / 100) - var(--ctw-ibx-size)) / 2);
+    margin: 0;
+    justify-content: flex-start;
+    width: auto;
+}
+
+.ctl-wrapper .ctl-horizontal-timeline :where(.ctl-year-text:before, .ctl-year-text:after) {
+    width: calc(var(--ctw-ybx-bd-width) + var(--ctw-line-width) * 0.1);
+    height: calc(var(--ctw-line-width) - var(--ctw-line-bd-width) * 2px);
+    top: calc(50% - (var(--ctw-line-width) - var(--ctw-line-bd-width) * 2px) / 2);
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-year-text:before {
+    left: 0;
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-year-text:after {
+    right: 0;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-year-label.ctl-year-text {
+    position: absolute;
+    left: calc(100% - var(--ctw-ybx-size) * 2);
+    box-shadow: 0 0 0 2px white, inset 0 0 0 2px rgba(0, 0, 0, 0.05), 0 0 0 5px var(--ctw-line-bg);
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-year-label.ctl-year-text {
+    left: calc(100% - var(--ctw-ybx-size) * 1.5);
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-year-text {
+    box-shadow: none;
+}
+
+
+/* --------------------- Line Year Box Horizontal - END --------------------- */
+
+
+/* ---------------------------- Labels Horizontal --------------------------- */
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-labels {
+    justify-content: var(--ctw-lbl-justify);
+    top: calc(0px - (var(--ctw-lbl-big-size) + var(--ctw-lbl-small-size) + var(--ctw-lbl-gap)) - var(--ctw-ibx-size) * 2);
+    height: calc(var(--ctw-lbl-big-size) + var(--ctw-lbl-small-size) + var(--ctw-lbl-gap));
+    text-align: center;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-story.even .ctl-labels {
+    padding-top: 40px;
+}
+
+/* ----------------------Label Arrow CSS - Start----------------------*/
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-story {
+    margin-bottom: 10px;
+    margin-top: calc(var(--ctw-ibx-size) * 2 + var(--ctw-lbl-big-size) + var(--ctw-lbl-small-size) + var(--ctw-lbl-gap) + 20px + var(--lbl-bd-width)*2) !important;
+    display: flex;
+    justify-content: center;
+}
+
+/* ----------------------horizontal-line css style - start  ----------------------*/
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-h-line{
+    top: calc(0px + var(--ctw-lbl-big-size) + var(--ctw-lbl-small-size) + var(--ctw-lbl-gap) + 20px + var(--ctw-ibx-size) - var(--ctw-line-width) * .5 + var(--lbl-bd-width)*2) !important;
+}
+
+/* ----------------------horizontal-line css style - end  ----------------------*/
+
+
+/* ------------------------- Labels Horizontal - END ------------------------ */
+
+
+/* ------------------------ Icon / Dot Box Horizontal ----------------------- */
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-icon {
+    left: calc(var(--ctw-ibx-position) * 1% - var(--ctw-ibx-size) * var(--ctw-ibx-position) / 100);
+    top: calc(var(--ctw-ibx-size) / 2 - var(--ctw-ibx-size) * 2);
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-icondot {
+    top: calc(var(--ctw-ibx-size) * 0.75 - var(--ctw-ibx-size) * 2);
+    left: calc(var(--ctw-ibx-position) * 1% - var(--ctw-ibx-size) * var(--ctw-ibx-position) / 100 + var(--ctw-ibx-size) / 4);
+}
+
+.ctl-wrapper .ctl-horizontal-timeline :where(.ctl-icondot:before, .ctl-icondot:after, .ctl-icon:before, .ctl-icon:after) {
+    width: calc(var(--ctw-ibx-bd-width) + var(--ctw-line-width) * 0.1);
+    height: calc(var(--ctw-line-width) - var(--ctw-line-bd-width) * 2px);
+    top: calc(50% - (var(--ctw-line-width) - var(--ctw-line-bd-width) * 2px) / 2);
+}
+
+.ctl-wrapper .ctl-horizontal-timeline :where(.ctl-icondot:before, .ctl-icon:before) {
+    left: calc(0px - var(--ctw-ibx-bd-width));
+}
+
+.ctl-wrapper .ctl-horizontal-timeline :where(.ctl-icondot:after, .ctl-icon:after) {
+    right: calc(0px - var(--ctw-ibx-bd-width));
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-media a {
+    width: calc(var(--ctw-cbx-img-width) - (var(--ctw-cbx-img-margin-left) + var(--ctw-cbx-img-margin-right)));
+}
+
+
+/* --------------------- Icon / Dot Box Horizontal - END -------------------- */
+
+
+/* ----------------------- Story Box Arrow Horizontal ----------------------- */
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-story {
+    display: flex;
+    justify-content: center;
+}
+
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-story:nth-child(odd) {
+    --ctw-arw-bg: var(--ctw-first-story-color, var(--ctw-cbx-des-color, var(--ctw-cbx-title-color)));
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-story:nth-child(even) {
+    --ctw-arw-bg: var(--ctw-second-story-color, var(--ctw-cbx-des-color, var(--ctw-cbx-title-color)));
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-arrow {
+    background: linear-gradient(to bottom right, var(--ctw-arw-bg, var(--ctw-cbx-title-bg)) 52%, transparent 48%);
+    top: calc(var(--ctw-ibx-size) / 7 - var(--ctw-ibx-size) / 2.65 + var(--ctw-cbx-bd-top-width) / 3);
+    left: calc(var(--ctw-ibx-position) * 1% - var(--ctw-ibx-size) * var(--ctw-ibx-position) / 100 + var(--ctw-ibx-size) / - var(--ctw-ibx-size) / 7);
+    border-width: var(--ctw-cbx-bd-top-width) 0 0 var(--ctw-cbx-bd-top-width);
+}
+
+
+/* -------------------- Story Box Arrow Horizontal - END -------------------- */
+
+
+/* -------------------------- Story Box Horizontal -------------------------- */
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-story {
+    margin-top: calc(var(--ctw-ibx-size) * 2 + var(--ctw-lbl-big-size) + var(--ctw-lbl-small-size) + var(--ctw-lbl-gap) + 20px);
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-story.swiper-slide {
+    overflow: visible;
+}
+
+
+/* ----------------------- Story Box Horizontal - END ----------------------- */
+
+
+/* ------------------------ Story Content Horizontal ------------------------ */
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-content {
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin: 0 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.ctl-wrapper .ctl-horizontal-timeline .ctl-title {
+    width: 100%;
+    order: unset;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-title {
+    background-color: #ffffff00 !important;
+    padding-top: 110px;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-story.even .ctl-title {
+    padding-top: 60px;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-title {
+    text-align: center;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-story:nth-child(odd) .ctl-title :where(a, a:hover) {
+    color: var(--ctw-first-story-color);
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-story.even .ctl-title :where(a, a:hover) {
+    color: var(--ctw-second-story-color);
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper :where(.ctl-media, .full-width, .ctl-description) {
+    display: none !important;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-content {
+    background-color: #ffffff00 !important;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-icondot {
+    border-radius: 50%;
+}
+
+
+/* --------------------- Story Content Horizontal - END --------------------- */
+
+
+/* --------------Horizontal bottom start ------*/
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-arrow {
+    transform: rotate(360deg);
+    width: 2px;
+    height: 36px;
+    background: linear-gradient(to bottom, var(--ctw-arw-bg) 0, rgba(229, 229, 229, 0) 100%);
+    top: calc(var(--ctw-ibx-size) / 7 - var(--ctw-ibx-size) / 1.1 + var(--ctw-cbx-bd-top-width) / 3);
+    left: calc(var(--ctw-ibx-position) * 1% - var(--ctw-ibx-size) * var(--ctw-ibx-position) / 150 + var(--ctw-ibx-size) / 2.2 - var(--ctw-ibx-size) / 7);
+    z-index: 1;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-story:nth-child(odd) .ctl-arrow {
+    background: linear-gradient(to bottom, var(--ctw-arw-bg) 0, rgba(229, 229, 229, 0) 100%);
+    height: 92px;
+}
+
+
+/* --------------Horizontal bottom End ------*/
+
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-labels {
+    top: unset;
+    z-index: 9;
+    padding-top: 100px;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-story.odd .ctl-label-big {
+    color: var(--ctw-lbl-big-color);
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-story.even .ctl-label-big {
+    color: var(--ctw-lbl-big-color);
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-story.even .ctl-labels {
+    padding-top: 40px;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-year-label.ctl-year-text {
+    top: -20px;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper .ctl-icon {
+    z-index: 2;
+    border-radius: 50%;
+    left: calc(var(--ctw-ibx-position) * 1% - var(--ctw-ibx-size) * var(--ctw-ibx-position) / 115);
+}
+
+
+
+.ctl-wrapper .ctl-horizontal-wrapper.ctl-content-empty .ctl-button-prev,
+.ctl-wrapper .ctl-horizontal-wrapper.ctl-content-empty .ctl-button-next,
+.ctl-wrapper .ctl-horizontal-wrapper.ctl-content-empty .ctl-h-line {
+    display: none;
+}
+
+.ctl-wrapper .ctl-horizontal-wrapper.ctl-content-empty .ctl-slider-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.ctl-wrapper .ctl-horizontal-timeline.ctl-content-empty .ctl-slider-container {
+    margin-top: 0px;
+}
+
+
+@media screen and (max-width:768px) {
+    .ctl-wrapper .cool-timeline-wrapper.ctl-horizontal-wrapper .ctl-year-label.ctl-year-text {
+        left: calc(100% - var(--ctw-ybx-size) * 2);
+    }
+}
+
+@media (max-width: 445px) {
+    .ctl-wrapper .cool-timeline-wrapper.ctl-horizontal-wrapper .ctl-year-label.ctl-year-text {
+        left: calc(100% - var(--ctw-ybx-size) * 1.6);
+    }
+
+    .ctl-wrapper .ctl-horizontal-timeline .ctl-content
+    {
+        margin: 0px;
+        padding: 0px;
+    }
+}

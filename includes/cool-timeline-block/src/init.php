@@ -19,6 +19,7 @@ function timeline_block_editor_assets() {
 			is_admin() ? array( 'wp-editor' ) : null,
 			null
 		);
+		wp_enqueue_script( 'ctl_block_common_script' );
 	} else {
 		if ( ! is_admin() ) {
 			wp_dequeue_style( 'cp_timeline-cgb-style' );
@@ -35,6 +36,8 @@ function editor_side_css() {
 			plugin_dir_url( __FILE__ ) . '../assets/common-block-editor.css', // Block editor CSS.
 			array( 'wp-edit-blocks' )// Dependency to include the CSS after it.
 		);
+		wp_enqueue_style( 'ctl_block_swiper_style' );
+		wp_enqueue_script( 'ctl_block_swiper_script' );
 }
 
 add_action( 'wp_head', 'timeline_block_load_post_assets' );
@@ -149,7 +152,7 @@ function cp_timeline_cgb_block_assets() {
 		array( 'wp-edit-blocks' ),
 		null
 	);
-
+	wp_register_script( 'ctl_block_common_script', CTL_PLUGIN_URL . 'includes/cool-timeline-block/assets/js/common.js', array( 'jquery' ), CTL_V, false );
 	wp_localize_script(
 		'cp_timeline-cgb-block-js',
 		'cgbGlobal',

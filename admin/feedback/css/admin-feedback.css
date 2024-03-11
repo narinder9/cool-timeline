@@ -25,9 +25,15 @@
     background-color: #7bc6de;
     color: white;
 }
-#cool-plugins-deactivate-feedback-dialog-form-body .cool-plugins-deactivate-feedback-dialog-input:not(:checked)~.cool-plugins-feedback-text {
+
+#cool-plugins-deactivate-feedback-dialog-form-body .cool-plugins-deactivate-feedback-dialog-input:not(:checked)~:where(.cool-plugins-feedback-text,.cool-plugins-extra-links) {
     display: none;
 }
+
+#cool-plugins-deactivate-feedback-dialog-form-body .cool-plugins-extra-links{
+    margin: -.5rem 0 1.3rem .5rem;
+}
+
 .cool-plugins-deactivation-response label{
     display: block;
 }

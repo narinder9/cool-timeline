@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         return;
     endif;
 
-    $cool_plugins_docs = "https://docs.coolplugins.net/";
+    $cool_plugins_docs = "https://cooltimeline.com/docs/";
     $cool_plugins_more_info ='https://cooltimeline.com/demo/?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=demo&utm_content=dashboard';
 ?>
 

@@ -3,7 +3,7 @@
   Plugin Name: Cool Timeline
   Plugin URI:https://cooltimeline.com
   Description:Cool Timeline is a responsive WordPress timeline plugin that allows you to create beautiful vertical storyline. You simply create posts, set images and date then Cool Timeline will automatically populate these posts in chronological order, based on the year and date
-  Version:2.7.1
+  Version:2.9.1
   Author:Cool Plugins
   Author URI:https://coolplugins.net/our-cool-plugins-list/
   License:GPLv2 or later
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Configuration */
 if ( ! defined( 'CTL_V' ) ) {
-	define( 'CTL_V', '2.7.1' );
+	define( 'CTL_V', '2.9.1' );
 }
 // define constants for later use
 define( 'CTL_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -29,7 +29,7 @@ if ( ! defined( 'CTL_DEMO_URL' ) ) {
 	define( 'CTL_DEMO_URL', 'https://cooltimeline.com/demo/?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=demo' );
 }
 if ( ! defined( 'CTL_BUY_PRO' ) ) {
-	define( 'CTL_BUY_PRO', 'https://cooltimeline.com/buy-cool-timeline-pro/' );
+	define( 'CTL_BUY_PRO', 'https://cooltimeline.com/plugin/cool-timeline-pro/' );
 }
 
 if ( ! class_exists( 'CoolTimeline' ) ) {
@@ -67,6 +67,7 @@ if ( ! class_exists( 'CoolTimeline' ) ) {
 			register_activation_hook( __FILE__, array( $thisIns, 'ctl_activate' ) );
 			register_deactivation_hook( __FILE__, array( $thisIns, 'ctl_deactivate' ) );
 
+			add_action( 'activated_plugin', array( $thisIns, 'ctl_plugin_redirection' ) );
 			/* including required files */
 			add_action( 'plugins_loaded', array( $thisIns, 'ctl_include_files' ) );
 			add_action( 'init', array( $thisIns, 'ctl_flush_rules' ) );
@@ -107,10 +108,15 @@ if ( ! class_exists( 'CoolTimeline' ) ) {
 			require CTL_PLUGIN_DIR . 'includes/class-stories-migration.php';
 			require_once CTL_PLUGIN_DIR . 'admin/class-migration.php';
 			// contains helper funciton for timeline
-			include_once CTL_PLUGIN_DIR . 'includes/ctl-helper-functions.php';
-			// Cool Timeline Main shortcode
-			require CTL_PLUGIN_DIR . 'includes/shortcodes/story-timeline/cool-timeline-shortcode.php';
-			new CoolTimelineShortcodeFree();
+			include_once CTL_PLUGIN_DIR . 'includes/shortcodes/class-ctl-helpers.php';
+
+			// Cool Timeline Src New Shortcode
+			require CTL_PLUGIN_DIR . 'includes/shortcodes/class-ctl-settings.php';
+			$settings_obj = new CTL_Settings();
+			// Cool Timeline Src New Shortcode
+			require CTL_PLUGIN_DIR . 'includes/shortcodes/class-ctl-shortcode.php';
+			new CTL_Shortcode( $settings_obj );
+
 			// VC addon support
 			require CTL_PLUGIN_DIR . '/includes/class-cool-vc-addon.php';
 			new CoolTmVCAddon();
@@ -156,7 +162,7 @@ if ( ! class_exists( 'CoolTimeline' ) ) {
 						We would like to suggest trying out the latest <strong> <a href="https://coolplugins.net/product/elementor-timeline-widget-pro-addon/?utm_source=ctl_plugin&utm_medium=inside_notice&utm_campaign=get_pro&utm_content=use_twea_notice" target="_blank"> Timeline Widget Pro for Elementor </a></strong> plugin. <a class="button button-primary" href="https://coolplugins.net/product/elementor-timeline-widget-pro-addon/?utm_source=ctl_plugin&utm_medium=inside_notice&utm_campaign=get_pro&utm_content=use_twea_notice" target="_blank">Try it now!</a> </br>Showcase your life story or <strong>company history</strong> an <strong>elegant & precise</strong> way.
 						
 						',
-								'ctl'
+								'cool-timeline'
 							),
 							'review_interval' => 3,
 							'logo'            => CTL_PLUGIN_URL . 'assets/images/elementor-addon.png',
@@ -191,8 +197,13 @@ if ( ! class_exists( 'CoolTimeline' ) ) {
 
 		// loading language files
 		public function ctl_load_plugin_textdomain() {
-			$rs = load_plugin_textdomain( 'cool-timeline', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+			load_plugin_textdomain( 'cool-timeline', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+		}
 
+		public function ctl_plugin_redirection( $plugin ) {
+			if ( plugin_basename( __FILE__ ) === $plugin ) {
+				exit( wp_redirect( admin_url( 'admin.php?page=cool_timeline_settings#tab=get-started' ) ) );
+			}
 		}
 
 		// Add the settings link to the plugins page
@@ -219,7 +230,7 @@ if ( ! class_exists( 'CoolTimeline' ) ) {
 			// - Update the post's metadata.
 			if ( isset( $_POST['ctl_post_meta']['story_type']['ctl_story_date'] ) ) {
 				$story_date      = sanitize_text_field( $_POST['ctl_post_meta']['story_type']['ctl_story_date'] );
-				$story_timestamp = CTL_functions::ctlfree_generate_custom_timestamp( $story_date );
+				$story_timestamp = CTL_Helpers::ctlfree_generate_custom_timestamp( $story_date );
 				update_post_meta( $post_id, 'ctl_story_timestamp', $story_timestamp );
 				update_post_meta( $post_id, 'story_based_on', 'default' );
 				update_post_meta( $post_id, 'ctl_story_date', $story_date );

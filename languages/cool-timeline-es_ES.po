@@ -1,0 +1,207 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cool Timeline\n"
+"POT-Creation-Date: 2020-08-10 11:44+0000\n"
+"PO-Revision-Date: 2023-12-01 11:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: Spanish (Spain)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: cooltimeline.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Loco-Version: 2.6.6; wp-6.4.1"
+
+#: cooltimeline.php:235
+msgid "Please Give Us Your Feedback"
+msgstr "Por Favor, Danos Tu Opinión"
+
+#: cooltimeline.php:246
+msgid ""
+"If you find our plugin and support helpful.<br>Please rate and review us,It "
+"helps us grow <br>and improve our services"
+msgstr ""
+
+#: cooltimeline.php:248
+msgid "Submit Review ★★★★★"
+msgstr "Presentar Examen ★★★★★"
+
+#: cooltimeline.php:250
+msgid "Upgrade to Pro version"
+msgstr "Actualizar a la versión Pro"
+
+#: admin/class.cool-timeline-posttype.php:71
+msgid "Story Year"
+msgstr "Historia Año"
+
+#: admin/class.cool-timeline-posttype.php:72
+msgid "Story Date"
+msgstr "Historia Fecha De"
+
+#: admin/class.cool-timeline-posttype.php:73
+msgid "Story Icon"
+msgstr "Historia Icono"
+
+#: admin/class.cool-timeline-posttype.php:104
+msgid "Not Matched"
+msgstr "No Se Corresponde"
+
+#: admin/class.review-notice.php:70
+msgid "I already rated it"
+msgstr "Yo ya clasificado"
+
+#: admin/class.review-notice.php:71
+msgid "Not Interested"
+msgstr "No Interesa"
+
+#: admin/class.review-notice.php:72
+msgid "No, not good enough, i do not like to rate it!"
+msgstr "No, no es lo suficientemente bueno, no me gusta la tasa de él!"
+
+#: admin/cool-timeline-settings.php:67
+msgid "Stories Description?"
+msgstr "Historias De La Descripción?"
+
+#: admin/cool-timeline-settings.php:67
+msgid ""
+"This option is overridden by shortcode in version 1.7. Please check "
+"shortcode generator."
+msgstr ""
+"Esta opción es reemplazado por shortcode en la versión 1.7. Por favor, "
+"compruebe código corto generador."
+
+#: admin/cool-timeline-settings.php:70
+msgid "Stories Order ?"
+msgstr "Historias De La Orden ?"
+
+#: admin/cool-timeline-settings.php:70
+msgid ""
+"This option is overridden by shortcode in version 1.7. Please check your "
+"shortcode generator."
+msgstr ""
+"Esta opción es reemplazado por shortcode en la versión 1.7. Por favor revise "
+"su código corto generador."
+
+#: admin/ctl-meta-fields.php:12
+msgid "Timeline Story Settings"
+msgstr "Línea De Tiempo Historia De La Configuración De"
+
+#: admin/ctl-meta-fields.php:24
+msgid "Story Date / Year <span class=\"ctl_required\">*</span>"
+msgstr ""
+
+#: admin/ctl-meta-fields.php:24
+msgid ""
+"<p class=\"ctl_required\">Please select story Story Date / Year / Time using "
+"datepicker only. <strong>Date Format( mm/dd/yy hh:mm )</strong></p>"
+msgstr ""
+
+#: admin/ctl-meta-fields.php:26
+msgid "d MM yy"
+msgstr "d MM aa"
+
+#: admin/ctl-meta-fields.php:28
+msgid "Full"
+msgstr "Completo"
+
+#: admin/ctl-meta-fields.php:28
+msgid "Small"
+msgstr "Pequeño"
+
+#: admin/ctl-meta-fields.php:28
+msgid "Story image size"
+msgstr "Historia el tamaño de la imagen"
+
+#: admin/ctl-meta-fields.php:29
+msgid ""
+"<div class=\"desc-field\"><strong style=\"width: 100%;display: inline-block;"
+"margin-top: 40px;\">Premium Settings | <a target=\"_blank\" href=\"https://1."
+"envato.market/7QLxy\">Buy Pro</a></strong><img src=\"https://res.cloudinary."
+"com/pinkborder/image/upload/v1556354078/cool-timeline-pro-wp-plugin/timeline-"
+"premium-features.png\" style=\"max-width: 100%;border: 2px solid #ef2e2e;\">"
+"</div>"
+msgstr ""
+
+#: fa-icons/fa-icons-class.php:88
+msgid "Select Story Icon"
+msgstr "Seleccione El Icono De La Historia"
+
+#: fa-icons/fa-icons-class.php:119
+msgid "Add Icon"
+msgstr "Agregar Icono"
+
+#: fa-icons/fa-icons-class.php:123
+msgid "Select Font Awesome Icon"
+msgstr "Seleccione La Fuente Impresionante Icono"
+
+#: includes/ctl-helper-functions.php:440
+msgid " of "
+msgstr " de "
+
+#: includes/ctl-helper-functions.php:441
+msgid " Page "
+msgstr " Página "
+
+#: admin/meta-box-class/my-meta-box-class.php:820
+msgid "Select a color"
+msgstr "Seleccione un color de la"
+
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:32
+msgid "Read More"
+msgstr "Leer Más"
+
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:133
+msgid "d/M/Y"
+msgstr "d/M/Y"
+
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:314
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:319
+msgid "Y"
+msgstr "Y"
+
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:350
+msgid "Sorry,You have not added any story yet"
+msgstr "Lo sentimos,no ha agregado ninguna historia pero"
+
+#: includes/shortcodes/story-timeline/cool-timeline-shortcode.php:436
+msgid "F j"
+msgstr "F j"
+
+#. Name of the plugin
+msgid "Cool  Timeline"
+msgstr "Fresco De La Línea De Tiempo"
+
+#. Description of the plugin
+msgid ""
+"Cool Timeline is a responsive WordPress timeline plugin that allows you to "
+"create beautiful vertical storyline. You simply create posts, set images and "
+"date then Cool Timeline will automatically populate these posts in "
+"chronological order, based on the year and date"
+msgstr ""
+"Fresco de la línea de tiempo es un responsive WordPress línea de tiempo "
+"plugin que te permite crear hermosas vertical de la historia. Usted "
+"simplemente crear puestos de trabajo, conjunto de imágenes y de fecha y, a "
+"continuación, Enfriar línea de tiempo se rellenará automáticamente estos "
+"puestos en orden cronológico, con base en el año y la fecha"
+
+#. URI of the plugin
+msgid "https://cooltimeline.com"
+msgstr ""
+
+#. Author of the plugin
+msgid "Cool Plugins"
+msgstr "Fresco Plugins"
+
+#. Author URI of the plugin
+msgid "https://coolplugins.net/our-cool-plugins-list/"
+msgstr ""

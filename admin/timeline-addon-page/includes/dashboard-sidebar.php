@@ -25,11 +25,6 @@ if ( ! defined( 'ABSPATH' ) ) {
       <a href="<?php echo esc_attr( $cool_support_email ); ?>" target="_blank" class="button button-secondary">Premium Plugin Support</a>
       <br><br>
       </li>
-      <li>We also provide <b>timeline plugins customization</b> services.
-      <br><br>
-      <a href="<?php echo esc_attr( $cool_support_email ); ?>" target="_blank" class="button button-primary">Hire Developer</a>
-      <br><br>
-      </li>
    </ul>
     </div>
 

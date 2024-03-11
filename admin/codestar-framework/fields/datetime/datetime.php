@@ -1,61 +1,71 @@
-<?php if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
+<?php if ( ! defined( 'ABSPATH' ) ) {
+	die;
+} // Cannot access directly.
 /**
  *
  * Field: datetime
  *
  * @since 1.0.0
  * @version 1.0.0
- *
  */
 if ( ! class_exists( 'CSF_Field_datetime' ) ) {
-  class CSF_Field_datetime extends CSF_Fields {
+	class CSF_Field_datetime extends CSF_Fields {
 
-    public function __construct( $field, $value = '', $unique = '', $where = '', $parent = '' ) {
-      parent::__construct( $field, $value, $unique, $where, $parent );
-    }
 
-    public function render() {
+		public function __construct( $field, $value = '', $unique = '', $where = '', $parent = '' ) {
 
-      $defaults = array(
-        'allowInput' => true,
-      );
+			 parent::__construct( $field, $value, $unique, $where, $parent );
+		}
 
-      $settings = ( ! empty( $this->field['settings'] ) ) ? $this->field['settings'] : array();
+		public function render() {
 
-      if ( ! isset( $settings['noCalendar'] ) ) {
-        $defaults['dateFormat'] = 'm/d/Y';
-      }
+			$defaults = array(
+				'allowInput' => true,
+			);
 
-      $settings = wp_parse_args( $settings, $defaults );
+			$settings = ( ! empty( $this->field['settings'] ) ) ? $this->field['settings'] : array();
 
-      echo $this->field_before();
+			if ( ! isset( $settings['noCalendar'] ) ) {
+				$defaults['dateFormat'] = 'm/d/Y';
+			}
 
-      if ( ! empty( $this->field['from_to'] ) ) {
+			$settings = wp_parse_args( $settings, $defaults );
 
-        $args = wp_parse_args( $this->field, array(
-          'text_from' => esc_html__( 'From', 'csf' ),
-          'text_to'   => esc_html__( 'To', 'csf' ),
-        ) );
+			echo $this->field_before();
 
-        $value = wp_parse_args( $this->value, array(
-          'from' => '',
-          'to'   => '',
-        ) );
+			if ( ! empty( $this->field['from_to'] ) ) {
 
-        echo '<label class="csf--from">'. esc_attr( $args['text_from'] ) .' <input type="text" name="'. esc_attr( $this->field_name( '[from]' ) ) .'" value="'. esc_attr( $value['from'] ) .'"'. $this->field_attributes() .' data-type="from" /></label>';
-        echo '<label class="csf--to">'. esc_attr( $args['text_to'] ) .' <input type="text" name="'. esc_attr( $this->field_name( '[to]' ) ) .'" value="'. esc_attr( $value['to'] ) .'"'. $this->field_attributes() .' data-type="to" /></label>';
+				$args = wp_parse_args(
+					$this->field,
+					array(
+						'text_from' => esc_html__( 'From', 'csf' ),
+						'text_to'   => esc_html__( 'To', 'csf' ),
+					)
+				);
 
-      } else {
+				$value = wp_parse_args(
+					$this->value,
+					array(
+						'from' => '',
+						'to'   => '',
+					)
+				);
 
-        echo '<input type="text" name="'. esc_attr( $this->field_name() ) .'" value="'. esc_attr( $this->value ) .'"'. $this->field_attributes() .'/>';
+				echo '<label class="csf--from">' . esc_attr( $args['text_from'] ) . ' <input type="text" name="' . esc_attr( $this->field_name( '[from]' ) ) . '" value="' . esc_attr( $value['from'] ) . '"' . $this->field_attributes() . ' data-type="from" /></label>';
+				echo '<label class="csf--to">' . esc_attr( $args['text_to'] ) . ' <input type="text" name="' . esc_attr( $this->field_name( '[to]' ) ) . '" value="' . esc_attr( $value['to'] ) . '"' . $this->field_attributes() . ' data-type="to" /></label>';
 
-      }
+			} else {
 
-      echo '<div class="csf-datetime-settings" data-settings="'. esc_attr( json_encode( $settings ) ) .'"></div>';
+				echo '<input type="text" name="' . esc_attr( $this->field_name() ) . '" value="' . esc_attr( $this->value ) . '"' . $this->field_attributes() . '/>';
 
-      echo $this->field_after();
+			}
 
-    }
+			echo '<div class="csf-datetime-settings" data-settings="' . esc_attr( json_encode( $settings ) ) . '"></div>';
 
-  }
+			echo $this->field_after();
+
+		}
+
+	}
 }
+
