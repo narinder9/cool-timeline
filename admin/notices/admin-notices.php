@@ -167,9 +167,22 @@ if (!class_exists('ctl_admin_notices')):
             });
             </script>';
             $nonce = wp_create_nonce( $id . '_notice_nonce' );
+            $logo_container_link_href = "";
+
+            switch($message['plugin_name']){
+                case 'Timeline Widget Pro for Elementor';
+                    $logo_container_link_href = 'https://wordpress.org/plugins/timeline-widget-addon-for-elementor';
+                    break;
+                case 'Timeline Module For Divi':
+                    $logo_container_link_href = 'https://wordpress.org/plugins/timeline-module-for-divi/';
+                    break;
+                default:
+                    $logo_container_link_href = 'https://wordpress.org/plugins/cool-timeline/';
+            }      
+
             $img_path= ( isset( $message['logo'] ) && !empty($message['logo'] ) ) ? $message['logo'] : null;
             if( $img_path != null ){
-                $image_html ='<div class="logo_container"><a href="https://wordpress.org/plugins/events-widgets-for-elementor-and-the-events-calendar/"><img src="'.esc_url($img_path).'" style="max-width:70px;"></a></div>';
+                $image_html ='<div class="logo_container"><a href="'.esc_attr($logo_container_link_href).'"><img src="'.esc_url($img_path).'" style="max-width:70px;"></a></div>';
             }
             else{
                 $image_html ='';
@@ -334,7 +347,7 @@ if (!class_exists('ctl_admin_notices')):
                 $us=update_option( $id . '_remove_notice','yes' );
                 die( 'Admin message removed!' );
             }else{
-                die( 'nounce verification failed!' );
+                die( 'nonce verification failed!' );
             }
 
         }

@@ -114,6 +114,21 @@ class ctlCommonScript {
         }  
     };
 
+	btnHoverEffect = () =>{
+        const eleClasses='.ctl-button-next:not(".swiper-button-disabled"), .ctl-button-prev:not(".swiper-button-disabled"), .ctl-pagination a.page-numbers';
+
+        jQuery(document).on('mousedown',eleClasses,(e)=>{
+            const ele=jQuery(e.currentTarget);
+
+            ele.addClass('ctl-btn-click-effect')
+				setTimeout(
+		            function() {
+		                ele.removeClass('ctl-btn-click-effect');
+		        },
+		    500);
+        });
+    }
+
     callBack = () => {
 
 		const eachTimeline=jQuery('.ctl-wrapper .cool-timeline-wrapper');
@@ -152,6 +167,9 @@ class ctlCommonScript {
         jQuery(window).on('resize', () => {
             this.ctlResponsiveDevice();
         });
+
+		// Button hover effect
+		this.btnHoverEffect();
     };
 }
 

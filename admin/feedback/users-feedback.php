@@ -106,7 +106,7 @@ class UsersFeedback {
 									$twae_plugin_url = 'https://wordpress.org/plugins/timeline-widget-addon-for-elementor/';
 									?>
 								  <div class="cool-plugins-extra-links">
-									Please try <a href="<?php echo esc_url( $twae_plugin_url ); ?>" target="_blank">Timeline Widget For Elementor</a> plugin.
+									<?php echo esc_html__( 'Please try ', 'cool-timeline' ); ?><a href="<?php echo esc_url( $twae_plugin_url ); ?>" target="_blank"><?php echo esc_html__( 'Timeline Widget For Elementor', 'cool-timeline' ); ?></a> <?php echo esc_html__( 'plugin.', 'cool-timeline' ); ?>
 									</div>
 									<?php
 								}
@@ -120,8 +120,8 @@ class UsersFeedback {
 					<input class="cool-plugins-GDPR-data-notice" id="cool-plugins-GDPR-data-notice" type="checkbox"><label for="cool-plugins-GDPR-data-notice"><?php echo esc_html( __( 'I consent to having Cool Plugins store my all submitted information via this form, they can also respond to my inquiry.', 'cool-timeline' ) ); ?></label>
 				</div>
 				<div class="cool-plugin-popup-button-wrapper">
-					<a class="cool-plugins-button button-deactivate" id="cool-plugin-submitNdeactivate">Submit and Deactivate</a>
-					<a class="cool-plugins-button" id="cool-plugin-skipNdeactivate">Skip and Deactivate</a>
+					<a class="cool-plugins-button button-deactivate" id="cool-plugin-submitNdeactivate"><?php echo esc_html__( 'Submit and Deactivate', 'cool-timeline' ); ?></a>
+					<a class="cool-plugins-button" id="cool-plugin-skipNdeactivate"><?php echo esc_html__( 'Skip and Deactivate', 'cool-timeline' ); ?></a>
 				</div>
 			</form>
 			</div>
@@ -135,7 +135,8 @@ class UsersFeedback {
 		if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( $_POST['_wpnonce'], '_cool-plugins_deactivate_feedback_nonce' ) ) {
 			wp_send_json_error();
 		} else {
-			$reason             = sanitize_text_field( $_POST['reason'] );
+			$reason             = sanitize_text_field( $_POST['reason'] ); // Sanitize reason input
+			$message            = isset( $_POST['message'] ) ? sanitize_textarea_field( $_POST['message'] ) : ''; // Sanitize message input
 			$deactivate_reasons = array(
 				'didnt_work_as_expected'         => array(
 					'title'             => esc_html( __( 'The plugin didn\'t work as expected', 'cool-timeline' ) ),

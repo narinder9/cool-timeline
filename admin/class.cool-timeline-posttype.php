@@ -83,13 +83,13 @@ class CoolTimelinePosttypeFree {
 	// clt column handlers
 	public function ctl_custom_columns( $column, $post_id ) {
 		$ctl_story_type = get_post_meta( $post_id, 'story_type', true );
-		$ctl_story_date = isset( $ctl_story_type['ctl_story_date'] ) ? $ctl_story_type['ctl_story_date'] : '';
+		$ctl_story_date = isset( $ctl_story_type['ctl_story_date'] ) ? sanitize_text_field( $ctl_story_type['ctl_story_date'] ) : ''; // Sanitize input
 		switch ( $column ) {
 			case 'story_year':
 				$story_timestamp = strtotime( $ctl_story_date );
 				if ( $story_timestamp !== false ) {
 					$story_year = gmdate( 'Y', $story_timestamp );
-					echo '<p><strong>' . esc_html( $story_year ) . '</strong></p>';
+					echo '<p><strong>' . esc_html( $story_year ) . '</strong></p>'; // Escape output
 				} else {
 					$ctl_story_date = trim( str_ireplace( array( 'am', 'pm' ), '', $ctl_story_date ) );
 					$dateobj        = DateTime::createFromFormat( 'm/d/Y H:i', $ctl_story_date, wp_timezone() );
@@ -99,19 +99,19 @@ class CoolTimelinePosttypeFree {
 				}
 				break;
 			case 'story_date':
-				echo '<p><strong>' . esc_html( $ctl_story_date ) . '</strong></p>';
+				echo '<p><strong>' . esc_html( $ctl_story_date ) . '</strong></p>'; // Escape output
 				break;
 			case 'icon':
 				$icon = get_post_meta( $post_id, 'story_icon', true );
-				$icon = isset( $icon['fa_field_icon'] ) ? $icon['fa_field_icon'] : '';
+				$icon = isset( $icon['fa_field_icon'] ) ? sanitize_text_field( $icon['fa_field_icon'] ) : ''; // Sanitize input
 				if ( $icon ) {
-					echo '<i style="font-size:32px;" class="' . esc_attr( $icon ) . '" aria-hidden="true"></i>';
+					echo '<i style="font-size:32px;" class="' . esc_attr( $icon ) . '" aria-hidden="true"></i>'; // Escape output
 				} else {
-					echo '<i  style="font-size:32px;" class="fa fa-clock-o" aria-hidden="true"></i>';
+					echo '<i style="font-size:32px;" class="fa fa-clock-o" aria-hidden="true"></i>';
 				}
 				break;
 			default:
-				echo '<p>' . esc_html_e( 'Not Matched', 'cool-timeline' ) . '</p>';
+				echo '<p>' . esc_html_e( 'Not Matched', 'cool-timeline' ) . '</p>'; // Escape output
 		}
 	}
 

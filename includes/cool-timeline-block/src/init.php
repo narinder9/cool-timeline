@@ -75,17 +75,17 @@ function timeline_block_load_post_assets() {
 				if ( isset( $block['attrs']['headFontFamily'] ) ) {
 					if ( ! in_array( $block['attrs']['headFontFamily'], $default_Fonts ) ) {
 						$headFont = array();
-						array_push( $headFont, $block['attrs']['headFontFamily'] );
+						array_push( $headFont, sanitize_text_field( $block['attrs']['headFontFamily'] ) ); // Sanitize font family
 						if ( isset( $block['attrs']['headFontWeight'] ) ) {
-							array_push( $headFont, $block['attrs']['headFontWeight'] );
+							array_push( $headFont, sanitize_text_field( $block['attrs']['headFontWeight'] ) ); // Sanitize font weight
 						}
 						if ( isset( $block['attrs']['headFontSubset'] ) ) {
-							array_push( $headFont, $block['attrs']['headFontSubset'] );
+							array_push( $headFont, sanitize_text_field( $block['attrs']['headFontSubset'] ) ); // Sanitize font subset
 						}
 						$head_link = 'https://fonts.googleapis.com/css?family=' . esc_attr( implode( ':', $headFont ) ) . '';
 						wp_enqueue_style(
 							'timeline-block-font-head', // Handle
-							$head_link
+							esc_url( $head_link ) // Escape URL
 						);
 					}
 				}
@@ -102,7 +102,7 @@ function timeline_block_load_post_assets() {
 						$subHead_link = 'https://fonts.googleapis.com/css?family=' . esc_attr( implode( ':', $subheadFont ) ) . '';
 						wp_enqueue_style(
 							'timeline-block-font-subHead', // Handle
-							$subHead_link
+							esc_url( $subHead_link ) // Escape URL
 						);
 					}
 				}
@@ -158,8 +158,7 @@ function cp_timeline_cgb_block_assets() {
 		'cgbGlobal',
 		array(
 			'pluginDirPath' => plugin_dir_path( __DIR__ ),
-			'pluginDirUrl'  => plugin_dir_url( __DIR__ ),
-
+			'pluginDirUrl'  => esc_url( plugin_dir_url( __DIR__ ) ), // Escape URL
 		)
 	);
 	if ( function_exists( 'register_block_type' ) ) {

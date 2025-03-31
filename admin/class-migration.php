@@ -28,12 +28,12 @@ class CTL_free_migrations {
 			return;
 		}
 
-		$args     = array(
+		$args  = array(
 			'post_type'   => 'cool_timeline',
 			'post_status' => array( 'publish', 'future' ),
 			'numberposts' => -1,
 		);
-		   $posts = get_posts( $args );
+		$posts = get_posts( $args );
 
 		// Story Type
 		$story_type_key = array(
@@ -49,32 +49,33 @@ class CTL_free_migrations {
 
 		if ( isset( $posts ) && is_array( $posts ) && ! empty( $posts ) ) {
 			foreach ( $posts as $post ) {
+				// Sanitize post ID
+				$post_id = intval( $post->ID );
 
 				foreach ( $story_icon_key as $item ) {
-					$item_value                         = get_post_meta( $post->ID, $item, true );
+					$item_value                         = get_post_meta( $post_id, $item, true );
 					$array_icon_type[ $item ]           = $item_value;
 					$array_icon_type['story_icon_type'] = 'fontawesome';
 				}
 
 				foreach ( $story_type_key as $item ) {
-					$item_value                         = get_post_meta( $post->ID, $item, true );
+					$item_value                         = get_post_meta( $post_id, $item, true );
 					$array_story_type[ $item ]          = $item_value;
 					$array_story_type['story_based_on'] = 'default';
 				}
 
 				foreach ( $story_media_key as $item ) {
-					$item_value                        = get_post_meta( $post->ID, $item, true );
+					$item_value                        = get_post_meta( $post_id, $item, true );
 					$array_story_media[ $item ]        = $item_value;
 					$array_story_media['story_format'] = 'default';
 				}
 
-				update_post_meta( $post->ID, 'story_type', $array_story_type );
-				update_post_meta( $post->ID, 'story_media', $array_story_media );
-				update_post_meta( $post->ID, 'story_icon', $array_icon_type );
+				update_post_meta( $post_id, 'story_type', $array_story_type );
+				update_post_meta( $post_id, 'story_media', $array_story_media );
+				update_post_meta( $post_id, 'story_icon', $array_icon_type );
 				update_option( 'ctl-postmeta-migration', 'done' );
 			}
 		}
-
 	}
 
 

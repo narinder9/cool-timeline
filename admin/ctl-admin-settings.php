@@ -232,9 +232,6 @@ if ( class_exists( 'CSF' ) ) {
 					'color'   => false,
 				),
 
-				// A textarea field
-
-
 				array(
 					'id'      => 'post_content_typo',
 					'type'    => 'typography',
@@ -282,70 +279,59 @@ if ( class_exists( 'CSF' ) ) {
 		?>
 		<div class="ctl_started-section">
 			<div class="ctl_tab_btn_wrapper">
-				<button class="button ctl_class_post_button ctl_tab_active">Classic Timeline Shortcode</button>
-				<button class="button ctl_block_timeline_button">Modern Timeline Block</button>
-				<button class="button button-info ctl_elementor_addon_button">Elementor Timeline Widgets</button>
+				<button class="button ctl_class_post_button ctl_tab_active"><?php echo esc_html__( 'Classic Timeline Shortcode', 'cool-timeline' ); ?></button>
+				<button class="button ctl_block_timeline_button"><?php echo esc_html__( 'Modern Timeline Block', 'cool-timeline' ); ?></button>
+				<button class="button button-info ctl_elementor_addon_button"><?php echo esc_html__( 'Elementor Timeline Widgets', 'cool-timeline' ); ?></button>
+				<button class="button button-info ctl_divi_module_button"><?php echo esc_html__( 'Timeline Module For Divi', 'cool-timeline' ); ?></button>
 			</div>
 			<div class="tab_panel">
 				<div class="wrapper_first">
 					<div class="ctl_step">
 						<div class="ctl_step-content">
 							<div class="ctl_steps-title">
-								<h2><a href="post-new.php?post_type=cool_timeline">1. Create Timeline Story</a></h2>
+								<h2><a href="post-new.php?post_type=cool_timeline"><?php echo esc_html__( '1. Create Timeline Story', 'cool-timeline' ); ?></a></h2>
 							</div>
 							<div class="ctl_steps-list">
 								<ol>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Open timeline addons and add a new story.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Open timeline addons and add a new story.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Craft a compelling <b>Title </b>and
-										<b>Description</b> for your story.</span>
+										<span class="ctl_list-text"><?php printf( esc_html__( 'Craft a compelling %1$s Title %2$s and %3$s Description %4$s for your story.', 'cool-timeline' ), '<b>', '</b>', '<b>', '</b>' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Specify the date for your timeline story.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Specify the date for your timeline story.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Personalize your timeline with icons and images.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Personalize your timeline with icons and images.', 'cool-timeline' ); ?></span>
 									</li>
 								</ol>
 							</div>
 						</div>
 						<div class="ctl_video-section">
-							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT" title="<?php echo esc_attr__( 'YouTube video player', 'cool-timeline' ); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 					</div>
 		
 					<div class="ctl_step ctl_col-rev">
 						<div class="ctl_video-section">
-							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=71"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=71" title="<?php echo esc_attr__( 'YouTube video player', 'cool-timeline' ); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 						<div class="ctl_step-content">
 							<div class="ctl_steps-title">
-								<h2><a href="post-new.php?post_type=page">2. Add Shortcode (Gutenberg)</a></h2>
+								<h2><a href="post-new.php?post_type=page"><?php echo esc_html__( '2. Add Shortcode (Gutenberg)', 'cool-timeline' ); ?></a></h2>
 							</div>
 							<div class="ctl_steps-list">
 								<ol>
 									<li class="ctl_step-data">
-		
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Search for <b>Cool Timeline</b> in the block search box.
-										</span>
+										<span class="ctl_list-text"><?php printf( esc_html__( 'Search for %1$s Cool Timeline %2$s in the block search box.', 'cool-timeline' ), '<b>', '</b>' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Access settings in the shortcode block to generate the timeline shortcode.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Access settings in the shortcode block to generate the timeline shortcode.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Publish the page and preview the output on the frontend.
-										</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Publish the page and preview the output on the frontend.', 'cool-timeline' ); ?></span>
 									</li>
-		
 								</ol>
 							</div>
 						</div>
@@ -354,59 +340,51 @@ if ( class_exists( 'CSF' ) ) {
 					<div class="ctl_step">
 						<div class="ctl_step-content">
 							<div class="ctl_steps-title">
-								<h2><a href="post-new.php?post_type=page">2. Add Shortcode (Classic Editor)</a></h2>
+								<h2><a href="post-new.php?post_type=page"><?php echo esc_html__( '2. Add Shortcode (Classic Editor)', 'cool-timeline' ); ?></a></h2>
 							</div>
 							<div class="ctl_steps-list">
 								<ol>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Create or edit a page.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Create or edit a page.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Click the <b>Add Timeline</b> button.</span>
+										<span class="ctl_list-text"><?php printf( esc_html__( 'Click the %1$s Add Timeline %2$s button.', 'cool-timeline' ), '<b>', '</b>' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Access General Settings to configure options.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Access General Settings to configure options.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Navigate to the preview tab for a Live Preview.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Navigate to the preview tab for a Live Preview.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Click the <b>Insert Shortcode</b> button to add the shortcode.</span>
+										<span class="ctl_list-text"><?php printf( esc_html__( 'Click the %s button to add the shortcode.', 'cool-timeline' ), '<b>' . esc_html__( 'Insert Shortcode', 'cool-timeline' ) . '</b>' ); ?></span>
 									</li>
 								</ol>
 							</div>
 						</div>
 						<div class="ctl_video-section">
-							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=41"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=41" title="<?php echo esc_attr__( 'YouTube video player', 'cool-timeline' ); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 					</div>
 
 					<div class="ctl_step ctl_col-rev">
 						<div class="ctl_video-section">
-							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=238"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=238" title="<?php echo esc_attr__( 'YouTube video player', 'cool-timeline' ); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 						<div class="ctl_step-content">
 							<div class="ctl_steps-title">
-								<h2>3. Timeline Configuration</h2>
+								<h2><?php echo esc_html__( '3. Timeline Configuration', 'cool-timeline' ); ?></h2>
 							</div>
 							<div class="ctl_steps-list">
 								<ol>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Configure general settings for your timeline, including title, story content, story year labels, and timeline position.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Configure general settings for your timeline, including title, story content, story year labels, and timeline position.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Customize style settings to adjust timeline story colors and apply custom CSS.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Customize style settings to adjust timeline story colors and apply custom CSS.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Set typography settings to style your timeline date, story, and story content fonts.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Set typography settings to style your timeline date, story, and story content fonts.', 'cool-timeline' ); ?></span>
 									</li>
 								</ol>
 							</div>
@@ -420,49 +398,42 @@ if ( class_exists( 'CSF' ) ) {
 					<div class="ctl_step">
 						<div class="ctl_step-content">
 							<div class="ctl_steps-title">
-								<h2><a href="post-new.php?post_type=page">1. Add Timeline Block</a></h2>
+								<h2><a href="post-new.php?post_type=page"><?php echo esc_html__( '1. Add Timeline Block', 'cool-timeline' ); ?></a></h2>
 							</div>
 							<div class="ctl_steps-list">
 								<ol>
 									<li class="ctl_step-data">
-		
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">
-										Search for <b>Cool Timeline Block</b> in the block search box.</span>
+										<span class="ctl_list-text"><?php printf( esc_html__( 'Search for %1$s Cool Timeline Block %2$s in the block search box.', 'cool-timeline' ), '<b>', '</b>' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Access Additional Settings by navigating to the right side of the Cool Timeline Block.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Access Additional Settings by navigating to the right side of the Cool Timeline Block.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Utilize General, Styles, and Advanced Settings within the Cool Timeline Block.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Utilize General, Styles, and Advanced Settings within the Cool Timeline Block.', 'cool-timeline' ); ?></span>
 									</li>
 								</ol>
 							</div>
 						</div>
 						<div class="ctl_video-section">
-							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=125" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=125" title="<?php echo esc_attr__( 'YouTube video player', 'cool-timeline' ); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 					</div>
 		
 					<div class="ctl_step ctl_col-rev">
 						<div class="ctl_video-section">
-							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=165"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=165" title="<?php echo esc_attr__( 'YouTube video player', 'cool-timeline' ); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 						<div class="ctl_step-content">
 							<div class="ctl_steps-title">
-								<h2>2. Timeline Block Style Settings</h2>
+								<h2><?php echo esc_html__( '2. Timeline Block Style Settings', 'cool-timeline' ); ?></h2>
 							</div>
 							<div class="ctl_steps-list">
 								<ol>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Access the Style Settings for the Cool Timeline Block.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Access the Style Settings for the Cool Timeline Block.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Modify the color of story Title, Description, and Labels.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Modify the color of story Title, Description, and Labels.', 'cool-timeline' ); ?></span>
 									</li>
 								</ol>
 							</div>
@@ -472,28 +443,24 @@ if ( class_exists( 'CSF' ) ) {
 					<div class="ctl_step">
 						<div class="ctl_step-content">
 							<div class="ctl_steps-title">
-								<h2>3. Timeline Block Advanced Settings</h2>
+								<h2><?php echo esc_html__( '3. Timeline Block Advanced Settings', 'cool-timeline' ); ?></h2>
 							</div>
 							<div class="ctl_steps-list">
 								<ol>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">
-										Access advanced settings for the Cool Timeline Block.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Access advanced settings for the Cool Timeline Block.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Customize the Line, Icon, Icon Background, and Story Border color.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Customize the Line, Icon, Icon Background, and Story Border color.', 'cool-timeline' ); ?></span>
 									</li>
 									<li class="ctl_step-data">
-										<!-- <span class="ctl_list-icon"><i class="fa fa-check" aria-hidden="true"></i></span> -->
-										<span class="ctl_list-text">Adjust the size of Line, Icon Box, and Item Spacing.</span>
+										<span class="ctl_list-text"><?php echo esc_html__( 'Adjust the size of Line, Icon Box, and Item Spacing.', 'cool-timeline' ); ?></span>
 									</li>
 								</ol>
 							</div>
 						</div>
 						<div class="ctl_video-section">
-							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=205" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe class="ctl_timeline-video" width="560" height="315" src="https://www.youtube.com/embed/eBoNMy2fjg8?si=VSz5YrO_ZOqqvoJT&amp;start=205" title="<?php echo esc_attr__( 'YouTube video player', 'cool-timeline' ); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
@@ -504,6 +471,7 @@ if ( class_exists( 'CSF' ) ) {
 			const ClassicPostButton = jQuery(".ctl_class_post_button");
 			const BlockTimelineButton = jQuery(".ctl_block_timeline_button");
 			const ElementAddonsButton = jQuery(".ctl_elementor_addon_button");
+			const DiviModuleButton = jQuery(".ctl_divi_module_button");
 			const firstWrapper = jQuery(".wrapper_first");
 			const secondWrapper = jQuery(".wrapper_second");
 			ClassicPostButton.on("click", (event) => {
@@ -522,6 +490,10 @@ if ( class_exists( 'CSF' ) ) {
 			});
 			ElementAddonsButton.on("click",(event)=>{
 				window.open("https://coolplugins.net/product/elementor-timeline-widget-pro-addon/?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=get_pro&utm_content=get-started-tabs", "_blank");
+				event.preventDefault();
+			})
+			DiviModuleButton.on("click",(event)=>{
+				window.open("https://wordpress.org/plugins/timeline-module-for-divi");
 				event.preventDefault();
 			})
 		</script>

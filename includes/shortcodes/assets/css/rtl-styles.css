@@ -42,3 +42,6 @@
 .rtl .cooltimeline_cont .center-line:after {
     margin-right: calc(50% - 10px);
 }
+.rtl{
+    direction: initial !important;
+}

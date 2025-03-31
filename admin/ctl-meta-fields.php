@@ -24,7 +24,6 @@ if ( class_exists( 'CSF' ) ) {
 		)
 	);
 
-
 		// Create a section
 		CSF::createSection(
 			$prefix,
@@ -32,6 +31,7 @@ if ( class_exists( 'CSF' ) ) {
 				// 'title'  => 'Add Icon',
 				'data_type' => 'unserialize',
 				'fields'    => array(
+
 					// Story Date
 					array(
 						'id'     => 'story_type',
@@ -90,7 +90,7 @@ if ( class_exists( 'CSF' ) ) {
 					array(
 						'id'      => 'ctl_pro_screenshot',
 						'type'    => 'content',
-						'content' => '<div class="desc-field"><h4 >Premium Settings | <a target="_blank" href="' . CTL_BUY_PRO . '?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=get_pro&utm_content=add_stories">Buy Pro</a></h4><img src="' . CTL_PLUGIN_URL . '/assets/images/pro-story-settings.png" style="max-width: 100%;border: 2px solid #ef2e2e;"></div>',
+						'content' => '<input type="hidden" name="ctl_nonce" value="' . wp_create_nonce( 'ctl_save_story_meta' ) . '"><div class="desc-field"><h4 >Premium Settings | <a target="_blank" href="' . CTL_BUY_PRO . '?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=get_pro&utm_content=add_stories">Buy Pro</a></h4><a target="_blank" href="' . CTL_BUY_PRO . '?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=get_pro&utm_content=add_stories"><img src="' . CTL_PLUGIN_URL . '/assets/images/pro-story-settings.png" style="max-width: 100%;border: 2px solid #ef2e2e;"></a></div>',
 						'class'   => 'story_format_image',
 					),
 
@@ -99,7 +99,6 @@ if ( class_exists( 'CSF' ) ) {
 
 			)
 		);
-
 
 	$pro_list = 'feautre_list';
 	// Create a metabox

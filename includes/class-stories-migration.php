@@ -52,6 +52,8 @@ class CTL_stories_migration {
 			foreach ( $posts as $post ) {
 				$published_date = get_the_date( 'm/d/Y H:i', $post->ID );
 				if ( $published_date ) {
+					// Sanitize the published date
+					$published_date = sanitize_text_field( $published_date );
 					update_post_meta( $post->ID, 'ctl_story_date', $published_date );
 					$story_timestamp = CTL_Helpers::ctlfree_generate_custom_timestamp( $published_date );
 					update_post_meta( $post->ID, 'ctl_story_timestamp', $story_timestamp );

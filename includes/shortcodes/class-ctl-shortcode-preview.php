@@ -188,11 +188,20 @@ if ( ! class_exists( 'CTL_Shortcode_Preivew' ) ) {
 			// Define symbols to be removed from the attribute value.
 			$symbols = array( '*', '(', ')', '[', ']', '{', '}', '"', "'", '\\', '/', ';', '$', '<', '>', '.', '”', '#', '!', '@', '^' );
 
-			$value        = str_replace( $symbols, '', $data ); // Remove specified symbols from the attribute value.
-			$value        = esc_html( $data ); // Escape HTML entities in the attribute value.
-			$value        = preg_replace( '/\s+/', '', $data ); // Remove white spaces from the attribute value.
-			$value        = wp_unslash( $data ); // Removes slashes from a string or recursively removes slashes from strings within an array.
-			$filter_value = sanitize_text_field( $value ); // Assign the filtered value to a variable with a more descriptive name.
+			// Remove specified symbols from the attribute value.
+			$value = str_replace( $symbols, '', $data );
+
+			// Escape HTML entities in the attribute value.
+			$value = esc_html( $value );
+
+			// Remove white spaces from the attribute value.
+			$value = preg_replace( '/\s+/', '', $value );
+
+			// Removes slashes from a string or recursively removes slashes from strings within an array.
+			$value = wp_unslash( $value );
+
+			// Sanitize the final value to ensure it's safe for output.
+			$filter_value = sanitize_text_field( $value );
 
 			// Return the filtered attribute value.
 			return $filter_value;

@@ -173,16 +173,18 @@ if ( ! class_exists( 'CTL_Layout_Manager' ) ) {
 		 * @param string $response The content HTML.
 		 */
 		private function render_vertical_layout( $response ) {
+
+			$rtl         = is_rtl() ? 'rtl' : '';
 			$attributes  = $this->attributes;
 			$wrapper_cls = implode( ' ', $attributes['config']['wrapper_cls'] );
 			$svg_icon    = 'icon' === $attributes['icons'];
 			?>
 			<!-- Cool Timeline Free V<?php echo esc_html( CTL_V ); ?> -->
-			<div class="<?php echo esc_attr( $attributes['config']['main_wrp_cls'] ); ?>" role="region" aria-label="Timeline">
+			<div class="<?php echo esc_attr( $attributes['config']['main_wrp_cls'] ) . ( $rtl ? ' ' . esc_attr( $rtl ) : '' ); ?>" role="region" aria-label="Timeline">
 				<?php
 				$timeline_content = CTL_Helpers::timeline_before_content( $this->settings );
 				if ( ! empty( $timeline_content ) ) {
-					echo $timeline_content;
+					echo wp_kses_post( $timeline_content ); // Escape output to allow safe HTML
 				}
 				?>
 				<div id="<?php echo esc_attr( $attributes['config']['wrapper_id'] ); ?>" class="<?php echo esc_attr( $wrapper_cls ); ?>" <?php echo implode( ' ', $attributes['config']['data_attribute'] ); ?>>

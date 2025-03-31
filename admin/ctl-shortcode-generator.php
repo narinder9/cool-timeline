@@ -43,7 +43,7 @@ if ( ! class_exists( 'CSF_free_shortcode_generator' ) ) {
 			echo '<style>
         span.dashicon.dashicons.dashicons-ctl-custom-icon:before {
         content:"";
-        background: url(' . CTL_PLUGIN_URL . 'assets/images/timeline-icon2-32x32.png);
+        background: url(' . esc_url( CTL_PLUGIN_URL ) . 'assets/images/timeline-icon2-32x32.png);
         background-size: contain;
         background-repeat: no-repeat;
         height: 20px;
@@ -52,7 +52,7 @@ if ( ! class_exists( 'CSF_free_shortcode_generator' ) ) {
         }
        #wp-content-wrap a[data-modal-id="ctl_timeline_shortcode"]:before {
         content: "";
-        background: url(' . CTL_PLUGIN_URL . 'assets/images/cool-timeline-icon.svg);
+        background: url(' . esc_url( CTL_PLUGIN_URL ) . 'assets/images/cool-timeline-icon.svg);
         background-size: contain;
         background-repeat: no-repeat;
         height: 17px;
@@ -89,20 +89,21 @@ if ( ! class_exists( 'CSF_free_shortcode_generator' ) ) {
 
 		// Preview Scripts Loaded
 		public function ctl_preview_script() {
-			wp_enqueue_script( 'ctl_preview_scripts', CTL_PLUGIN_URL . 'includes/shortcodes/assets/js/ctl-preview.min.js', array( 'jquery' ), CTL_V, false );
+			wp_enqueue_script( 'ctl_preview_scripts', esc_url( CTL_PLUGIN_URL . 'includes/shortcodes/assets/js/ctl-preview.min.js' ), array( 'jquery' ), CTL_V, false );
 			wp_localize_script(
 				'ctl_preview_scripts',
 				'myAjax',
 				array(
-					'ajaxurl' => admin_url( 'admin-ajax.php' ),
+					'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) ),
 					'nonce'   => wp_create_nonce( 'ctl_preview' ),
 				)
 			);
 		}
 
 		public function CSF_free_shortcode_generator() {
-			$id        = isset( $GLOBALS['_GET']['post'] ) ? $GLOBALS['_GET']['post'] : '';
-			$post_type = isset( $GLOBALS['_GET']['post_type'] ) ? $GLOBALS['_GET']['post_type'] : get_post_type( $id );
+			// Sanitize input data
+			$id        = isset( $GLOBALS['_GET']['post'] ) ? intval( $GLOBALS['_GET']['post'] ) : '';
+			$post_type = isset( $GLOBALS['_GET']['post_type'] ) ? sanitize_text_field( $GLOBALS['_GET']['post_type'] ) : get_post_type( $id );
 
 			// change block name if older block exists in current page condition start
 			$block_name = 'ctl-gutenberg-block';

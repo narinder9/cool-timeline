@@ -71,6 +71,7 @@ class CoolTmVCAddon {
 							'value'       => __( 10, 'cool-timeline' ),
 							'save_always' => true,
 							'description' => __( 'You Can Show Pagination After These Posts In Vertical Timeline.', 'cool-timeline' ),
+							'admin_label' => true,
 						),
 						array(
 							'type'        => 'textfield',
@@ -96,6 +97,7 @@ class CoolTmVCAddon {
 							),
 							'description' => __( 'Timeline Stories order like:- DESC(2017-1900) , ASC(1900-2017)', 'cool-timeline' ),
 							'save_always' => true,
+							'admin_label' => true,
 						),
 						array(
 							'type'        => 'dropdown',

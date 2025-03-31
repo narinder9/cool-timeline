@@ -89,6 +89,10 @@ li#toplevel_page_cool-plugins-timeline-addon img {
     margin-bottom: 20px;
 }
 
+.cool-plugins-timeline-addon .twae_welcome_plugin_list{
+    margin-top: 3rem;
+}
+
 .cool-body-left .plugin-block {
     display: inline-block;
     width: calc(50% - 2px);
@@ -157,7 +161,8 @@ span.plugin-update-available {
 .wp-submenu a[href*="edit.php?post_type=cool_timeline"],
 .wp-submenu a[href*="post-new.php?post_type=cool_timeline"],
 .wp-submenu a[href*="edit-tags.php?taxonomy=ctl-stories&post_type=cool_timeline"],
-.wp-submenu a[href*="admin.php?page=cool_timeline_settings"] {
+.wp-submenu a[href*="admin.php?page=cool_timeline_settings"],
+.toplevel_page_cool-plugins-timeline-addon .wp-submenu a[href*="admin.php?page=twae-welcome-page"] {
     color: #f98f9e !IMPORTANT;
     background: #0c1111 !IMPORTANT;
 }

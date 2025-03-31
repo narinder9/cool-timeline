@@ -221,7 +221,7 @@
     flex-direction: column;
 }
 
-.ctl-wrapper .ctl-label-big {
+.ctl-wrapper .ctl-label-big, .ctl-wrapper .ctl-label-big a {
     line-height: var(--ctw-cbx-date-line-height);
     font-size: var(--ctw-cbx-date-font-size);
     font-weight: var(--ctw-cbx-date-font-weight);
@@ -231,6 +231,15 @@
     color: var(--ctw-lbl-big-color);
     white-space: nowrap;
     display: inline;
+}
+    
+.ctl-wrapper .ctl-label-big a{
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+.ctl-wrapper .ctl-label-big a:hover{
+    opacity: 0.8;
 }
 
 .ctl-wrapper .ctl-labels.ctl-label-overflow .ctl-label-big{

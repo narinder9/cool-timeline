@@ -85,7 +85,7 @@ if ( ! class_exists( 'CTL_Shortcode' ) ) {
 			$this->ctl_layout_loader();
 
 			$this->ctl_asset_obj = new CTL_Assets_Loader();
-			
+
 			// Preview Ajax request instance
 			CTL_Ajax_Handler::get_instance();
 		}
@@ -254,8 +254,9 @@ if ( ! class_exists( 'CTL_Shortcode' ) ) {
 		}
 
 		public function attributes_migration( $attr, $shortcode_attr ) {
+			$shortcode_attr = empty( $shortcode_attr ) ? array() : $shortcode_attr;
 			if ( 'horizontal' === $attr['layout'] && ! array_key_exists( 'items', $shortcode_attr ) || array_key_exists( 'items', $shortcode_attr ) && empty( $shortcode_attr['items'] ) ) {
-				$attr['items']      = isset( $attr['show-posts'] ) ? $attr['show-posts'] : $settings['post_per_page'];
+				$attr['items']      = isset( $attr['show-posts'] ) ? $attr['show-posts'] : $this->settings['post_per_page'];
 				$attr['show-posts'] = '-1';
 			}
 			if ( isset( $attr['date-format'] ) && 'default' === $attr['date-format'] ) {

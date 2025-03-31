@@ -49,11 +49,11 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 		public function show_plugins( $plugin_tag, $menu_slug, $dashboard_heading, $main_menu_title, $icon ) {
 
 			if ( ! empty( $plugin_tag ) && ! empty( $menu_slug ) && ! empty( $dashboard_heading ) ) {
-				$this->plugin_tag            = $plugin_tag;
-				$this->main_menu_slug        = $menu_slug;
-				$this->dashboar_page_heading = $dashboard_heading;
-				$this->menu_title            = $main_menu_title;
-				$this->menu_icon             = $icon;
+				$this->plugin_tag            = sanitize_text_field( $plugin_tag ); // Sanitize input
+				$this->main_menu_slug        = sanitize_text_field( $menu_slug ); // Sanitize input
+				$this->dashboar_page_heading = sanitize_text_field( $dashboard_heading ); // Sanitize input
+				$this->menu_title            = sanitize_text_field( $main_menu_title ); // Sanitize input
+				$this->menu_icon             = sanitize_text_field( $icon ); // Sanitize input
 			} else {
 				return false;
 			}
@@ -68,8 +68,7 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 			 */
 		function cool_plugins_activate() {
 			if ( current_user_can( 'upload_plugins' ) ) {
-
-					$plugin_slug = isset( $_POST['cp_slug'] ) ? sanitize_text_field( $_POST['cp_slug'] ) : '';
+				$plugin_slug = isset( $_POST['cp_slug'] ) ? sanitize_text_field( $_POST['cp_slug'] ) : ''; // Sanitize input
 				if ( ! empty( $plugin_slug ) ) {
 					if ( ! check_ajax_referer( 'cp-nonce-activate-' . $plugin_slug, 'wp_nonce', false ) ) {
 						wp_send_json_error( 'Invalid security token sent.' );
@@ -97,10 +96,8 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 			 * This function use the core WordPress functionality of installing a plugin through URL
 			 */
 		function cool_plugins_install() {
-
 			if ( current_user_can( 'upload_plugins' ) ) {
-
-				$plugin_slug = isset( $_POST['cp_slug'] ) ? sanitize_text_field( $_POST['cp_slug'] ) : '';
+				$plugin_slug = isset( $_POST['cp_slug'] ) ? sanitize_text_field( $_POST['cp_slug'] ) : ''; // Sanitize input
 				if ( ! empty( $plugin_slug ) ) {
 					if ( ! check_ajax_referer( 'cp-nonce-download-' . $plugin_slug, 'wp_nonce', false ) ) {
 						wp_send_json_error( 'Invalid security token sent.' );
@@ -110,8 +107,8 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 					$downloader = new cool_plugins_downloader();
 					$plugins    = $this->request_wp_plugins_data( $this->plugin_tag );
 					if ( isset( $plugins[ $plugin_slug ] ) ) {
-						$url = $plugins[ $plugin_slug ]['download_link'];
-						return $downloader->install( sanitize_url( $url ), 'install' );
+						$url = esc_url( $plugins[ $plugin_slug ]['download_link'] ); // Escape URL
+						return $downloader->install( sanitize_url( $url ), 'install' ); // Sanitize URL
 					} else {
 						wp_send_json_error( 'Sorry, You are installing a wrong plugin.' );
 						wp_die();
@@ -121,8 +118,8 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 					wp_die();
 				}
 			} else {
-					  wp_send_json_error( 'You have no permission to do this action.' );
-					  wp_die();
+				wp_send_json_error( 'You have no permission to do this action.' );
+				wp_die();
 			}
 		}
 
@@ -159,12 +156,13 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
                     <div class="plugins-list installed-addons" data-empty-message="You have not installed any addon at the moment"><h3>Currently Installed Timeline Plugins</h3>';
 				foreach ( $plugins as $plugin ) {
 
-					$plugin_name    = $plugin['name'];
-					$plugin_desc    = $plugin['desc'];
-					$plugin_logo    = $this->addon_plugins_logo( $plugin['slug'] );
-					$plugin_url     = $plugin['download_link'];
-					$plugin_slug    = $plugin['slug'];
-					$plugin_version = $plugin['version'];
+					$plugin_name = sanitize_text_field( $plugin['name'] ); // Sanitize output
+					$plugin_desc = wp_kses_post( $plugin['desc'] ); // Sanitize output
+					$plugin_logo = $this->addon_plugins_logo( $plugin['slug'] );
+					$plugin_url  = null !== $plugin['download_link'] ? esc_url( $plugin['download_link'] ) : null; // Escape URL
+
+					$plugin_slug    = sanitize_text_field( $plugin['slug'] ); // Sanitize output
+					$plugin_version = sanitize_text_field( $plugin['version'] ); // Sanitize output
 
 					if ( file_exists( WP_PLUGIN_DIR . '/' . $plugin_slug ) ) {
 						require $this->addon_dir . '/includes/dashboard-page.php';
@@ -179,12 +177,12 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 						continue;
 					}
 
-					$plugin_name    = $plugin['name'];
-					$plugin_desc    = $plugin['desc'];
+					$plugin_name    = sanitize_text_field( $plugin['name'] ); // Sanitize output
+					$plugin_desc    = wp_kses_post( $plugin['desc'] ); // Sanitize output
 					$plugin_logo    = $this->addon_plugins_logo( $plugin['slug'] );
-					$plugin_url     = $plugin['download_link'];
-					$plugin_slug    = $plugin['slug'];
-					$plugin_version = $plugin['version'];
+					$plugin_url     = esc_url( $plugin['download_link'] ); // Escape URL
+					$plugin_slug    = sanitize_text_field( $plugin['slug'] ); // Sanitize output
+					$plugin_version = sanitize_text_field( $plugin['version'] ); // Sanitize output
 
 					if ( ! file_exists( WP_PLUGIN_DIR . '/' . $plugin_slug ) ) {
 						require $this->addon_dir . '/includes/dashboard-page.php';
@@ -198,13 +196,13 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 					echo "<div class='plugins-list pro-addons' data-empty-message='No more Pro plugins available at the moment'><h3>Premium Timeline Plugins</h3>";
 					foreach ( $this->pro_plugins as $plugin ) {
 						$plugin_logo    = '';
-						$plugin_name    = $plugin['name'];
-						$plugin_desc    = $plugin['desc'];
+						$plugin_name    = sanitize_text_field( $plugin['name'] ); // Sanitize output
+						$plugin_desc    = wp_kses_post( $plugin['desc'] ); // Sanitize output
 						$plugin_logo    = $this->addon_plugins_logo( $plugin['slug'] );
-						$plugin_pro_url = $plugin['buyLink'];
+						$plugin_pro_url = esc_url( $plugin['buyLink'] ); // Escape URL
 						$plugin_url     = null;
 						$plugin_version = null;
-						$plugin_slug    = $plugin['slug'];
+						$plugin_slug    = sanitize_text_field( $plugin['slug'] ); // Sanitize output
 
 						if ( ! file_exists( WP_PLUGIN_DIR . '/' . $plugin_slug ) ) {
 							require $this->addon_dir . '/includes/dashboard-page.php';
@@ -267,15 +265,15 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 				if ( $plugin->tag == $tag ) {
 
 					$this->pro_plugins[ $plugin->slug ] = array(
-						'name'          => $plugin->name,
-						'logo'          => $plugin->image_url,
-						'desc'          => $plugin->info,
-						'slug'          => $plugin->slug,
-						'buyLink'       => $plugin->buy_url,
-						'version'       => $plugin->version,
+						'name'          => sanitize_text_field( $plugin->name ), // Sanitize output
+						'logo'          => esc_url( $plugin->image_url ), // Escape URL
+						'desc'          => wp_kses_post( $plugin->info ), // Sanitize output
+						'slug'          => sanitize_text_field( $plugin->slug ), // Sanitize output
+						'buyLink'       => esc_url( $plugin->buy_url ), // Escape URL
+						'version'       => sanitize_text_field( $plugin->version ), // Sanitize output
 						'download_link' => null,
-						'incompatible'  => $plugin->free_version,
-						'buyLink'       => $plugin->buy_url,
+						'incompatible'  => sanitize_text_field( $plugin->free_version ), // Sanitize output
+						'buyLink'       => esc_url( $plugin->buy_url ), // Escape URL
 					);
 					if ( property_exists( $plugin, 'free_version' ) && $plugin->free_version != null ) {
 						$this->disable_plugins[ $plugin->free_version ] = array( 'pro' => $plugin->slug );
@@ -317,19 +315,19 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 				// if (!property_exists($plugin['tag'], $tag)) {
 				// continue;
 				// }
-				$plugins_data['name'] = $plugin['name'];
-				$plugins_data['logo'] = $plugin['image_url'];
+				$plugins_data['name'] = sanitize_text_field( $plugin['name'] ); // Sanitize output
+				$plugins_data['logo'] = esc_url( $plugin['image_url'] ); // Escape URL
 
 				/*
 				   foreach ($plugin->icons as $icon) {
 					$plugins_data['logo'] = $icon;
 					break;
 				} */
-				$plugins_data['slug']           = $plugin['slug'];
-				$plugins_data['desc']           = $plugin['info'];
-				$plugins_data['version']        = $plugin['version'];
-				$plugins_data['tags']           = $plugin['tag'];
-				$plugins_data['download_link']  = $plugin['download_url'];
+				$plugins_data['slug']           = sanitize_text_field( $plugin['slug'] ); // Sanitize output
+				$plugins_data['desc']           = wp_kses_post( $plugin['info'] ); // Sanitize output
+				$plugins_data['version']        = sanitize_text_field( $plugin['version'] ); // Sanitize output
+				$plugins_data['tags']           = sanitize_text_field( $plugin['tag'] ); // Sanitize output
+				$plugins_data['download_link']  = esc_url( $plugin['download_url'] ); // Escape URL
 				$all_plugins[ $plugin['slug'] ] = $plugins_data;
 			}
 
@@ -350,6 +348,7 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 				'cool-timeline-pro'                       => 'cool-timeline-pro.png',
 				'timeline-block'                          => 'timeline-block.png',
 				'timeline-builder-pro'                    => 'timeline-builder-pro.png',
+				'timeline-module-for-divi'                => 'timeline-module-for-divi.png',
 			);
 			if ( isset( $logos_arr[ $slug ] ) ) {
 				return $logo_url = CTL_PLUGIN_URL . 'admin/timeline-addon-page/assets/images/' . $logos_arr[ $slug ];

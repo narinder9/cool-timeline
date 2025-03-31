@@ -11,6 +11,19 @@
   /* margin: 5px; */
 }
 
+.ctl-feedback-notice-wrapper.notice.notice-info.is-dismissible,
+.ctl-divi-module-notice_admin_notice {
+  padding: 5px;
+  display: table;
+  width: calc(100% - 10px);
+  max-width: 870px;
+  clear: both;
+  border-radius: 5px;
+  border: 2px solid #8f42ec;
+  box-sizing: border-box;
+  /* margin: 5px; */
+}
+
 .ctl-feedback-notice-wrapper .logo_container,
 .ctl-simple-notice .logo_container {
   width: 80px;
