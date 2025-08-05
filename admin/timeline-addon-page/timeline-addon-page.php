@@ -228,6 +228,20 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 				wp_enqueue_script( 'cool-plugins-timeline-addon', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array( 'jquery' ), null, true );
 				wp_localize_script( 'cool-plugins-timeline-addon', 'cp_events', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 			}
+
+			wp_enqueue_script(
+				'ctl-migration-js',
+				plugin_dir_url( __FILE__ ) . 'assets/js/migration.js',
+				array( 'jquery' ),
+				'1.0',
+				true
+			);
+			
+			wp_localize_script( 'ctl-migration-js', 'ctl_migration', array(
+				'nonce' => wp_create_nonce('ctl_migrate_nonce'),
+				'redirect_url' => esc_url(admin_url('edit.php?post_type=cool_timeline')),
+				'ajax_url' => admin_url('admin-ajax.php')
+			));
 		}
 
 		function disable_free_plugins() {
@@ -259,7 +273,7 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 				return;
 			}
 			$plugin_info = (array) json_decode( $response['body'] );
-
+			
 			foreach ( $plugin_info as $plugin ) {
 
 				if ( $plugin->tag == $tag ) {
@@ -310,7 +324,7 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 			}
 			$plugin_info = json_decode( $response['body'], true );
 			$all_plugins = array();
-			// var_dump($plugin->slug);
+			
 			foreach ( $plugin_info as $plugin ) {
 				// if (!property_exists($plugin['tag'], $tag)) {
 				// continue;
@@ -344,11 +358,13 @@ if ( ! class_exists( 'cool_plugins_timeline_addons' ) ) {
 			$logos_arr = array(
 				'cool-timeline'                           => 'cool-timeline.png',
 				'timeline-widget-addon-for-elementor'     => 'timeline-widget-addon-for-elementor.png',
-				'timeline-widget-addon-for-elementor-pro' => 'timeline-widget-addon-for-elementor-pro.png',
-				'cool-timeline-pro'                       => 'cool-timeline-pro.png',
+				'timeline-widget-addon-for-elementor-pro' => 'timeline-widget-addon-for-elementor.png',
+				'cool-timeline-pro'                       => 'cool-timeline.png',
 				'timeline-block'                          => 'timeline-block.png',
 				'timeline-builder-pro'                    => 'timeline-builder-pro.png',
 				'timeline-module-for-divi'                => 'timeline-module-for-divi.png',
+				'timeline-block-pro'                => 'timeline-block.png',
+				'timeline-module-for-divi-pro'                => 'timeline-module-for-divi.png',
 			);
 			if ( isset( $logos_arr[ $slug ] ) ) {
 				return $logo_url = CTL_PLUGIN_URL . 'admin/timeline-addon-page/assets/images/' . $logos_arr[ $slug ];

@@ -5169,3 +5169,10 @@ span.flatpickr-weekday {
     transform: translate3d(0, 0, 0);
   }
 }
+
+.csf-buttons-migrate .csf-migrate{
+  min-width: 72px;
+  padding: 4px 6px;
+  font-size: 13px;
+    line-height: 25px;
+}

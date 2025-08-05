@@ -109,7 +109,6 @@
   .ctl-shortcode-block-demo-button {
     display: flex;
     justify-content: center;
-    padding-block: 0px !important;
     gap: 10px;
   }
   

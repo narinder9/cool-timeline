@@ -10,20 +10,19 @@ class CTL_free_migrations {
 	 * Constructor.
 	 */
 	public function __construct() {
-		 // migrate old version stories
-		add_action( 'admin_init', array( $this, 'ctl_postmeta_migration' ) );// Post meta migration > 3.5.3
+		
+		add_action( 'admin_init', array( $this, 'ctl_postmeta_migration' ) );
 		add_action( 'admin_init', array( $this, 'ctl_settings_migration' ) );
+		add_action( 'wp_ajax_ctl_migrate_stories', array( $this, 'ctl_migrate_stories' ) );
 	}
-
-
-	// migrate stories from cool timeline free version
+	
 	function ctl_postmeta_migration() {
 
-		// migration done
+		
 		if ( get_option( 'ctl-postmeta-migration' ) ) {
 			return;
 		}
-		// Direct new version
+		
 		if ( version_compare( get_option( 'cool-free-timeline-v' ), '2.1', '>' ) && ! ( get_option( 'cool-timelne-v' ) ) ) {
 			return;
 		}
@@ -35,11 +34,11 @@ class CTL_free_migrations {
 		);
 		$posts = get_posts( $args );
 
-		// Story Type
+		
 		$story_type_key = array(
 			'ctl_story_date',
 		);
-		// Story Media
+		
 		$story_media_key = array(
 			'img_cont_size',
 		);
@@ -49,7 +48,7 @@ class CTL_free_migrations {
 
 		if ( isset( $posts ) && is_array( $posts ) && ! empty( $posts ) ) {
 			foreach ( $posts as $post ) {
-				// Sanitize post ID
+				
 				$post_id = intval( $post->ID );
 
 				foreach ( $story_icon_key as $item ) {
@@ -188,7 +187,174 @@ class CTL_free_migrations {
 		return $arr;
 	}
 
+	/**
+	 * Migrate data from Timeline Express to Cool Timeline
+	 */
+	public function migrate_timeline_express_to_cool_timeline() {
 
+		if ( get_option( 'timeline_express_migrated' ) ) {
+			return;
+		}
+	
+		$args = array(
+			'post_type'      => 'te_announcements',
+			'posts_per_page' => -1,
+			'post_status'    => 'publish',
+		);
+		
+		$timeline_express_posts = get_posts( $args );
+        if ( empty( $timeline_express_posts ) ) {
+			return ;
+		}
 
+		$migrate_stories = 0;
+
+		$timeline_settings     = get_option('timeline_express_storage');
+		$cooltimeline_settings = get_option('cool_timeline_settings', []);
+	
+		if (!is_array($timeline_settings)) {
+			$timeline_settings = array();
+		}
+		
+		$cooltimeline_settings = (array) get_option('cool_timeline_settings', []);
+		
+		// Initialize all required array keys
+		if (!isset($cooltimeline_settings['story_content_settings']) || !is_array($cooltimeline_settings['story_content_settings'])) {
+			$cooltimeline_settings['story_content_settings'] = array();
+		}
+		
+		// Ensure all settings are properly initialized
+		$cooltimeline_settings = array_merge(array(
+			'story_content_settings' => array(),
+			'first_post' => '',
+			'content_bg_color' => '',
+			'line_color' => ''
+		), $cooltimeline_settings);
+		
+		if ( ! empty( $timeline_settings['excerpt-trim-length'] ) ) {
+			$cooltimeline_settings['story_content_settings']['content_length'] = (string) (int) $timeline_settings['excerpt-trim-length'];
+		}
+		
+		if (isset($timeline_settings['read-more-visibility'])) {
+			$cooltimeline_settings['story_content_settings']['display_readmore'] = $timeline_settings['read-more-visibility'] === '1' ? 'yes' : 'no';
+		}
+
+		if (isset($timeline_settings['default-announcement-color'])) {
+			$cooltimeline_settings['first_post'] = $timeline_settings['default-announcement-color'];
+		}
+
+		if (isset($timeline_settings['announcement-bg-color'])) {
+			$cooltimeline_settings['content_bg_color'] = $timeline_settings['announcement-bg-color'];
+		}
+		
+		if (isset($timeline_settings['announcement-background-line-color'])) {
+			$cooltimeline_settings['line_color'] = $timeline_settings['announcement-background-line-color'];
+		}
+       	
+		foreach ( $timeline_express_posts as $old_post ) {
+
+			if ( empty( $old_post->ID ) ) {
+				continue;
+			}
+
+			$migrate_stories++;
+			$event_timestamp = intval( get_post_meta( $old_post->ID, 'announcement_date', true ) );
+			$icon_raw        = get_post_meta( $old_post->ID, 'announcement_icon', true );
+			$color_raw       = get_post_meta( $old_post->ID, 'announcement_color', true );
+			$attachment_id   = intval( get_post_meta( $old_post->ID, 'announcement_image_id', true ) );
+			$excerpt         = wp_kses_post(get_post_meta($old_post->ID,'announcement_custom_excerpt',true));
+			
+			$formatted_for_meta = $event_timestamp ? date( 'm/d/Y h:i A', $event_timestamp ) : '';
+			$color = sanitize_text_field( $color_raw );
+
+			if (strpos($icon_raw, 'fa-') === false) {
+				$icon_class = 'fa fa-' . sanitize_html_class($icon_raw);
+			} else {
+				$icon_class = 'fa ' . sanitize_html_class($icon_raw);
+			}
+			
+			$new_post = array(
+				'post_title'   => sanitize_text_field( $old_post->post_title ),
+				'post_content' => wp_kses_post( $old_post->post_content ),
+				'post_excerpt'=>$excerpt,
+				'post_type'    => 'cool_timeline',
+				'post_status'  => $old_post->post_status,
+				'post_date'    => $old_post->post_date,
+				'post_name'    => sanitize_title( $old_post->post_title ),
+			);
+
+			$new_post_id = wp_insert_post( $new_post );
+			
+			if ( ! is_wp_error( $new_post_id ) ) {
+
+				clean_post_cache( $new_post_id );
+				
+				if ( $attachment_id && get_post_type( $attachment_id ) === 'attachment' ) {
+					set_post_thumbnail( $new_post_id, $attachment_id );
+				}
+
+				wp_update_post([
+					'ID' => $new_post_id,
+					'post_status' => 'publish',
+				]);
+			
+				update_post_meta( $new_post_id, '_ctl_visible', 'yes' );
+				
+				if ( ! empty( $formatted_for_meta ) ) {
+
+					$story_type_serialized = [
+						'ctl_story_date' => $formatted_for_meta,
+					];
+
+					update_post_meta( $new_post_id, 'ctl_story_timestamp', $event_timestamp );
+					update_post_meta( $new_post_id, 'story_date', $formatted_for_meta );
+					update_post_meta( $new_post_id, 'story_type', $story_type_serialized );
+				}
+
+				if ( ! empty( $color ) ) {
+
+					update_post_meta( $new_post_id, 'story_color', $color );
+				}
+
+				if ( ! empty( $icon_class ) ) {
+
+					$story_icon_serialized = [
+						'fa_field_icon' => $icon_class,
+					];
+					update_post_meta( $new_post_id, 'story_icon', $story_icon_serialized );
+				}
+			}
+		}
+		
+		update_option( 'timeline_express_migrated', 1 );
+		update_option('cool_timeline_settings', $cooltimeline_settings);
+		return $migrate_stories;
+		
+	}
+	
+	public function ctl_migrate_stories() {
+
+		check_ajax_referer( 'ctl_migrate_nonce', 'nonce' );
+	
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( [ 'message' => __( 'Unauthorized', 'cool-timeline' ) ] );
+			wp_die();
+		}
+	
+		$total_stories = $this->migrate_timeline_express_to_cool_timeline();
+	
+		if ( empty( $total_stories ) || $total_stories === 0 ) {
+		
+			wp_send_json_error( [ 'message' => __( 'No Attachemnt Found To Migrate.', 'cool-timeline' ) ] );
+			wp_die();
+		}
+	
+		wp_send_json_success([
+			'message' => __( 'Migration Completed', 'cool-timeline' ),
+			'total_stories' => $total_stories
+		]);
+	}
+	
+	
 }
 new CTL_free_migrations();

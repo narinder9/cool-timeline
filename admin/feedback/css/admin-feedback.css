@@ -8,6 +8,7 @@
 }
 .cool-plugins-deactivation-response{
     position: fixed;
+    width: 53%;
     left: 35%;
     top: 22%;
     z-index: 9999;
@@ -30,15 +31,17 @@
     display: none;
 }
 
-#cool-plugins-deactivate-feedback-dialog-form-body .cool-plugins-extra-links{
-    margin: -.5rem 0 1.3rem .5rem;
+.cool-plugins-deactivate-feedback-dialog-input-wrapper {
+    margin-bottom: 10px !important;
+    margin-top: 9px;
 }
 
-.cool-plugins-deactivation-response label{
+
+.cool-plugins-deactivate-feedback-dialog-input-wrappe label{
     display: block;
 }
 .cool-plugins-deactivation-response textarea {
-    margin: 10px;
+    margin-top: 10px;
     width: -webkit-fill-available;
 }
 #cool-plugins-deactivate-feedback-dialog-form-body {
@@ -47,7 +50,7 @@
 .cool-plugins-deactivation-response input[type=radio]{
     float: left;
     margin-right: 10px;
-    margin-top: 0px;
+    margin-top: 2px;
 }
 label.cool-plugins-deactivate-feedback-dialog-label {
     margin-bottom: 10px;
@@ -121,4 +124,11 @@ a.cool-plugins-button:hover {
 #cool-plugins-form-wrapper input#cool-plugins-GDPR-data-notice {
     float: left;
     margin-top: 4px !important;
+}
+#cool-plugins-deactivate-feedback-dialog-form-body .cool-plugins-deactivate-feedback-dialog-input:not(:checked)~:where(.cool-plugins-feedback-text, .cool-plugins-extra-links) {
+    display: none;
+}
+
+.cool-plugins-extra-links {
+    margin-bottom: 10px;
 }

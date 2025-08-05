@@ -29,7 +29,7 @@ jQuery(document).ready(function ($) {
             let pluginTag = $(this).attr('data-plugin-tag');
 
             let btn = $(this);
-            console.log('activation in progress');
+
             $.ajax({
                 type: 'POST',
                 url: cp_events.ajax_url,
@@ -56,5 +56,11 @@ jQuery(document).ready(function ($) {
         }
 
     })
+
+    
+
+       
+    
+
 
 })

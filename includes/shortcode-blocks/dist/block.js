@@ -332,20 +332,17 @@ var _wp$components = wp.components,
       }]
     }, function (tab) {
       return React.createElement(Card, null, tab.content);
-    }), React.createElement(PanelBody, {
-      title: __("View Timeline Demos", "timeline-block"),
-      initialOpen: false
-    }, React.createElement(CardBody, {
+    }), React.createElement(CardBody, {
       className: "ctl-shortcode-block-demo-button"
     }, React.createElement("a", {
       target: "_blank",
       className: "button button-primary",
-      href: "https://cooltimeline.com/demo/?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=demo&utm_content=ctl_shortcode"
+      href: "https://cooltimeline.com/demo/cool-timeline-pro/?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=demo&utm_content=ctl_shortcode"
     }, "View Demos"), React.createElement("a", {
       target: "_blank",
       className: "button button-primary",
-      href: "https://cooltimeline.com/buy-cool-timeline-pro/?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=get_pro&utm_content=ctl_shortcode"
-    }, "Buy Pro")))), props.attributes.isPreview ? React.createElement("img", {
+      href: "https://cooltimeline.com/plugin/cool-timeline-pro/?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=get_pro&utm_content=ctl_shortcode"
+    }, "Buy Pro"))), props.attributes.isPreview ? React.createElement("img", {
       src: _images_timeline_png__WEBPACK_IMPORTED_MODULE_2__["default"]
     }) : React.createElement("div", {
       className: props.className,
@@ -459,6 +456,20 @@ var CtlIcon = function CtlIcon() {
 
 /***/ }),
 
+/***/ "./src/images/timeline.png":
+/*!*********************************!*\
+  !*** ./src/images/timeline.png ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "images/27d3f3c782dabdb08d424daa7396b72e.png");
+
+/***/ }),
+
 /***/ "./src/layout-type.js":
 /*!****************************!*\
   !*** ./src/layout-type.js ***!
@@ -506,20 +517,6 @@ var CtlLayoutType = function CtlLayoutType(props) {
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CtlLayoutType);
-
-/***/ }),
-
-/***/ "./src/images/timeline.png":
-/*!*********************************!*\
-  !*** ./src/images/timeline.png ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "images/27d3f3c782dabdb08d424daa7396b72e.png");
 
 /***/ }),
 
@@ -608,26 +605,26 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
 /******/ 		var document = __webpack_require__.g.document;
 /******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
 /******/ 				scriptUrl = document.currentScript.src;
 /******/ 			if (!scriptUrl) {
 /******/ 				var scripts = document.getElementsByTagName("script");
 /******/ 				if(scripts.length) {
 /******/ 					var i = scripts.length - 1;
-/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
 /******/ 				}
 /******/ 			}
 /******/ 		}
 /******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
 /******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
 /******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
 /******/ 		__webpack_require__.p = scriptUrl + "../";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
 /*!**********************!*\
   !*** ./src/index.js ***!

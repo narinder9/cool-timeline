@@ -247,9 +247,11 @@ if ( ! class_exists( 'CTL_Loop_Helpers' ) ) {
 			if ( 'full' === $attributes['story-content'] ) {
 				global $post;
 				$content .= apply_filters( 'the_content', $post->post_content );
+				
 			} else {
 				// $content .= '<p>' . apply_filters( 'ctl_story_excerpt', get_the_excerpt() ) . '</p>';
 				$content .= CTL_Helpers::ctl_get_excerpt( $this->settings );
+				
 			}
 			if ( ! empty( $content ) ) {
 				$output .= '<!-- ' . $this->tm_type . ' Description --><div class="ctl-description">' . apply_filters( 'the_content', $content ) . '</div>';

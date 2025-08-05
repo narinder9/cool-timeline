@@ -1,23 +1,72 @@
 .timeline-block-iconpicker{
 	margin-top: 1rem;
+	position: relative;
 }
 
-.timeline-block-iconpicker .iconpicker-pickercontainer{
-	position: absolute;
-    left: -2px;
-    width: 258px;
-    margin-top: 3px;
-	row-gap: 12px;
-    column-gap: 20px;
+.icon-picker__popup {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: -10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    width: calc(100% + 10px);
+    padding: .5rem;
+    border: 1px solid #c1c1c1;
 }
-.timeline-block-iconpicker .iconpicker-pickercontainer .iconpicker-item{
-    font-size: 23px !important;
-    border: 1px solid black !important;
-    height: 39px;
-    width: 41px;
+
+.icon-picker__selected {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #797979;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.icon-picker__popup-content {
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.icon-picker__popup input[type="text"] {
+	margin-bottom: 10px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.icon-picker__list {
+	display: grid;
+    max-height: clamp(200px, 290px, 60vh);
+	height: auto;
+    overflow-y: auto;
+	row-gap: .8rem;
+	grid-template-columns: auto auto auto auto;
+	justify-content: space-between;
+}
+
+.icon-picker__item {
+    width: 45px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #71717166;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    font-size: 1.3rem;
+}
+
+.icon-picker__item:hover {
+	border-color: #007cba;
 }
 
 .timeline-block-typography-advanced{
@@ -702,6 +751,10 @@ i.fipicon-angle-left:before {
     height: 28px !important;
     border-radius: 50%;
   }
+
+  .cp-timeline-block-style-settings button::after{
+	content: unset;
+  }
   
   .timeline-block-typography-reset-btn,
   .timeline-block-colorpallete-reset,
@@ -953,10 +1006,6 @@ i.fipicon-angle-left:before {
 }
 
 /* block style tab css start */
-.cooltimeline-tab-settings .ctlb-tabs{
-	padding-top: 25px;
-	position: relative
-}
 .cooltimeline-tab-settings .ctlb-tabs::before{
 	font-family: dashicons;
     display: inline-block;
@@ -990,3 +1039,7 @@ i.fipicon-angle-left:before {
 .cooltimeline-tab-settings .ctlb-advanced-tab::before{
 	content: '\f111';
 }
+.cooltimeline-tab-settings .ctlb-tabs{
+	padding-top: 25px
+}
+/* block style tab css end */

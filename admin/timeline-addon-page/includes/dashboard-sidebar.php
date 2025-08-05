@@ -12,11 +12,11 @@ if ( ! isset( $this->main_menu_slug ) ) {
 	return false;
 }
 
- $cool_support_email = 'https://coolplugins.net/support/';
+ $cool_support_email = 'https://coolplugins.net/support/?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=support&utm_content=dashboard';
 ?>
 
  <div class="cool-body-right">
-	<a href="https://coolplugins.net" target="_blank">
+	<a href="https://coolplugins.net/?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=author_page&utm_content=dashboard" target="_blank">
 		<img src="<?php echo esc_url( plugin_dir_url( $this->addon_file ) ) . '/assets/coolplugins-logo.png'; ?>" alt="<?php esc_attr__( 'Cool Plugins Logo', 'cool-timeline' ); ?>">
 	</a>
 	<ul>

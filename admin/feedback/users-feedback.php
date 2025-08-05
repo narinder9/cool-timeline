@@ -12,10 +12,11 @@ class UsersFeedback {
 	private $plugin_version = CTL_V;
 	private $plugin_name    = 'Cool Timeline';
 	private $plugin_slug    = 'ctl';
+	
 	/*
 	|-----------------------------------------------------------------|
 	|   Use this constructor to fire all actions and filters          |
-	|-----------------------------------------------------------------|
+	|----------------------------------------------------------------|
 	*/
 	public function __construct() {
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_feedback_scripts' ) );
@@ -73,7 +74,7 @@ class UsersFeedback {
 		);
 
 		?>
-		<div id="cool-plugins-deactivate-feedback-dialog-wrapper" class="hide-feedback-popup">
+		<div id="cool-plugins-deactivate-feedback-dialog-wrapper" class="hide-feedback-popup" data-slug="<?php echo esc_attr( $this->plugin_slug ); ?>">
 						
 			<div class="cool-plugins-deactivation-response">
 			<div id="cool-plugins-deactivate-feedback-dialog-header">
@@ -87,7 +88,7 @@ class UsersFeedback {
 			<div id="cool-plugins-form-wrapper" class="cool-plugins-form-wrapper-cls">
 			<form id="cool-plugins-deactivate-feedback-dialog-form" method="post">
 				<?php
-				wp_nonce_field( '_cool-plugins_deactivate_feedback_nonce', "$this->plugin_slug-wpnonce" );
+				wp_nonce_field( '_cool-plugins_deactivate_feedback_nonce', '_wpnonce' );
 				?>
 				<input type="hidden" name="action" value="cool-plugins_deactivate_feedback" />
 				<div id="cool-plugins-deactivate-feedback-dialog-form-caption"><?php echo esc_html( __( 'If you have a moment, please share why you are deactivating this plugin.', 'cool-timeline' ) ); ?></div>
@@ -102,7 +103,7 @@ class UsersFeedback {
 							<?php if ( ! empty( $reason['input_placeholder'] ) ) : ?>
 								<textarea class="cool-plugins-feedback-text" type="textarea" name="reason_<?php echo esc_attr( $reason_key ); ?>" placeholder="<?php echo esc_attr( $reason['input_placeholder'] ); ?>"></textarea>
 								<?php
-								if ( in_array( $reason_key, $reason_key_arr, true ) ) {
+									if ( in_array( $reason_key, $reason_key_arr, true ) ) {
 									$twae_plugin_url = 'https://wordpress.org/plugins/timeline-widget-addon-for-elementor/';
 									?>
 								  <div class="cool-plugins-extra-links">
@@ -110,18 +111,23 @@ class UsersFeedback {
 									</div>
 									<?php
 								}
+								
 							endif;
+							
 							?>
 							<?php if ( ! empty( $reason['alert'] ) ) : ?>
 								<div class="cool-plugins-feedback-text"><?php echo esc_html( $reason['alert'] ); ?></div>
 							<?php endif; ?>
 						</div>
 					<?php endforeach; ?>
-					<input class="cool-plugins-GDPR-data-notice" id="cool-plugins-GDPR-data-notice" type="checkbox"><label for="cool-plugins-GDPR-data-notice"><?php echo esc_html( __( 'I consent to having Cool Plugins store my all submitted information via this form, they can also respond to my inquiry.', 'cool-timeline' ) ); ?></label>
+
+					<input class="cool-plugins-GDPR-data-notice" id="cool-plugins-GDPR-data-notice-<?php echo $this->plugin_slug; ?>" type="checkbox"><label for="cool-plugins-GDPR-data-notice"><?php echo esc_html__( 'I agree to share anonymous usage data and basic site details (such as server, PHP, and WordPress versions) to support Cool Timeline improvement efforts. Additionally, I allow Cool Plugins to store all information provided through this form and to respond to my inquiry.' ); ?></label>
+					
+
 				</div>
 				<div class="cool-plugin-popup-button-wrapper">
-					<a class="cool-plugins-button button-deactivate" id="cool-plugin-submitNdeactivate"><?php echo esc_html__( 'Submit and Deactivate', 'cool-timeline' ); ?></a>
-					<a class="cool-plugins-button" id="cool-plugin-skipNdeactivate"><?php echo esc_html__( 'Skip and Deactivate', 'cool-timeline' ); ?></a>
+					<a class="cool-plugins-button button-deactivate" id="ctl-cool-plugin-submitNdeactivate"><?php echo esc_html__( 'Submit and Deactivate', 'cool-timeline' ); ?></a>
+					<a class="cool-plugins-button" id="ctl-cool-plugin-skipNdeactivate"><?php echo esc_html__( 'Skip and Deactivate', 'cool-timeline' ); ?></a>
 				</div>
 			</form>
 			</div>
@@ -161,22 +167,30 @@ class UsersFeedback {
 			);
 
 			$deativation_reason = array_key_exists( $reason, $deactivate_reasons ) ? $reason : 'other';
-
+		
 			$sanitized_message = sanitize_text_field( $_POST['message'] ) == '' ? 'N/A' : sanitize_text_field( $_POST['message'] );
 			$admin_email       = sanitize_email( get_option( 'admin_email' ) );
 			$site_url          = esc_url( site_url() );
-			$feedback_url      = esc_url( 'http://feedback.coolplugins.net/wp-json/coolplugins-feedback/v1/feedback' );
+			$feedback_url      = CTL_FEEDBACK_API.'wp-json/coolplugins-feedback/v1/feedback' ;
+			$plugin_initial    = get_option('ctl_initial_save_version') ?: 'N/A';
+			$install_date      = get_option('ctl-install-date') ?: 'N/A';
+			$unique_key        = '31';
+			$site_id        	= $site_url . '-' . $install_date . '-' . $unique_key;
 			$response          = wp_remote_post(
 				$feedback_url,
 				array(
 					'timeout' => 30,
 					'body'    => array(
+						'server_info' => serialize(\CoolTimeline::ctl_get_user_info()['server_info']), 
+						'extra_details' => serialize(\CoolTimeline::ctl_get_user_info()['extra_details']),
 						'plugin_version' => $this->plugin_version,
 						'plugin_name'    => $this->plugin_name,
+						'plugin_initial' => $plugin_initial,
 						'reason'         => $deativation_reason,
 						'review'         => $sanitized_message,
 						'email'          => $admin_email,
 						'domain'         => $site_url,
+						'site_id'    	 => md5($site_id),
 					),
 				)
 			);
