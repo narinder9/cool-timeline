@@ -111,7 +111,7 @@ class CoolTimelinePosttypeFree {
 				}
 				break;
 			default:
-				echo '<p>' . esc_html_e( 'Not Matched', 'cool-timeline' ) . '</p>'; // Escape output
+				echo '<p>' . esc_html__( 'Not Matched', 'cool-timeline' ) . '</p>'; // Escape output
 		}
 	}
 
