@@ -86,7 +86,7 @@ if ( $pro_already_installed === true ) {
   <div class="plugin-block-inner">
 
 	<div class="plugin-logo">
-	<img src="<?php echo esc_url( $plugin_logo ); ?>" width="250px" alt="<?php esc_attr__( 'Plugin Logo', 'cool-timeline' ); ?>" /> 
+	<img src="<?php echo esc_url( $plugin_logo ); ?>" width="250px" alt="<?php echo esc_attr__( 'Plugin Logo', 'cool-timeline' ); ?>" /> 
 	</div>
 
 	<div class="plugin-info">
