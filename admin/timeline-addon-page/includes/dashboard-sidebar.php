@@ -17,7 +17,7 @@ if ( ! isset( $this->main_menu_slug ) ) {
 
  <div class="cool-body-right">
 	<a href="https://coolplugins.net/?utm_source=ctl_plugin&utm_medium=inside&utm_campaign=author_page&utm_content=dashboard" target="_blank">
-		<img src="<?php echo esc_url( plugin_dir_url( $this->addon_file ) ) . '/assets/coolplugins-logo.png'; ?>" alt="<?php esc_attr__( 'Cool Plugins Logo', 'cool-timeline' ); ?>">
+		<img src="<?php echo esc_url( plugin_dir_url( $this->addon_file ) ) . '/assets/coolplugins-logo.png'; ?>" alt="<?php echo esc_attr__( 'Cool Plugins Logo', 'cool-timeline' ); ?>">
 	</a>
 	<ul>
 	  <li><?php echo esc_html__( 'Cool Plugins develops best timeline plugins for WordPress.', 'cool-timeline' ); ?></li>
