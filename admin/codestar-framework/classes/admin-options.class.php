@@ -496,7 +496,7 @@ if ( ! class_exists( 'CSF_Options' ) ) {
     }
 
     public function add_admin_footer_text() {
-      echo wp_kses_post( $this->args['footer_credit'] );
+      return wp_kses_post( $this->args['footer_credit'] );
     }
 
     public function error_check( $sections, $err = '' ) {
